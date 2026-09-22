@@ -48,6 +48,12 @@
         <Execute>
           <option name="pattern" value="ssh-keygen ed25519 *" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="git clone *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git push" />
+        </Execute>
       </list>
     </option>
   </component>
