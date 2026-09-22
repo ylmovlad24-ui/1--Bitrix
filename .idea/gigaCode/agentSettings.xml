@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GigaCodeAgentSettings">
+    <option name="autoApprovedCommands">
+      <list>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:/Users/Анна/IdeaProjects/bitrix/.gigacode/plans&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cd *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;$files = @('services.html','cases.html','blog.html','contacts.html','editions.html','bitrix.html','bitrix24.html','privacy.html'); foreach($f in $files) { $content = Get-Content $f -Raw -Encoding UTF8; $content = $content -replace '(?s)&lt;body&gt;\\s*&lt;header.*?&lt;/nav&gt;\\s*&lt;/nav&gt;', '&lt;body&gt;'; $content = $content -replace '(?s)&lt;footer.*?&lt;/footer&gt;\\s*&lt;script', '&lt;script'; Set-Content $f $content -Encoding UTF8 -NoNewline }; Write-Output 'Done'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;$cd = 'C:/Users/Анна/IdeaProjects/bitrix/bitrix'; Set-Location $cd; $files = @('services.html','cases.html','blog.html','contacts.html','editions.html','bitrix.html','bitrix24.html','privacy.html'); foreach($f in $files) { $content = Get-Content $f -Raw -Encoding UTF8; $content = $content -replace '(?s)&lt;body&gt;\\s*&lt;header.*?&lt;/nav&gt;\\s*&lt;/nav&gt;', '&lt;body&gt;'; $content = $content -replace '(?s)&lt;footer.*?&lt;/footer&gt;\\s*&lt;script', '&lt;script'; Set-Content $f $content -Encoding UTF8 -NoNewline }; Write-Output 'Done'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/fix-headers.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix&quot; -Filter &quot;*.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/bitrix/fix.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:/Users/Анна/IdeaProjects/bitrix/fix-headers.ps1&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git status" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git add *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git commit *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git remote *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git push *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="dir C:\Users\Анна\.ssh\id_* 2&gt;$null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="ssh-keygen ed25519 *" />
+        </Execute>
+      </list>
+    </option>
+  </component>
+</project>

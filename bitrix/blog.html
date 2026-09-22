@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог — dianomi | CRM, 1С-Битрикс, автоматизация</title>
+  <meta name="description" content="Разбираем, как настроить CRM Битрикс24, ускорить сайт на 1С-Битрикс и увеличить конверсию. Кейсы с цифрами, а не теория.">
+  <meta property="og:title" content="Блог — dianomi | Практические статьи о CRM и сайтах">
+  <meta property="og:description" content="Статьи с конкретными цифрами: как увеличить конверсию, настроить воронки продаж, ускорить загрузку.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dianomi.ru/blog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
+      <span>dianomi</span>
+    </a>
+    <nav class="header__nav" aria-label="Навигация">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">Главная</a></li>
+        <li><a href="about.html" class="header__nav-link">О компании</a></li>
+        <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+        <li><a href="editions.html" class="header__nav-link">Тарифы</a></li>
+        <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
+        <li><a href="blog.html" class="header__nav-link header__nav-link--active">Блог</a></li>
+        <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a href="contacts.html" class="btn btn-accent btn-sm">Консультация</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
+    <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">О компании</a></li>
+    <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li>
+    <li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li>
+    <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
+    <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог</a></li>
+    <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
+  </ul>
+  <div class="mobile-menu__cta">
+    <a href="contacts.html" class="btn btn-accent btn-full">Консультация</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title">Блог</h1>
+    <p class="page-hero__subtitle">Практические статьи с цифрами и конкретными решениями. Никакой воды — только то, что работает.</p>
+  </div>
+</section>
+
+<!-- Featured article -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto 48px;">
+      <div class="card animate-on-scroll" style="padding:32px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:280px;">
+          <div style="margin-bottom:12px;">
+            <span class="blog-card__tag" style="background:var(--danger);color:#fff;padding:4px 12px;border-radius:12px;font-size:0.75rem;font-weight:600;">Важно</span>
+          </div>
+          <h2 style="margin-bottom:12px;">Почему ваш сайт на 1С-Битрикс теряет до 40% посетителей</h2>
+          <p style="color:var(--text-muted);font-size:0.9375rem;margin-bottom:16px;">Среднее время загрузки корпоративного сайта на Битрикс — 4.2 секунды. Каждый лишний секунда снижает конверсию на 7%. Разбираем 5 конкретных настроек, которые ускорили загрузку в 3 раза у наших клиентов.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+            <a href="contacts.html" class="btn btn-accent btn-sm">Получить аудит скорости</a>
+            <a href="services.html" class="btn btn-outline btn-sm">Услуги по оптимизации</a>
+          </div>
+        </div>
+        <div style="flex:0 0 280px;text-align:center;background:var(--light);border-radius:12px;padding:32px 24px;">
+          <div style="font-size:3rem;font-weight:700;color:var(--danger);margin-bottom:4px;">4.2с</div>
+          <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:16px;">среднее время загрузки</div>
+          <div style="font-size:2rem;font-weight:700;color:var(--success);margin-bottom:4px;">1.3с</div>
+          <div style="font-size:0.875rem;color:var(--text-muted);">после оптимизации</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Article grid -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:8px;">Последние статьи</h2>
+    <p style="text-align:center;color:var(--text-muted);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;">Выбираем по темам: CRM, сайты, автоматизация. Каждая статья — на основе реального проекта.</p>
+    <div class="blog-grid grid grid--3">
+
+      <!-- Статья 1 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#2A5B9A,#4A8FE0);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">🔄</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">CRM</span>
+            <time>Август 2026</time>
+          </div>
+          <h3 class="blog-card__title">5 ошибок при настройке CRM Битрикс24, которые стоят денег</h3>
+          <p class="blog-card__desc">Заявки теряются, клиенты не получают ответы, менеджеры путаются в сценариях. Разбираем 5 самых частых ошибок и показываем, как их исправить за один день.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Проверить свою CRM</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Статья 2 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#27ae60,#2ecc71);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">📈</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Воронки</span>
+            <time>Июль 2026</time>
+          </div>
+          <h3 class="blog-card__title">Воронка продаж в Битрикс24: как мы увеличили конверсию с 3% до 11%</h3>
+          <p class="blog-card__desc">Оптовый поставщик стройматериалов. Проблема — 80% заявок «зависали» без обработки. За 3 недели настроили воронку, автоназначение и триггеры. Результат — рост конверсии в 3.7 раза.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Увеличить конверсию</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Статья 3 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#e67e22,#f39c12);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">⚡</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Скорость</span>
+            <time>Июль 2026</time>
+          </div>
+          <h3 class="blog-card__title">Композитный сайт: реально ли ускорить Битрикс и как настроить без сбоев</h3>
+          <p class="blog-card__desc">Технология Композит снижает время загрузки, но при неправильной настройке ломает личный кабинет и корзину. Показываем, что включить, а что оставить динамическим — на примере реального магазина.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Ускорить сайт</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Статья 4 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#8e44ad,#9b59b6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">🔗</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Интеграции</span>
+            <time>Июнь 2026</time>
+          </div>
+          <h3 class="blog-card__title">Битрикс24 + 1С: как настроить синхронизацию без дублей и потерь данных</h3>
+          <p class="blog-card__desc">Ручной перенос товаров, цен и заказов из 1С в CRM отнимает часы каждый день. Автоматизация синхронизации экономит 15 часов в неделю и исключает ошибки ввода.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Настроить интеграцию</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Статья 5 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#2c3e50,#34495e);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">🛡️</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Безопасность</span>
+            <time>Июнь 2026</time>
+          </div>
+          <h3 class="blog-card__title">Бэкап сайта на Битрикс: что делать, когда хостер «потерял» данные</h3>
+          <p class="blog-card__desc">История одного клиента: хостер провёл обновление сервера и потерял базу. Восстановление заняло 48 часов — потому что бэкапов не было. Рассказываем, как настроить автоматическое резервное копирование.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Проверить бэкапы</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Статья 6 -->
+      <article class="blog-card animate-on-scroll">
+        <div class="blog-card__image" style="background:linear-gradient(135deg,#16a085,#1abc9c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;">📊</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span class="blog-card__tag">Аналитика</span>
+            <time>Май 2026</time>
+          </div>
+          <h3 class="blog-card__title">Сквозная аналитика для сайта на Битрикс: от заявки до закрытой сделки</h3>
+          <p class="blog-card__desc">9 из 10 компаний не знают, какой канал принёс последнюю продажу. Настраиваем связку Битрикс24 + Метрика + CRM-цели и показываем, какие рекламные каналы работают, а какие сливают бюджет.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+            <a href="contacts.html" class="btn btn-outline btn-sm btn-full">Подключить аналитику</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA — lead magnet -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner animate-on-scroll">
+      <h2 class="cta-banner__title">Не хотите разбираться сами?</h2>
+      <p class="cta-banner__desc">Запишитесь на бесплатный аудит — проверим ваш сайт или CRM, найдём точки роста и скажем, что делать в первую очередь. Без обязательств.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+        <a href="contacts.html" class="btn btn-accent">Бесплатный аудит</a>
+        <a href="services.html" class="btn btn-outline">Все услуги</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
+          <span>dianomi</span>
+        </div>
+        <p class="footer__desc">Авторизованный партнёр 1С-Битрикс. Помогаем бизнесу расти с помощью CRM Битрикс24 и сайтов на 1С-Битрикс.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="editions.html">Тарифы</a></li>
+          <li><a href="cases.html">Кейсы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Контакты</h4>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📞</span>
+          <div><a href="tel:+79120767025">+7 (912) 076-70-25</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">✉️</span>
+          <div><a href="mailto:hello@dianomi.ru">hello@dianomi.ru</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📍</span>
+          <div><p style="margin:0;">г. Барнаул, пер. Прудской 69А, оф. 67</p></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">🕐</span>
+          <div><p style="margin:0;">пн-пт 09:00–17:00</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bitrix">
+      <a href="https://www.1c-bitrix.ru/products/cms/" target="_blank" rel="noopener noreferrer" class="footer__bitrix-link">
+        <svg width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" rx="4" fill="#2A5B9A"/><text x="10" y="15" font-family="Arial" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">B</text></svg>
+        <span>Работает на «1С-Битрикс: Управление сайтом»</span>
+      </a>
+    </div>
+    <div class="footer__copyright">
+      <p>&copy; <span id="currentYear"></span> dianomi. Все права защищены. ИП Шмеер В.А.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

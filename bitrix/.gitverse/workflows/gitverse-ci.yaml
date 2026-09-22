@@ -1,0 +1,21 @@
+name: Публикация статического сайта
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to GitVerse Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy static site
+        uses: gitverse/pages-deploy@v1
+        with:
+          directory: .
+          site: dianomi

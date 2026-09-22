@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разработка сайтов на 1С-Битрикс — dianomi | Корпоративные сайты и интернет-магазины</title>
+  <meta name="description" content="Разрабатываем сайты на 1С-Битрикс, которые продают. SEO-оптимизация, Композит, интеграция с 1С. От идеи до запуска за 4-8 недель.">
+  <meta property="og:title" content="Разработка сайтов на 1С-Битрикс — dianomi">
+  <meta property="og:description" content="Корпоративные сайты и интернет-магазины на 1С-Битрикс с гарантией результата. SEO, скорость, интеграции.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dianomi.ru/bitrix.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
+      <span>dianomi</span>
+    </a>
+    <nav class="header__nav" aria-label="Навигация">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">Главная</a></li>
+        <li><a href="about.html" class="header__nav-link">О компании</a></li>
+        <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+        <li><a href="editions.html" class="header__nav-link">Тарифы</a></li>
+        <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
+        <li><a href="blog.html" class="header__nav-link">Блог</a></li>
+        <li><a href="services.html" class="header__nav-link header__nav-link--active">Услуги</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a href="contacts.html" class="btn btn-accent btn-sm">Консультация</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
+    <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">О компании</a></li>
+    <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li>
+    <li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li>
+    <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
+    <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог</a></li>
+    <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
+  </ul>
+  <div class="mobile-menu__cta">
+    <a href="contacts.html" class="btn btn-accent btn-full">Консультация</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <h1 class="hero__title">Сайт на 1С-Битрикс, который приносит заявки — а не headaches</h1>
+      <p class="hero__subtitle">Разрабатываем корпоративные сайты и интернет-магазины, которые загружаются за 1.3 секунды, ранжируются в поиске и не требуют ежедневного «тушения пожаров»</p>
+      <div class="hero__actions">
+        <a href="contacts.html" class="btn btn-accent">Получить бесплатный аудит сайта</a>
+        <a href="#cases" class="btn btn-outline">Смотреть кейсы</a>
+      </div>
+      <div class="hero__stats" style="margin-top:48px;">
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">150+</div>
+          <div class="hero__stat-label">сайтов разработано</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">1.3с</div>
+          <div class="hero__stat-label">среднее время загрузки</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">98%</div>
+          <div class="hero__stat-label">клиентов рекомендуют нас</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain points -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Почему ваш текущий сайт не работает</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Если хотя бы один пункт про вас — мы знаем, как это исправить</p>
+    <div class="grid grid--3">
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">🐌</div>
+        <h3 class="card__title">Сайт загружается больше 3 секунд</h3>
+        <p class="card__text">60% посетителей уходят, если страница грузится дольше 3 секунд. На 1С-Битрикс без правильной настройки это происходит почти гарантированно.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">📉</div>
+        <h3 class="card__title">Конверсия ниже 1%</h3>
+        <p class="card__text">Сайт есть, трафик есть, а заявок почти нет. Проблема не в рекламе — проблема в том, как сайт обрабатывает посетителя.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">🔧</div>
+        <h3 class="card__title">Каждое изменение — это заказ у разработчика</h3>
+        <p class="card__text">Хотите поменять текст, цену или фото — ждёте неделю и платите. Админка Битрикс должна быть понятной, а не пугающей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution: What we do -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Что мы делаем</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Не просто «делаем сайты». Решаем конкретные бизнес-задачи.</p>
+
+    <!-- Solution 1 -->
+    <div class="grid grid--2" style="gap:32px;align-items:center;margin-bottom:48px;">
+      <div class="animate-on-scroll">
+        <div style="background:linear-gradient(135deg,#2A5B9A,#4A8FE0);border-radius:16px;padding:48px 32px;text-align:center;">
+          <div style="font-size:4rem;margin-bottom:16px;">🏢</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.8);font-weight:600;text-transform:uppercase;letter-spacing:1px;">Корпоративные сайты</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px;">Корпоративный сайт на 1С-Битрикс</h3>
+        <h4 style="color:var(--danger);margin-bottom:8px;">Проблема:</h4>
+        <p style="color:var(--text-muted);margin-bottom:16px;">Сайт компании не отражает уровень сервиса. Нет каталога, нет калькулятора, нет понятной навигации. Клиент не понимает, чем вы занимаетесь, и уходит к конкуренту.</p>
+        <h4 style="color:var(--success);margin-bottom:8px;">Решение:</h4>
+        <ul style="color:var(--text-muted);margin-bottom:16px;padding-left:20px;line-height:1.8;">
+          <li>Дизайн, который сразу объясняет, что вы предлагаете</li>
+          <li>Каталог услуг/товаров с фильтрами и поиском</li>
+          <li>Калькулятор стоимости или конфигуратор</li>
+          <li>Интеграция с CRM — все заявки попадают в систему</li>
+          <li>SEO-структура, продуманная до запуска</li>
+        </ul>
+        <h4 style="color:var(--accent);margin-bottom:8px;">Результат:</h4>
+        <p style="color:var(--text-muted);">Средний рост органического трафика — <strong style="color:var(--success);">+120% за 6 месяцев</strong>. Снижение стоимости лида — <strong style="color:var(--success);">на 35%</strong>.</p>
+        <a href="contacts.html" class="btn btn-accent" style="margin-top:16px;">Обсудить проект</a>
+      </div>
+    </div>
+
+    <!-- Solution 2 -->
+    <div class="grid grid--2" style="gap:32px;align-items:center;margin-bottom:48px;">
+      <div style="order:2;">
+        <div style="background:linear-gradient(135deg,#e67e22,#f39c12);border-radius:16px;padding:48px 32px;text-align:center;">
+          <div style="font-size:4rem;margin-bottom:16px;">🛒</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.8);font-weight:600;text-transform:uppercase;letter-spacing:1px;">Интернет-магазины</div>
+        </div>
+      </div>
+      <div style="order:1;">
+        <h3 style="margin-bottom:12px;">Интернет-магазин на 1С-Битрикс</h3>
+        <h4 style="color:var(--danger);margin-bottom:8px;">Проблема:</h4>
+        <p style="color:var(--text-muted);margin-bottom:16px;">Магазин есть, но корзина не работает, товары не синхронизированы с 1С, а скорость загрузки убивает продажи. Каждый отказ корзины — это потерянные деньги.</p>
+        <h4 style="color:var(--success);margin-bottom:8px;">Решение:</h4>
+        <ul style="color:var(--text-muted);margin-bottom:16px;padding-left:20px;line-height:1.8;">
+          <li>Полная синхронизация с 1С: товары, цены, остатки, заказы</li>
+          <li>Оптимизированная корзина с минимальным числом шагов</li>
+          <li>Композитная технология — загрузка за 1-2 секунды</li>
+          <li>Интеграция с платёжными системами и службами доставки</li>
+          <li>Отзывы, рейтинги, рекомендации — повышение среднего чека</li>
+        </ul>
+        <h4 style="color:var(--accent);margin-bottom:8px;">Результат:</h4>
+        <p style="color:var(--text-muted);">Средний рост конверсии магазина — <strong style="color:var(--success);">с 1.2% до 4.5%</strong>. Рост среднего чека — <strong style="color:var(--success);">на 22%</strong> за счёт рекомендаций.</p>
+        <a href="contacts.html" class="btn btn-accent" style="margin-top:16px;">Обсудить проект</a>
+      </div>
+    </div>
+
+    <!-- Solution 3 -->
+    <div class="grid grid--2" style="gap:32px;align-items:center;">
+      <div class="animate-on-scroll">
+        <div style="background:linear-gradient(135deg,#27ae60,#2ecc71);border-radius:16px;padding:48px 32px;text-align:center;">
+          <div style="font-size:4rem;margin-bottom:16px;">⚡</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.8);font-weight:600;text-transform:uppercase;letter-spacing:1px;">Оптимизация</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px;">Оптимизация существующего сайта</h3>
+        <h4 style="color:var(--danger);margin-bottom:8px;">Проблема:</h4>
+        <p style="color:var(--text-muted);margin-bottom:16px;">Сайт на Битрикс уже есть, но он тормозит, не индексируется или постоянно «падает» после обновлений. Вы не знаете, с чего начать.</p>
+        <h4 style="color:var(--success);margin-bottom:8px;">Решение:</h4>
+        <ul style="color:var(--text-muted);margin-bottom:16px;padding-left:20px;line-height:1.8;">
+          <li>Аудит производительности и SEO</li>
+          <li>Настройка Композита без поломки функционала</li>
+          <li>Оптимизация базы данных и кэширования</li>
+          <li>Настройка автоматических бэкапов</li>
+          <li>Обучение вашей команды работе с админкой</li>
+        </ul>
+        <h4 style="color:var(--accent);margin-bottom:8px;">Результат:</h4>
+        <p style="color:var(--text-muted);">Ускорение загрузки в <strong style="color:var(--success);">2-4 раза</strong>. Улучшение позиций в поиске на <strong style="color:var(--success);">15-30 позиций</strong>. Нулевые простои из-за бэкапов.</p>
+        <a href="contacts.html" class="btn btn-accent" style="margin-top:16px;">Заказать аудит</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Как мы работаем</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Прозрачный процесс без сюрпризов. Вы всегда знаете, на каком этапе проект.</p>
+    <div class="grid grid--4">
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div class="card__number" style="font-size:2rem;font-weight:700;color:var(--accent);margin-bottom:12px;">01</div>
+        <h3 class="card__title" style="font-size:1.125rem;">Аудит и бриф</h3>
+        <p class="card__text">Бесплатно анализируем ваш текущий сайт (если есть), конкурентов и целевую аудиторию. Составляем ТЗ с конкретными KPI.</p>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div class="card__number" style="font-size:2rem;font-weight:700;color:var(--accent);margin-bottom:12px;">02</div>
+        <h3 class="card__title" style="font-size:1.125rem;">Дизайн и прототип</h3>
+        <p class="card__text">Создаём интерактивный прототип и дизайн-макеты. Вы видите будущий сайт до написания первой строки кода.</p>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div class="card__number" style="font-size:2rem;font-weight:700;color:var(--accent);margin-bottom:12px;">03</div>
+        <h3 class="card__title" style="font-size:1.125rem;">Разработка и интеграции</h3>
+        <p class="card__text">Верстка, программирование, подключение CRM, 1С, платёжек. Еженедельные демо — вы видите прогресс.</p>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div class="card__number" style="font-size:2rem;font-weight:700;color:var(--accent);margin-bottom:12px;">04</div>
+        <h3 class="card__title" style="font-size:1.125rem;">Запуск и поддержка</h3>
+        <p class="card__text">Тестирование, запуск, обучение вашей команды. Поддержка 3 месяца бесплатно — любые правки и исправления.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cases -->
+<section class="section section--alt" id="cases">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Кейсы по разработке сайтов</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Реальные проекты с конкретными цифрами. Без воды.</p>
+    <div class="grid grid--3">
+      <!-- Case 1 -->
+      <div class="case-card animate-on-scroll">
+        <div class="case-card__image" style="background:linear-gradient(135deg,#2A5B9A,#4A8FE0);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;min-height:160px;">🏗️</div>
+        <div class="case-card__body">
+          <h3 class="case-card__title">Оптовый поставщик стройматериалов</h3>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Было:</strong> Устаревший сайт, 0 заявок из поиска, загрузка 6.2 сек</p>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Сделали:</strong> Корпоративный сайт + прайс-калькулятор + интеграция с 1С</p>
+          <p style="color:var(--success);font-weight:600;font-size:0.875rem;">➜ +240% трафика за 4 месяца, 15-20 заявок в неделю из поиска</p>
+          <a href="cases.html" class="btn btn-outline btn-sm btn-full" style="margin-top:16px;">Все детали кейса</a>
+        </div>
+      </div>
+      <!-- Case 2 -->
+      <div class="case-card animate-on-scroll">
+        <div class="case-card__image" style="background:linear-gradient(135deg,#e67e22,#f39c12);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;min-height:160px;">🛍️</div>
+        <div class="case-card__body">
+          <h3 class="case-card__title">Интернет-магазин электроники</h3>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Было:</strong> Конверсия 0.8%, корзина «отваливалась», нет синхронизации с 1С</p>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Сделали:</strong> Редизайн + Композит + полная синхронизация с 1С</p>
+          <p style="color:var(--success);font-weight:600;font-size:0.875rem;">➜ Конверсия 3.9%, загрузка 1.1 сек, 99.7% товаров синхронизировано</p>
+          <a href="cases.html" class="btn btn-outline btn-sm btn-full" style="margin-top:16px;">Все детали кейса</a>
+        </div>
+      </div>
+      <!-- Case 3 -->
+      <div class="case-card animate-on-scroll">
+        <div class="case-card__image" style="background:linear-gradient(135deg,#27ae60,#2ecc71);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;min-height:160px;">🏭</div>
+        <div class="case-card__body">
+          <h3 class="case-card__title">Производитель мебели</h3>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Было:</strong> Нет сайта вообще, все заявки по телефону, нет каталога</p>
+          <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:12px;"><strong>Сделали:</strong> Сайт-каталог с конфигуратором + CRM Битрикс24</p>
+          <p style="color:var(--success);font-weight:600;font-size:0.875rem;">➜ 40+ заявок в неделю из поиска, средний чек вырос на 30%</p>
+          <a href="cases.html" class="btn btn-outline btn-sm btn-full" style="margin-top:16px;">Все детали кейса</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Editions / Pricing -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Стоимость разработки</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Фиксированная цена в договоре. Никаких «доплат за сложность».</p>
+    <div class="grid grid--3">
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <h3 class="card__title" style="font-size:1.25rem;">Лендинг</h3>
+        <div style="font-size:2rem;font-weight:700;color:var(--accent);margin:16px 0;">от 120 000 ₽</div>
+        <ul style="text-align:left;color:var(--text-muted);line-height:2;padding-left:20px;margin-bottom:24px;">
+          <li>Одностраничный сайт</li>
+          <li>Адаптивный дизайн</li>
+          <li>Форма заявки</li>
+          <li>SEO-базовая настройка</li>
+          <li>Срок: 2-3 недели</li>
+        </ul>
+        <a href="contacts.html" class="btn btn-outline btn-full">Обсудить</a>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;border:2px solid var(--accent);position:relative;">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 16px;border-radius:12px;font-size:0.8rem;font-weight:600;">Популярный</div>
+        <h3 class="card__title" style="font-size:1.25rem;">Корпоративный сайт</h3>
+        <div style="font-size:2rem;font-weight:700;color:var(--accent);margin:16px 0;">от 350 000 ₽</div>
+        <ul style="text-align:left;color:var(--text-muted);line-height:2;padding-left:20px;margin-bottom:24px;">
+          <li>До 20 страниц</li>
+          <li>Каталог услуг/товаров</li>
+          <li>Интеграция с CRM</li>
+          <li>SEO-оптимизация</li>
+          <li>Админка для вашей команды</li>
+          <li>Срок: 4-6 недель</li>
+        </ul>
+        <a href="contacts.html" class="btn btn-accent btn-full">Обсудить</a>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <h3 class="card__title" style="font-size:1.25rem;">Интернет-магазин</h3>
+        <div style="font-size:2rem;font-weight:700;color:var(--accent);margin:16px 0;">от 500 000 ₽</div>
+        <ul style="text-align:left;color:var(--text-muted);line-height:2;padding-left:20px;margin-bottom:24px;">
+          <li>Каталог + корзина + оплата</li>
+          <li>Интеграция с 1С</li>
+          <li>Композитная оптимизация</li>
+          <li>Личный кабинет покупателя</li>
+          <li>CRM + аналитика</li>
+          <li>Срок: 6-10 недель</li>
+        </ul>
+        <a href="contacts.html" class="btn btn-outline btn-full">Обсудить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container" style="max-width:800px;">
+    <h2 class="section__title" style="text-align:center;">Частые вопросы</h2>
+    <div style="margin-top:40px;">
+      <div class="faq-item animate-on-scroll" style="margin-bottom:16px;">
+        <button class="faq-question">
+          <span>Почему именно 1С-Битрикс? Почему не Tilda или WordPress?</span>
+          <span class="faq-question__icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer__text">
+            <p>1С-Битрикс — единственная CMS в РФ, сер��ифицированная для работы с государственными системами и имеющая встроенную SEO-оптимизацию. Для бизнес-сайтов это значит: безопасность, масштабируемость и полная интеграция с 1С. Tilda хороша для простых лендингов, но не подходит для каталогов с тысячами товаров и сложной логикой.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll" style="margin-bottom:16px;">
+        <button class="faq-question">
+          <span>Сколько точно займёт разработка?</span>
+          <span class="faq-question__icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer__text">
+            <p>Лендинг — 2-3 недели. Корпоративный сайт — 4-6 недель. Интернет-магазин — 6-10 недель. Точные сроки фиксируем в договоре после аудита. За 3 года ни один проект не сдвинулся более чем на 5 дней от плановой даты.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll" style="margin-bottom:16px;">
+        <button class="faq-question">
+          <span>Что будет с моим сайтом после запуска?</span>
+          <span class="faq-question__icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer__text">
+            <p>3 месяца бесплатной поддержки: любые правки, исправления, мелкие доработки. После — на абонентском обслуживании от 15 000 ₽/мес (включает хостинг, бэкапы, мониторинг и правки). Или вы можете вести сайт сами — мы обучим вашу команду.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll" style="margin-bottom:16px;">
+        <button class="faq-question">
+          <span>Можно ли доработать существующий сайт на Битрикс?</span>
+          <span class="faq-question__icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer__text">
+            <p>Да, но сначала мы делаем аудит. Если текущий код качественный — доработаем. Если сайт построен на «костылях» прошлого разработчика — предложим редизайн с сохранением SEO-позиций. Честно скажем, что выгоднее в вашем случае.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item animate-on-scroll" style="margin-bottom:16px;">
+        <button class="faq-question">
+          <span>Как происходит оплата?</span>
+          <span class="faq-question__icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer__text">
+            <p>30% предоплата, 40% после утверждения дизайн-макетов, 30% после запуска. Работаем по договору с юридическими и физическими лицами. Для крупных проектов — рассрочка на 3-6 месяцев.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner animate-on-scroll">
+      <h2 class="cta-banner__title">Нужен сайт, который работает</h2>
+      <p class="cta-banner__desc">Запишитесь на бесплатный аудит — покажем, что мешает вашему сайту приносить заявки, и скажем, как это исправить. Без обязательств и навязывания.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+        <a href="contacts.html" class="btn btn-accent">Бесплатный аудит сайта</a>
+        <a href="tel:+79120767025" class="btn btn-outline">+7 (912) 076-70-25</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
+          <span>dianomi</span>
+        </div>
+        <p class="footer__desc">Авторизованный партнёр 1С-Битрикс. Помогаем бизнесу расти с помощью CRM Битрикс24 и сайтов на 1С-Битрикс.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="editions.html">Тарифы</a></li>
+          <li><a href="cases.html">Кейсы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Контакты</h4>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📞</span>
+          <div><a href="tel:+79120767025">+7 (912) 076-70-25</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">✉️</span>
+          <div><a href="mailto:hello@dianomi.ru">hello@dianomi.ru</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📍</span>
+          <div><p style="margin:0;">г. Барнаул, пер. Прудской 69А, оф. 67</p></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">🕐</span>
+          <div><p style="margin:0;">пн-пт 09:00–17:00</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bitrix">
+      <a href="https://www.1c-bitrix.ru/products/cms/" target="_blank" rel="noopener noreferrer" class="footer__bitrix-link">
+        <svg width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" rx="4" fill="#2A5B9A"/><text x="10" y="15" font-family="Arial" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">B</text></svg>
+        <span>Работает на «1С-Битрикс: Управление сайтом»</span>
+      </a>
+    </div>
+    <div class="footer__copyright">
+      <p>&copy; <span id="currentYear"></span> dianomi. Все права защищены. ИП Шмеер В.А.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
