@@ -56,6 +56,7 @@
           <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/license.php' -Headers @{'User-Agent'='Mozilla/5.0'} -OutFile 'C:\\dev\\bitrix_license.html'&quot;" />
         </Execute>
         <Execute>
+<<<<<<< Updated upstream
           <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/license.php' -Headers @{'User-Agent'='Mozilla/5.0'} -OutFile 'C:\\bitrix_license.html'&quot;" />
         </Execute>
         <Execute>
@@ -173,6 +174,13 @@
         <Read>
           <option name="pattern" value="$PROJECT_DIR$/../../../../../bitrix_license.html" />
         </Read>
+=======
+          <option name="pattern" value="git diff *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git log *" />
+        </Execute>
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
