@@ -31,7 +31,7 @@
 
   if (burger) {
     burger.addEventListener('click', function () {
-      mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
+      mobileMenu.classList.contains('mobile-menu--open') ? closeMenu() : openMenu();
     });
   }
 
@@ -43,6 +43,26 @@
   var menuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
   menuLinks.forEach(function (link) {
     link.addEventListener('click', closeMenu);
+  });
+
+  // Mobile dropdown toggle
+  var dropdownBtns = document.querySelectorAll('.mobile-menu__dropdown-btn');
+  dropdownBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var dropdownList = this.nextElementSibling;
+      var icon = this.querySelector('.mobile-menu__dropdown-icon');
+      if (!dropdownList) return;
+      var isOpen = dropdownList.classList.contains('mobile-menu__dropdown-list--open');
+      if (isOpen) {
+        dropdownList.classList.remove('mobile-menu__dropdown-list--open');
+        this.setAttribute('aria-expanded', 'false');
+        if (icon) icon.textContent = '▾';
+      } else {
+        dropdownList.classList.add('mobile-menu__dropdown-list--open');
+        this.setAttribute('aria-expanded', 'true');
+        if (icon) icon.textContent = '▴';
+      }
+    });
   });
 
   // Close menu on Escape
@@ -400,6 +420,52 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ───────── Swiper Cases Slider ───────── */
+  var casesSwiper = document.querySelector('.cases-swiper');
+  if (casesSwiper && typeof Swiper !== 'undefined') {
+    new Swiper(casesSwiper, {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 2
+        },
+        960: {
+          slidesPerView: 3
+        }
+      }
+    });
+  }
+
+  /* ───────── Case Filters ───────── */
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var caseCards = document.querySelectorAll('.case-card[data-category]');
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = this.getAttribute('data-filter');
+      // Update active button
+      filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
+      this.classList.add('filter-btn--active');
+      // Filter cards
+      caseCards.forEach(function (card) {
+        var category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 
   /* ───────── Load shared header/footer ───────── */
   // Load header partial

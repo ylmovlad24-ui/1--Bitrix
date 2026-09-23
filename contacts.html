@@ -59,6 +59,17 @@
   </div>
 </nav>
 
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <ul class="breadcrumb__list">
+      <li><a href="index.html">Главная</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><strong>Контакты</strong></li>
+    </ul>
+  </div>
+</div>
+
 <!-- Page Hero — focused on action, not just "contacts" -->
 <section class="page-hero">
   <div class="container">
@@ -155,11 +166,9 @@
           </div>
         </div>
 
-        <!-- Detailed form — only for those who want it -->
-        <div class="animate-on-scroll" style="margin-bottom:48px;">
-          <h2 style="text-align:center;margin-bottom:8px;">Подробная заявка</h2>
-          <p style="text-align:center;color:var(--text-muted);font-size:0.9375rem;margin-bottom:24px;">Хотите описать задачу подробно? Заполните форму — подготовим индивидуальное предложение с оценкой сроков и стоимости.</p>
-          <form class="contact-form" id="contactForm" novalidate>
+        <!-- Detailed form — collapsed by default -->
+        <details class="animate-on-scroll" style="margin-bottom:48px;background:var(--white);border-radius:12px;border:1px solid var(--border);padding:24px;">
+          <summary style="cursor:pointer;font-weight:600;font-size:1.125rem;margin-bottom:16px;">Подробная заявка — описать задачу</summary>
             <div class="grid grid--2">
               <div class="form-group">
                 <label for="cf-name">Имя <span class="required">*</span></label>
@@ -207,7 +216,7 @@
             <button type="submit" class="btn btn-accent btn-full">Отправить заявку</button>
           </form>
           <p style="text-align:center;color:var(--text-muted);font-size:0.8125rem;margin-top:12px;">Обычно отвечаем в течение 2 часов в рабочее время</p>
-        </div>
+        </details>
 
         <!-- Success Message (hidden by default) -->
         <div class="form-success" id="formSuccess">

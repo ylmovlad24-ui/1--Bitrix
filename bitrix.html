@@ -29,8 +29,7 @@
         <li><a href="services.html" class="header__nav-link">Услуги</a></li>
         <li><a href="editions.html" class="header__nav-link">Тарифы</a></li>
         <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
-        <li><a href="blog.html" class="header__nav-link">Блог</a></li>
-        <li><a href="services.html" class="header__nav-link header__nav-link--active">Услуги</a></li>
+        <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
       </ul>
     </nav>
     <div class="header__cta">
@@ -51,13 +50,25 @@
     <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li>
     <li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li>
     <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
-    <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог</a></li>
     <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
   </ul>
   <div class="mobile-menu__cta">
     <a href="contacts.html" class="btn btn-accent btn-full">Консультация</a>
   </div>
 </nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <ul class="breadcrumb__list">
+      <li><a href="index.html">Главная</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><a href="services.html">Услуги</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><strong>Сайты на 1С-Битрикс</strong></li>
+    </ul>
+  </div>
+</div>
 
 <!-- Hero -->
 <section class="hero">
@@ -389,14 +400,41 @@
   <div class="container">
     <div class="cta-banner animate-on-scroll">
       <h2 class="cta-banner__title">Нужен сайт, который работает</h2>
-      <p class="cta-banner__desc">Запишитесь на бесплатный аудит — покажем, что мешает вашему сайту приносить заявки, и скажем, как это исправить. Без обязательств и навязывания.</p>
+      <p class="cta-banner__desc">Запишитесь на бесплатный аудит — покажем, что мешает вашему сайту приносить заявки, и скажем, как это исправить. Без обязательств.</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
         <a href="contacts.html" class="btn btn-accent">Бесплатный аудит сайта</a>
         <a href="tel:+79120767025" class="btn btn-outline">+7 (912) 076-70-25</a>
       </div>
+      <p style="text-align:center;margin-top:20px;font-size:0.9375rem;color:rgba(255,255,255,0.8);">
+        <a href="cases.html" style="color:#FFF;text-decoration:underline;">Смотреть все кейсы по сайтам →</a>
+      </p>
     </div>
   </div>
 </section>
+
+<!-- Sticky CTA (mobile only) -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="tel:+79120767025" class="btn btn-primary">📞 Позвонить</a>
+  <a href="contacts.html" class="btn btn-accent">Заявка</a>
+</div>
+
+<!-- Popup Modal -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+    <button class="popup__close" id="popupClose">&times;</button>
+    <div style="font-size:2rem;margin-bottom:12px;">🌐</div>
+    <h3 class="popup__title">Бесплатный аудит сайта</h3>
+    <p class="popup__desc">Покажем, что мешает вашему сайту приносить заявки</p>
+    <form id="popupForm" novalidate>
+      <div class="form-group"><input type="text" class="form-control" placeholder="Ваше имя" required></div>
+      <div class="form-group"><input type="tel" class="form-control" placeholder="+7 (___) ___-__-__" required></div>
+      <div class="consent-group"><label><input type="checkbox" required><span>Даю согласие на обработку <a href="privacy.html">персональных данных</a></span></label></div>
+      <button type="submit" class="btn btn-accent btn-full">Получить аудит</button>
+      <p class="quick-form__guarantee">Ответим в течение 2 часов</p>
+    </form>
+    <button class="popup__dismiss" id="popupDismiss">Пока нет</button>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">

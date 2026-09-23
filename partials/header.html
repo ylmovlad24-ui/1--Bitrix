@@ -12,10 +12,42 @@
       <ul class="header__nav-list">
         <li><a href="index.html" class="header__nav-link">Главная</a></li>
         <li><a href="about.html" class="header__nav-link">О компании</a></li>
-        <li><a href="services.html" class="header__nav-link">Услуги</a></li>
-        <li><a href="editions.html" class="header__nav-link">Тарифы</a></li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="header__nav-link">Услуги ▾</a>
+          <div class="mega-menu">
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">CRM Битрикс24</h4>
+              <ul class="mega-menu__list">
+                <li><a href="bitrix24.html">Внедрение CRM</a></li>
+                <li><a href="bitrix24.html">Воронки продаж</a></li>
+                <li><a href="bitrix24.html">Автоматизация</a></li>
+                <li><a href="bitrix24.html">Интеграции</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Сайты на 1С-Битрикс</h4>
+              <ul class="mega-menu__list">
+                <li><a href="bitrix.html">Корпоративные сайты</a></li>
+                <li><a href="bitrix.html">Интернет-магазины</a></li>
+                <li><a href="bitrix.html">Оптимизация сайтов</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Оптимизация процессов</h4>
+              <ul class="mega-menu__list">
+                <li><a href="services.html">BI-аналитика</a></li>
+                <li><a href="services.html">Проектное управление</a></li>
+                <li><a href="services.html">Оргструктура и RACI</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Комплексная трансформация</h4>
+              <p class="mega-menu__desc">Полный цикл: аудит → CRM → сайт → аналитика → поддержка</p>
+              <a href="services.html" class="btn btn-outline btn-sm btn-full">Все услуги</a>
+            </div>
+          </div>
+        </li>
         <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
-        <li><a href="blog.html" class="header__nav-link">Блог</a></li>
         <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
       </ul>
     </nav>
@@ -42,10 +74,19 @@
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
     <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">О компании</a></li>
-    <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li>
-    <li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li>
+    <li class="mobile-menu__item mobile-menu__dropdown">
+      <button class="mobile-menu__dropdown-btn" aria-expanded="false">
+        <span>Услуги</span>
+        <span class="mobile-menu__dropdown-icon">▾</span>
+      </button>
+      <ul class="mobile-menu__dropdown-list" style="display:none;">
+        <li><a href="bitrix24.html">CRM Битрикс24</a></li>
+        <li><a href="bitrix.html">Сайты на 1С-Битрикс</a></li>
+        <li><a href="services.html">Оптимизация процессов</a></li>
+        <li><a href="services.html">Комплексная трансформация</a></li>
+      </ul>
+    </li>
     <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
-    <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог</a></li>
     <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
   </ul>
   <div class="mobile-menu__cta">

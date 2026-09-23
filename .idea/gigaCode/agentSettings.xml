@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GigaCodeAgentSettings">
+    <option name="autoApproveEdits" value="true" />
+    <option name="autoApprovedCommands">
+      <list>
+        <Execute>
+          <option name="pattern" value="curl -s -L https://amiveo.com/ -H &quot;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;$response = Invoke-WebRequest -Uri 'https://amiveo.com/' -UserAgent 'Mozilla/5.0'; $response.Content | Out-File -FilePath 'C:\temp\amiveo.html' -Encoding UTF8; Write-Host 'Done: '$response.Content.Length&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Invoke-WebRequest -Uri 'https://amiveo.com/' -OutFile 'C:\\temp\\amiveo.html' -UserAgent 'Mozilla/5.0'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L -A &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&quot; &quot;https://amiveo.com/&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;$response = Invoke-WebRequest -Uri 'https://amiveo.com/' -UserAgent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'; $response.Content | Out-File -FilePath 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html' -Encoding UTF8; Write-Host 'Fetched successfully. Length:' $response.Content.Length&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Invoke-WebRequest -Uri 'https://amiveo.com/' -OutFile 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html' -UserAgent 'Mozilla/5.0'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;(Get-Item 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html').Length&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;(Select-String -Path 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html' -Pattern '&lt;section|&lt;header|&lt;footer|&lt;nav|&lt;main|&lt;div class=' -AllMatches).Matches.Count&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html' -Pattern '&lt;section[^&gt;]*&gt;' -AllMatches | ForEach-Object { $_.Matches } | ForEach-Object { $_.Value }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/amiveo_analysis.html' -Pattern 'class=\&quot;[^\&quot;]*hero[^\&quot;]*\&quot;|class=\&quot;[^\&quot;]*banner[^\&quot;]*\&quot;|class=\&quot;[^\&quot;]*title[^\&quot;]*\&quot;' -AllMatches | ForEach-Object { $_.Line.Trim() } | Select-Object -First 30&quot;" />
+        </Execute>
+      </list>
+    </option>
+    <option name="autoApprovedReads">
+      <list>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../../temp/amiveo.html" />
+        </Read>
+      </list>
+    </option>
+  </component>
+</project>
