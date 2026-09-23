@@ -8,14 +8,10 @@
 (function () {
   'use strict';
 
-  /* ───────── DOM references ───────── */
-  var burger = document.getElementById('burger');
-  var mobileMenu = document.getElementById('mobileMenu');
-  var mobileOverlay = document.getElementById('mobileOverlay');
-  var header = document.getElementById('header');
-
   /* ───────── Mobile menu toggle ───────── */
   function openMenu() {
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileOverlay = document.getElementById('mobileOverlay');
     if (!mobileMenu) return;
     mobileMenu.classList.add('mobile-menu--open');
     if (mobileOverlay) mobileOverlay.classList.add('mobile-overlay--visible');
@@ -23,55 +19,61 @@
   }
 
   function closeMenu() {
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileOverlay = document.getElementById('mobileOverlay');
     if (!mobileMenu) return;
     mobileMenu.classList.remove('mobile-menu--open');
     if (mobileOverlay) mobileOverlay.classList.remove('mobile-overlay--visible');
     document.body.style.overflow = '';
   }
 
-  if (burger) {
-    burger.addEventListener('click', function () {
-      mobileMenu.classList.contains('mobile-menu--open') ? closeMenu() : openMenu();
-    });
+  function initMobileMenu() {
+    var burger = document.getElementById('burger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileOverlay = document.getElementById('mobileOverlay');
+
+    if (burger) {
+      burger.addEventListener('click', function () {
+        mobileMenu.classList.contains('mobile-menu--open') ? closeMenu() : openMenu();
+      });
+    }
+
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener('click', closeMenu);
+    }
+
+    if (mobileMenu) {
+      var menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    }
   }
 
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', closeMenu);
-  }
-
-  // Close menu on link click
-  var menuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
-  menuLinks.forEach(function (link) {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // Mobile dropdown toggle
-  var dropdownBtns = document.querySelectorAll('.mobile-menu__dropdown-btn');
-  dropdownBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var dropdownList = this.nextElementSibling;
-      var icon = this.querySelector('.mobile-menu__dropdown-icon');
-      if (!dropdownList) return;
-      var isOpen = dropdownList.classList.contains('mobile-menu__dropdown-list--open');
-      if (isOpen) {
-        dropdownList.classList.remove('mobile-menu__dropdown-list--open');
-        this.setAttribute('aria-expanded', 'false');
-        if (icon) icon.textContent = '▾';
-      } else {
-        dropdownList.classList.add('mobile-menu__dropdown-list--open');
-        this.setAttribute('aria-expanded', 'true');
-        if (icon) icon.textContent = '▴';
-      }
+  function initDropdown() {
+    var dropdownBtns = document.querySelectorAll('.mobile-menu__dropdown-btn');
+    dropdownBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var dropdownList = this.nextElementSibling;
+        var icon = this.querySelector('.mobile-menu__dropdown-icon');
+        if (!dropdownList) return;
+        var isOpen = dropdownList.classList.contains('mobile-menu__dropdown-list--open');
+        if (isOpen) {
+          dropdownList.classList.remove('mobile-menu__dropdown-list--open');
+          this.setAttribute('aria-expanded', 'false');
+          if (icon) icon.textContent = '▾';
+        } else {
+          dropdownList.classList.add('mobile-menu__dropdown-list--open');
+          this.setAttribute('aria-expanded', 'true');
+          if (icon) icon.textContent = '▴';
+        }
+      });
     });
-  });
-
-  // Close menu on Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
+  }
 
   /* ───────── Header shrink on scroll ───────── */
   function onScrollHeader() {
+    var header = document.getElementById('header');
     if (!header) return;
     if (window.scrollY > 20) {
       header.classList.add('header--scrolled');
@@ -102,7 +104,8 @@
       var target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        var offset = header ? header.offsetHeight + 16 : 24;
+        var headerEl = document.getElementById('header');
+        var offset = headerEl ? headerEl.offsetHeight + 16 : 24;
         var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
       }
@@ -117,7 +120,6 @@
       var isValid = true;
       var fields = contactForm.querySelectorAll('[required]');
 
-      // Reset styles
       fields.forEach(function (field) {
         field.classList.remove('form-control--error');
       });
@@ -127,7 +129,6 @@
           field.classList.add('form-control--error');
           isValid = false;
         }
-        // Email validation
         if (field.type === 'email' && field.value.trim()) {
           var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRe.test(field.value.trim())) {
@@ -159,7 +160,7 @@
   var popupClose = document.getElementById('popupClose');
   var popupDismiss = document.getElementById('popupDismiss');
   var popupForm = document.getElementById('popupForm');
-  var POPUP_DELAY = 45000; // 45 seconds
+  var POPUP_DELAY = 45000;
   var POPUP_STORAGE_KEY = 'dianomi_popup_shown';
 
   function showPopup() {
@@ -172,7 +173,6 @@
     if (!popupOverlay) return;
     popupOverlay.classList.remove('popup-overlay--visible');
     document.body.style.overflow = '';
-    // Remember that popup was shown in this session
     try {
       sessionStorage.setItem(POPUP_STORAGE_KEY, '1');
     } catch (e) {}
@@ -192,7 +192,6 @@
     });
   }
 
-  // Show popup after delay (once per session)
   if (popupOverlay) {
     try {
       if (!sessionStorage.getItem(POPUP_STORAGE_KEY)) {
@@ -201,7 +200,6 @@
     } catch (e) {}
   }
 
-  // Popup form submission
   if (popupForm) {
     popupForm.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -224,41 +222,6 @@
     });
   }
 
-  /* ───────── Loss Calculator ───────── */
-  var lossManagers = document.getElementById('lossManagers');
-  var lossCheck = document.getElementById('lossCheck');
-  var lossManagersVal = document.getElementById('lossManagersVal');
-  var lossCheckVal = document.getElementById('lossCheckVal');
-  var lossResult = document.getElementById('lossResult');
-
-  if (lossManagers && lossCheck && lossResult) {
-    function formatNumber(n) {
-      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-    }
-
-    function calculateLoss() {
-      var managers = parseInt(lossManagers.value, 10) || 1;
-      var check = parseInt(lossCheck.value, 10) || 50000;
-
-      if (lossManagersVal) lossManagersVal.textContent = managers;
-      if (lossCheckVal) lossCheckVal.textContent = formatNumber(check) + ' ₽';
-
-      // Formula: managers * 0.1 (10% lost leads) * check * 22 (working days)
-      var monthlyLoss = Math.round(managers * 0.1 * check * 22);
-      lossResult.textContent = '~' + formatNumber(monthlyLoss) + ' ₽/мес';
-
-      // Update the paragraph text
-      var p = lossResult.parentElement.querySelector('p');
-      if (p) {
-        p.innerHTML = 'Вы теряете около <strong>' + formatNumber(monthlyLoss) + ' ₽ каждый месяц</strong> из-за ручных процессов и потерянных лидов';
-      }
-    }
-
-    lossManagers.addEventListener('input', calculateLoss);
-    lossCheck.addEventListener('input', calculateLoss);
-    calculateLoss(); // Initial calculation
-  }
-
   /* ───────── FAQ Accordion ───────── */
   var faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(function (btn) {
@@ -269,7 +232,6 @@
       var icon = this.querySelector('.faq-question__icon');
       var isOpen = item.classList.contains('faq-item--open');
 
-      // Close all other items
       document.querySelectorAll('.faq-item.faq-item--open').forEach(function (openItem) {
         if (openItem !== item) {
           openItem.classList.remove('faq-item--open');
@@ -278,7 +240,6 @@
         }
       });
 
-      // Toggle current item
       if (isOpen) {
         item.classList.remove('faq-item--open');
         answer.style.maxHeight = null;
@@ -301,7 +262,6 @@
       if (value.length === 0) {
         formatted = '';
       } else {
-        // Ensure starts with 7
         if (value[0] === '8') {
           value = '7' + value.substring(1);
         }
@@ -330,7 +290,6 @@
       e.target.value = formatted;
     });
 
-    // Clear on focus if placeholder
     input.addEventListener('focus', function () {
       if (!this.value) {
         this.value = '';
@@ -356,7 +315,6 @@
       observer.observe(el);
     });
   } else {
-    // Fallback: show everything
     animatedElements.forEach(function (el) {
       el.classList.add('animate-on-scroll--visible');
     });
@@ -381,7 +339,6 @@
       counterObserver.observe(counter);
     });
   } else {
-    // Fallback: set final values immediately
     counters.forEach(function (counter) {
       var target = parseInt(counter.getAttribute('data-target') || counter.getAttribute('data-count'), 10) || 0;
       var suffix = counter.getAttribute('data-suffix') || '';
@@ -392,7 +349,7 @@
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-target') || el.getAttribute('data-count'), 10) || 0;
     var suffix = el.getAttribute('data-suffix') || '';
-    var duration = 2000; // ms
+    var duration = 2000;
     var startTime = null;
 
     function easeOutQuart(t) {
@@ -452,10 +409,8 @@
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var filter = this.getAttribute('data-filter');
-      // Update active button
       filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
       this.classList.add('filter-btn--active');
-      // Filter cards
       caseCards.forEach(function (card) {
         var category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
@@ -468,13 +423,19 @@
   });
 
   /* ───────── Load shared header/footer ───────── */
-  // Load header partial
   fetch('partials/header.html')
     .then(function(r) { return r.text(); })
     .then(function(html) {
       document.querySelector('head').insertAdjacentHTML('beforebegin', html);
+      // Инициализируем мобильное меню ПОСЛЕ загрузки header
+      initMobileMenu();
+      initDropdown();
     })
-    .catch(function() { /* Fallback: header already in HTML */ });
+    .catch(function() {
+      // Если header уже встроен в HTML — инициализируем сразу
+      initMobileMenu();
+      initDropdown();
+    });
 
   // Load footer partial
   fetch('partials/footer.html')
@@ -485,11 +446,6 @@
     .catch(function() { /* Fallback: footer already in HTML */ });
 
   /* ───────── Composite Site SDK placeholder ───────── */
-  // When migrating to 1C-Bitrix CMS, replace this stub with the actual
-  // Bitrix composite init. Example:
-  //   if (typeof BX !== 'undefined' && BX.bitrix_composite_init) {
-  //     BX.bitrix_composite_init();
-  //   }
   window.__dianomi_composite_stub = true;
 
 })();
