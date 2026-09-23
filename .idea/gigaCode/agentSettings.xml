@@ -133,6 +133,36 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\license.html' | Select-String -Pattern 'пользовател|user|интернет-магазин|eshop' | Select-Object -First 15&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$css = Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/css/style.css' -Raw; $css = $css -replace '/\*.*?\*/' , '' -replace '\s+', ' ' -replace '\s*([{}:;,])\s*', '$1' -replace ';}', '}'; Set-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/css/style.min.css' $css -Encoding UTF8&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$css = Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/css/style.css' -Raw; $css = $css -replace '/\*.*?\*/' , '' -replace '\n', '' -replace '\r', '' -replace '  ', ' ' -replace '\t', '' -replace '\s*([{}:;,])\s*', '$1' -replace ';}', '}'; Set-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/css/style.min.css' $css -Encoding UTF8&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import re; css=open('css/style.css',encoding='utf-8').read(); css=re.sub(r'/\*.*?\*/','',css,flags=re.DOTALL); css=re.sub(r'\s+',' ',css); css=re.sub(r'\s*([{}:;,])\s*','\\1',css); css=re.sub(r';}','}',css); open('css/style.min.css','w',encoding='utf-8').write(css)&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import re; js=open('js/main.js',encoding='utf-8').read(); js=re.sub(r'/\*.*?\*/','',js,flags=re.DOTALL); js=re.sub(r'//.*$','',js,flags=re.MULTILINE); js=re.sub(r'\s+',' ',js); js=re.sub(r'\s*([{}:;,()\[\]=+\-*/&lt;&gt;!&amp;|~^%])\s*','\\1',js); js=re.sub(r';}','}',js); open('js/main.min.js','w',encoding='utf-8').write(js)&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem '*.html' | ForEach-Object { (Get-Content $_.FullName -Raw) -replace 'href=\&quot;css/style\.css\&quot;', 'href=\&quot;css/style.min.css\&quot;' -replace 'src=\&quot;js/main\.js\&quot;', 'src=\&quot;js/main.min.js\&quot;' | Set-Content $_.FullName -Encoding UTF8 }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import glob, re; [open(f,'w',encoding='utf-8').write(re.sub(r'href=\&quot;css/style\.css\&quot;','href=\&quot;css/style.min.css\&quot;',re.sub(r'src=\&quot;js/main\.js\&quot;','src=\&quot;js/main.min.js\&quot;',open(f,encoding='utf-8').read()))) for f in glob.glob('*.html')]&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import re; f=open('css/style.css',encoding='utf-8').read(); f=re.sub(r'/\*.*?\*/','',f,flags=re.DOTALL); f=re.sub(r'\s+',' ',f); f=re.sub(r'\s*([{}:;,])\s*','\\1',f); f=re.sub(r';}','}',f); open('css/style.min.css','w',encoding='utf-8').write(f); print('CSS minified:', len(f), 'bytes')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="ls *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem css, js" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$css = Get-Content 'css/style.css' -Raw; $css = $css -replace '/\*.*?\*/','' -replace '\r?\n','' -replace '\t','' -replace '  +',' '; $css = $css -replace '\s*([{}:;,])\s*','$1' -replace ';}','}'; Set-Content 'css/style.min.css' $css -Encoding UTF8; Write-Host 'Done: '$css.Length&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">

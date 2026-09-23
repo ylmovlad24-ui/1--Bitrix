@@ -5,16 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О компании — dianomi | Авторизованный партнёр 1С-Битрикс</title>
   <meta name="description" content="dianomi — авторизованный партнёр 1С-Битрикс. 11 инженеров: 5 разработчиков, 4 CRM-интегратора, 3 DevOps. 80+ проектов за 7 лет. Внедряем Битрикс24 и сайты на 1С-Битрикс под ключ.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta property="og:title" content="О компании — dianomi">
   <meta property="og:description" content="11 инженеров. 80+ проектов. 80% клиентов — по рекомендации. Авторизованный партнёр 1С-Битрикс с 2019 года.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dianomi.ru/about.html">
+  <meta name="keywords" content="dianomi, о компании, партнёр 1С-Битрикс, команда, инженеры, авторизованный партнёр">
+  <meta property="og:image" content="https://dianomi.ru/img/og-about.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="О компании — dianomi">
+  <meta name="twitter:description" content="11 инженеров. 80+ проектов. 80% клиентов — по рекомендации. Авторизованный партнёр 1С-Битрикс с 2019 года.">
+  <meta name="twitter:image" content="https://dianomi.ru/img/og-about.jpg">
+  <link rel="canonical" href="https://dianomi.ru/about.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:10000;padding:1rem;background:var(--primary);color:#fff;">Перейти к основному содержанию</a>
+
+<main id="main-content">
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
@@ -165,6 +178,31 @@
   </div>
 </section>
 
-<script src="js/main.js"></script>
+</main>
+
+<script src="js/main.js" defer></script>
+
+<!-- BreadcrumbList JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://dianomi.ru/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "О компании",
+      "item": "https://dianomi.ru/about.html"
+    }
+  ]
+}
+</script>
+
 </body>
 </html>

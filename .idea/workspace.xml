@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac93e952-8dd3-4bc7-81df-a99679c8681c" name="Список изменений" comment="" />
+    <list default="true" id="ac93e952-8dd3-4bc7-81df-a99679c8681c" name="Список изменений" comment="">
+      <change afterPath="$PROJECT_DIR$/.gigacode/plans/1790149433554-brave-tiger.plan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gigaCode/agentSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gigaCode/agentSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitrix.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitrix24.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix24.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases.html" beforeDir="false" afterPath="$PROJECT_DIR$/cases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editions.html" beforeDir="false" afterPath="$PROJECT_DIR$/editions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +33,9 @@
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="3JiUfRVTxSfnfiV67wYRm2C8lnH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
