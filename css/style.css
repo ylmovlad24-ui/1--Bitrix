@@ -453,6 +453,212 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .loss-calculator__value { text-align: center; font-size: 1.5rem; font-weight: var(--font-weight-bold); color: var(--error); margin: 16px 0 8px; }
 .loss-calculator__result { font-size: 0.9375rem; color: var(--text-light); text-align: center; }
 
+/* === 6n. Service Detail (services.html) === */
+.service-detail__title {
+  margin-bottom: 16px;
+}
+.service-detail__section {
+  margin-bottom: 20px;
+}
+.service-detail__label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.service-detail__label--problem {
+  color: var(--danger);
+}
+.service-detail__label--solution {
+  color: var(--success);
+}
+.service-detail__label--result {
+  color: var(--primary);
+}
+.service-detail__text {
+  margin-bottom: 0;
+  color: var(--text-light);
+}
+.service-included-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+.service-included-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+}
+.service-included-list li:last-child {
+  border-bottom: none;
+}
+.service-included-list__check {
+  color: var(--success);
+  font-weight: bold;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+.service-detail-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  background: linear-gradient(135deg, rgba(42, 91, 154, 0.06), rgba(42, 91, 154, 0.02));
+  text-align: center;
+  border-radius: var(--card-radius);
+}
+.service-detail-visual--accent {
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.06), rgba(230, 126, 34, 0.02));
+}
+.service-detail-visual--success {
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.06), rgba(39, 174, 96, 0.02));
+}
+.service-detail-visual__icon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+.service-detail-visual__text {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.optimization-card {
+  padding: 24px;
+  border-left: 4px solid transparent;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.optimization-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.optimization-card--primary {
+  border-left-color: var(--primary);
+}
+.optimization-card--accent {
+  border-left-color: var(--accent);
+}
+.optimization-card__icon {
+  margin-bottom: 12px;
+}
+.optimization-card__title {
+  margin-bottom: 12px;
+}
+.optimization-card__problem {
+  color: var(--danger);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.optimization-card__solution {
+  color: var(--success);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.optimization-card__result {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* === 6o. Accordion (additional services) === */
+.accordion {
+  display: grid;
+  gap: 12px;
+}
+.accordion-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.accordion-item:hover {
+  border-color: var(--primary);
+}
+.accordion-item--open {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  color: var(--text);
+  text-align: left;
+  transition: color var(--transition-fast);
+}
+.accordion-header:hover {
+  color: var(--primary);
+}
+.accordion-header__icon {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+}
+.accordion-header__title {
+  flex: 1;
+}
+.accordion-header__chevron {
+  font-size: 0.875rem;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+.accordion-item--open .accordion-header__chevron {
+  transform: rotate(180deg);
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+.accordion-item--open .accordion-body {
+  max-height: 500px;
+}
+.accordion-body__content {
+  padding: 0 16px 16px;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* === 6p. Guarantee cards === */
+.guarantee-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.guarantee-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.guarantee-card__icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.guarantee-card__title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.guarantee-card__desc {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
 /* === 7. RESPONSIVE === */
 
 /* --- Tablet (≥600px) --- */

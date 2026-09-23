@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BI-аналитика — dianomi | Дашборды и отчёты из всех источников данных</title>
+  <meta name="description" content="BI-аналитика для бизнеса: дашборды, отчёты и визуализация из всех источников данных. Интеграция CRM, 1С, рекламы в единую картину. Решения на основе фактов.">
+  <meta name="keywords" content="BI-аналитика, дашборды, бизнес-аналитика, отчёты, визуализация данных, интеграция данных, CRM аналитика">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta property="og:title" content="BI-аналитика — dianomi">
+  <meta property="og:description" content="Дашборды и отчёты из всех источников данных. Решения на основе фактов, а не интуиции.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dianomi.ru/bi-analytics.html">
+  <meta property="og:image" content="https://dianomi.ru/img/og-bi-analytics.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BI-аналитика — dianomi">
+  <meta name="twitter:description" content="Дашборды и отчёты из всех источников данных. Решения на основе фактов, а не интуиции.">
+  <meta name="twitter:image" content="https://dianomi.ru/img/og-bi-analytics.jpg">
+  <link rel="canonical" href="https://dianomi.ru/bi-analytics.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
+      <span>dianomi</span>
+    </a>
+    <nav class="header__nav" aria-label="Навигация">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">Главная</a></li>
+        <li><a href="about.html" class="header__nav-link">О компании</a></li>
+        <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+        <li><a href="editions.html" class="header__nav-link">Тарифы</a></li>
+        <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
+        <li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a href="contacts.html" class="btn btn-accent btn-sm">Консультация</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
+    <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">О компании</a></li>
+    <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li>
+    <li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li>
+    <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
+    <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
+  </ul>
+  <div class="mobile-menu__cta">
+    <a href="contacts.html" class="btn btn-accent btn-full">Консультация</a>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <ul class="breadcrumb__list">
+      <li><a href="index.html">Главная</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><a href="services.html">Услуги</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><a href="optimization.html">Оптимизация бизнес-процессов</a></li>
+      <li class="breadcrumb__separator">/</li>
+      <li><strong>BI-аналитика</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <h1 class="hero__title">BI-аналитика для вашего бизнеса</h1>
+      <p class="hero__subtitle">Превращаем разрозненные данные в понятные дашборды и отчёты. Все источники данных в одном месте — решения на основе фактов, а не интуиции</p>
+      <div class="hero__actions">
+        <a href="contacts.html" class="btn btn-accent">Заказать аудит аналитики</a>
+        <a href="#results" class="btn btn-outline">Узнать результаты</a>
+      </div>
+      <div class="hero__stats" style="margin-top:48px;">
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">20-40%</div>
+          <div class="hero__stat-label">экономии времени на отчётах</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">100%</div>
+          <div class="hero__stat-label">прозрачность бизнеса в реальном времени</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" style="color:var(--accent);">5-10+</div>
+          <div class="hero__stat-label">источников данных в одном дашборде</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain points -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Знакомо?</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Если хотя бы 2 пункта — без BI-аналитики вы теряете возможности каждый день</p>
+    <div class="grid grid--3">
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">🔍</div>
+        <h3 class="card__title">Руководитель не знает, что происходит в бизнесе</h3>
+        <p class="card__text">Нет единой картины: продажи в CRM, склад в 1С, реклама в кабинетах площадок. Чтобы понять реальное положение дел, нужно собрать 5-10 разных отчётов. А к моменту сбора — данные уже устарели.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">📄</div>
+        <h3 class="card__title">Отчёты собираются вручную по несколько дней</h3>
+        <p class="card__text">Каждый месяц — выгрузка из CRM, выгрузка из 1С, выгрузка из рекламных кабинетов. Сводка в Excel, формулы, дубли данных. Менеджер тратит 2-3 дня на ежемесячный отчёт, который всё равно содержит ошибки.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="card__icon" style="font-size:2rem;margin-bottom:16px;">🎲</div>
+        <h3 class="card__title">Решения принимаются «на глаз»</h3>
+        <p class="card__text">«Кажется, с контекста больше заявок» — но это не подтверждено. «Надо сократить расходы на рекламу» — но на какую? Без данных решения принимаются интуитивно, а ошибки обходятся дорого.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Что входит -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Что входит в BI-аналитику</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Комплексный подход: от аудита данных до готовых дашбордов</p>
+    <div style="max-width:700px;margin:0 auto;">
+      <ul style="list-style:none;padding:0;display:grid;gap:20px;">
+        <li class="animate-on-scroll" style="display:flex;gap:16px;align-items:flex-start;">
+          <span style="color:var(--success);font-size:1.25rem;flex-shrink:0;margin-top:2px;">✓</span>
+          <div>
+            <strong style="font-size:1.0625rem;">Аудит источников данных</strong>
+            <p style="color:var(--text-muted);margin-top:4px;">Определяем, какие данные у вас есть, где они хранятся, как часто обновляются и как связаны между собой. Составляем карту данных.</p>
+          </div>
+        </li>
+        <li class="animate-on-scroll" style="display:flex;gap:16px;align-items:flex-start;">
+          <span style="color:var(--success);font-size:1.25rem;flex-shrink:0;margin-top:2px;">✓</span>
+          <div>
+            <strong style="font-size:1.0625rem;">Проектирование дашбордов</strong>
+            <p style="color:var(--text-muted);margin-top:4px;">Создаём структуру дашбордов под роли: общая картина для руководителя, операционные отчёты для менеджеров, детальные отчёты для аналитиков.</p>
+          </div>
+        </li>
+        <li class="animate-on-scroll" style="display:flex;gap:16px;align-items:flex-start;">
+          <span style="color:var(--success);font-size:1.25rem;flex-shrink:0;margin-top:2px;">✓</span>
+          <div>
+            <strong style="font-size:1.0625rem;">Интеграция с CRM, 1С, рекламой</strong>
+            <p style="color:var(--text-muted);margin-top:4px;">Подключаем все источники данных: CRM-системы, 1С, рекламные кабинеты, сайты, телефонии, почтовые сервисы — в единую аналитическую платформу.</p>
+          </div>
+        </li>
+        <li class="animate-on-scroll" style="display:flex;gap:16px;align-items:flex-start;">
+          <span style="color:var(--success);font-size:1.25rem;flex-shrink:0;margin-top:2px;">✓</span>
+          <div>
+            <strong style="font-size:1.0625rem;">Автоматические отчёты по расписанию</strong>
+            <p style="color:var(--text-muted);margin-top:4px;">Ежедневные, еженедельные, ежемесячные отчёты формируются автоматически и приходят на почту или в мессенджер. Никакой ручной работы.</p>
+          </div>
+        </li>
+        <li class="animate-on-scroll" style="display:flex;gap:16px;align-items:flex-start;">
+          <span style="color:var(--success);font-size:1.25rem;flex-shrink:0;margin-top:2px;">✓</span>
+          <div>
+            <strong style="font-size:1.0625rem;">Обучение команды работе с данными</strong>
+            <p style="color:var(--text-muted);margin-top:4px;">Обучаем менеджеров и руководителей пользоваться дашбордами, строить фильтры, понимать метрики. Самостоятельная работа с данными.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section" id="results">
+  <div class="container">
+    <h2 class="section__title" style="text-align:center;">Результаты внедрения BI-аналитики</h2>
+    <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Конкретные изменения в работе компании после внедрения</p>
+    <div class="grid grid--3">
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div style="font-size:3rem;font-weight:700;color:var(--accent);margin-bottom:8px;">20-40%</div>
+        <h3 class="card__title">Экономии времени на отчётах</h3>
+        <p class="card__text">Автоматические дашборды заменяют ручную сводку из 5-10 источников. То, что занимало 2-3 дня, теперь доступно в один клик.</p>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div style="font-size:3rem;font-weight:700;color:var(--accent);margin-bottom:8px;">📊</div>
+        <h3 class="card__title">Решения на основе данных</h3>
+        <p class="card__text">Руководитель видит реальную картину: какой канал приносит прибыль, где теряются клиенты, какие продукты растут. Решения — на основе фактов.</p>
+      </div>
+      <div class="card animate-on-scroll" style="text-align:center;">
+        <div style="font-size:3rem;font-weight:700;color:var(--accent);margin-bottom:8px;">🔄</div>
+        <h3 class="card__title">Единая картина бизнеса</h3>
+        <p class="card__text">Все ключевые метрики в реальном времени на одном экране. Продажи, финансы, маркетинг, склад — в одном дашборде, обновляющемся автоматически.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner animate-on-scroll">
+      <h2 class="cta-banner__title">Готовы увидеть бизнес целиком?</h2>
+      <p class="cta-banner__desc">Бесплатный аудит аналитики — покажем, какие данные вы теряете и как собрать единую картину бизнеса</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+        <a href="contacts.html" class="btn btn-accent">Заказать аудит</a>
+        <a href="tel:+79120767025" class="btn btn-outline">+7 (912) 076-70-25</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky CTA (mobile only) -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="tel:+79120767025" class="btn btn-primary">📞 Позвонить</a>
+  <a href="contacts.html" class="btn btn-accent">Заявка</a>
+</div>
+
+</main>
+
+<!-- Popup Modal -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+    <button class="popup__close" id="popupClose">&times;</button>
+    <div style="font-size:2rem;margin-bottom:12px;">📊</div>
+    <h3 class="popup__title">Бесплатный аудит аналитики</h3>
+    <p class="popup__desc">Покажем, какие данные вы теряете. Без обязательств</p>
+    <form id="popupForm" novalidate>
+      <div class="form-group"><input type="text" class="form-control" placeholder="Ваше имя" required></div>
+      <div class="form-group"><input type="tel" class="form-control" placeholder="+7 (___) ___-__-__" required></div>
+      <div class="consent-group"><label><input type="checkbox" required><span>Даю согласие на обработку <a href="privacy.html">персональных данных</a></span></label></div>
+      <button type="submit" class="btn btn-accent btn-full">Получить аудит</button>
+      <p class="quick-form__guarantee">Ответим в течение 2 часов</p>
+    </form>
+    <button class="popup__dismiss" id="popupDismiss">Пока нет</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
+          <span>dianomi</span>
+        </div>
+        <p class="footer__desc">Авторизованный партнёр 1С-Битрикс. Помогаем бизнесу расти с помощью CRM Битрикс24 и сайтов на 1С-Битрикс.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="editions.html">Тарифы</a></li>
+          <li><a href="cases.html">Кейсы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Контакты</h4>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📞</span>
+          <div><a href="tel:+79120767025">+7 (912) 076-70-25</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">✉️</span>
+          <div><a href="mailto:hello@dianomi.ru">hello@dianomi.ru</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📍</span>
+          <div><p style="margin:0;">г. Барнаул, пер. Прудской 69А, оф. 67</p></div>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">🕐</span>
+          <div><p style="margin:0;">пн-пт 09:00–17:00</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bitrix">
+      <a href="https://www.1c-bitrix.ru/products/crm/" target="_blank" rel="noopener noreferrer" class="footer__bitrix-link">
+        <svg width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" rx="4" fill="#2A5B9A"/><text x="10" y="15" font-family="Arial" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">B</text></svg>
+        <span>Работает на «Битрикс24»</span>
+      </a>
+    </div>
+    <div class="footer__copyright">
+      <p>&copy; <span id="currentYear"></span> dianomi. Все права защищены. ИП Шмеер В.А.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+
+<!-- BreadcrumbList JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://dianomi.ru/"},
+    {"@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://dianomi.ru/services.html"},
+    {"@type": "ListItem", "position": 3, "name": "Оптимизация бизнес-процессов", "item": "https://dianomi.ru/optimization.html"},
+    {"@type": "ListItem", "position": 4, "name": "BI-аналитика", "item": "https://dianomi.ru/bi-analytics.html"}
+  ]
+}
+</script>
+
+</body>
+</html>

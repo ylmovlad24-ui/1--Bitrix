@@ -252,6 +252,34 @@
     });
   });
 
+  /* ───────── Accordion (additional services) ───────── */
+  var accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = this.closest('.accordion-item');
+      if (!item) return;
+      var body = item.querySelector('.accordion-body');
+      var isOpen = item.classList.contains('accordion-item--open');
+
+      // Close all
+      document.querySelectorAll('.accordion-item.accordion-item--open').forEach(function (openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('accordion-item--open');
+          openItem.querySelector('.accordion-body').style.maxHeight = null;
+        }
+      });
+
+      // Toggle current
+      if (isOpen) {
+        item.classList.remove('accordion-item--open');
+        body.style.maxHeight = null;
+      } else {
+        item.classList.add('accordion-item--open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
   /* ───────── Phone Mask ───────── */
   var phoneInputs = document.querySelectorAll('input[type="tel"]');
   phoneInputs.forEach(function (input) {
