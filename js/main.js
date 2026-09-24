@@ -1,8 +1,7 @@
 /**
- * dianomi — Main JavaScript
- * Mobile-first utilities: hamburger menu, smooth scroll,
- * form validation, scroll animations, sticky CTA, popup,
- * loss calculator, FAQ accordion, phone mask, counter animation.
+ * dianomi — Main JavaScript (nov architecture)
+ * Mobile-first utilities: hamburger menu, mega menu, smooth scroll,
+ * form validation, scroll animations, dynamic form fields, breadcrumbs.
  */
 
 (function () {
@@ -36,6 +35,7 @@
       burger.addEventListener('click', function () {
         mobileMenu.classList.contains('mobile-menu--open') ? closeMenu() : openMenu();
       });
+      burger.setAttribute('aria-expanded', 'false');
     }
 
     if (mobileOverlay) {
@@ -50,6 +50,7 @@
     }
   }
 
+  /* ───────── Mobile dropdowns ───────── */
   function initDropdown() {
     var dropdownBtns = document.querySelectorAll('.mobile-menu__dropdown-btn');
     dropdownBtns.forEach(function (btn) {
@@ -71,6 +72,42 @@
     });
   }
 
+  /* ───────── Mega Menu (desktop hover) ───────── */
+  function initMegaMenu() {
+    var dropdowns = document.querySelectorAll('.nav-dropdown');
+    dropdowns.forEach(function (dropdown) {
+      var link = dropdown.querySelector('.header__nav-link');
+      var menu = dropdown.querySelector('.mega-menu');
+      if (!menu) return;
+
+      // Desktop: show on hover
+      dropdown.addEventListener('mouseenter', function () {
+        menu.style.opacity = '1';
+        menu.style.visibility = 'visible';
+        menu.style.transform = 'translateX(-50%) translateY(0)';
+      });
+
+      dropdown.addEventListener('mouseleave', function () {
+        menu.style.opacity = '';
+        menu.style.visibility = '';
+        menu.style.transform = '';
+      });
+
+      // Mobile: show on click
+      if (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth < 960) {
+            e.preventDefault();
+            var isOpen = menu.style.opacity === '1';
+            menu.style.opacity = isOpen ? '' : '1';
+            menu.style.visibility = isOpen ? '' : 'visible';
+            menu.style.transform = isOpen ? '' : 'translateX(-50%) translateY(0)';
+          }
+        });
+      }
+    });
+  }
+
   /* ───────── Header shrink on scroll ───────── */
   function onScrollHeader() {
     var header = document.getElementById('header');
@@ -84,47 +121,97 @@
   window.addEventListener('scroll', onScrollHeader, { passive: true });
   onScrollHeader();
 
-  /* ───────── Sticky CTA (mobile) ───────── */
-  var stickyCta = document.getElementById('stickyCta');
-  if (stickyCta) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 400) {
-        stickyCta.classList.add('sticky-cta--visible');
-      } else {
-        stickyCta.classList.remove('sticky-cta--visible');
-      }
-    }, { passive: true });
-  }
-
   /* ───────── Smooth scroll for anchor links ───────── */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      var target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        var headerEl = document.getElementById('header');
-        var offset = headerEl ? headerEl.offsetHeight + 16 : 24;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-      }
-    });
+  document.addEventListener('click', function (e) {
+    var target = e.target.closest('a[href^="#"]');
+    if (!target) return;
+    var href = target.getAttribute('href');
+    if (href === '#') return;
+    var el = document.querySelector(href);
+    if (el) {
+      e.preventDefault();
+      var headerEl = document.getElementById('header');
+      var offset = headerEl ? headerEl.offsetHeight + 24 : 40;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
   });
 
-  /* ───────── Contact form validation ───────── */
-  var contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+  /* ───────── Project form (dynamic fields) ───────── */
+  var projectForm = document.getElementById('projectForm');
+  if (projectForm) {
+    var projectTypeSelect = document.getElementById('projectType');
+    var dynamicFields = document.getElementById('dynamicFields');
+
+    if (projectTypeSelect && dynamicFields) {
+      projectTypeSelect.addEventListener('change', function () {
+        var type = this.value;
+        dynamicFields.innerHTML = '';
+
+        var fields = {
+          'bitrix24': [
+            { label: 'Битрикс24 уже используется?', type: 'select', options: ['Нет, будем внедрять', 'Да, облако', 'Да, коробка'] },
+            { label: 'Количество пользователей', type: 'number' },
+            { label: 'Необходимые интеграции', type: 'text', placeholder: '1С, телефония, сайт...' }
+          ],
+          'web-system': [
+            { label: 'Тип проекта', type: 'select', options: ['Корпоративный сайт', 'Интернет-магазин', 'B2B-портал', 'Личный кабинет', 'Каталог'] },
+            { label: 'Есть ли действующий сайт?', type: 'select', options: ['Нет', 'Да'] },
+            { label: 'Необходима интеграция с 1С?', type: 'select', options: ['Да', 'Нет', 'Пока не знаю'] },
+            { label: 'Размер каталога (товаров)', type: 'number' }
+          ],
+          'integration': [
+            { label: 'Какие системы нужно связать?', type: 'text', placeholder: 'Битрикс24, 1С, сайт...' },
+            { label: 'Какие данные передавать?', type: 'text', placeholder: 'Клиенты, товары, заказы...' },
+            { label: 'Направление обмена', type: 'select', options: ['Односторонний', 'Двусторонний'] },
+            { label: 'Есть ли техническая документация?', type: 'select', options: ['Да', 'Нет'] }
+          ]
+        };
+
+        var typeFields = fields[type] || [];
+        typeFields.forEach(function (field) {
+          var div = document.createElement('div');
+          div.className = 'form-group';
+
+          var label = document.createElement('label');
+          label.textContent = field.label;
+          div.appendChild(label);
+
+          if (field.type === 'select') {
+            var select = document.createElement('select');
+            select.className = 'form-control';
+            select.name = field.label;
+            field.options.forEach(function (opt) {
+              var option = document.createElement('option');
+              option.value = opt;
+              option.textContent = opt;
+              select.appendChild(option);
+            });
+            div.appendChild(select);
+          } else {
+            var input = document.createElement('input');
+            input.type = field.type;
+            input.className = 'form-control';
+            input.name = field.label;
+            input.placeholder = field.placeholder || '';
+            div.appendChild(input);
+          }
+
+          dynamicFields.appendChild(div);
+        });
+      });
+    }
+
+    projectForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var isValid = true;
-      var fields = contactForm.querySelectorAll('[required]');
+      var requiredFields = projectForm.querySelectorAll('[required]');
 
-      fields.forEach(function (field) {
+      requiredFields.forEach(function (field) {
         field.classList.remove('form-control--error');
       });
 
-      fields.forEach(function (field) {
+      requiredFields.forEach(function (field) {
         if (!field.value.trim()) {
           field.classList.add('form-control--error');
           isValid = false;
@@ -138,105 +225,55 @@
         }
       });
 
+      // Check consent
+      var consent = projectForm.querySelector('input[type="checkbox"][name="consent"]');
+      if (consent && !consent.checked) {
+        consent.classList.add('form-control--error');
+        isValid = false;
+      }
+
       if (isValid) {
-        var submitBtn = contactForm.querySelector('button[type="submit"]');
-        var originalText = submitBtn ? submitBtn.textContent : '';
+        // Simulate submit - replace with actual endpoint
+        var submitBtn = projectForm.querySelector('button[type="submit"]');
         if (submitBtn) {
-          submitBtn.textContent = 'Отправлено ✓';
+          submitBtn.textContent = 'Отправка...';
           submitBtn.disabled = true;
-          setTimeout(function () {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            contactForm.reset();
-          }, 3000);
         }
-        alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
-      }
-    });
-  }
 
-  /* ───────── Popup (delayed, once per session) ───────── */
-  var popupOverlay = document.getElementById('popupOverlay');
-  var popupClose = document.getElementById('popupClose');
-  var popupDismiss = document.getElementById('popupDismiss');
-  var popupForm = document.getElementById('popupForm');
-  var POPUP_DELAY = 45000;
-  var POPUP_STORAGE_KEY = 'dianomi_popup_shown';
+        // Store UTM params
+        var utmParams = {};
+        var searchParams = new URLSearchParams(window.location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (param) {
+          if (searchParams.get(param)) {
+            utmParams[param] = searchParams.get(param);
+          }
+        });
 
-  function showPopup() {
-    if (!popupOverlay) return;
-    popupOverlay.classList.add('popup-overlay--visible');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function hidePopup() {
-    if (!popupOverlay) return;
-    popupOverlay.classList.remove('popup-overlay--visible');
-    document.body.style.overflow = '';
-    try {
-      sessionStorage.setItem(POPUP_STORAGE_KEY, '1');
-    } catch (e) {}
-  }
-
-  if (popupClose) {
-    popupClose.addEventListener('click', hidePopup);
-  }
-
-  if (popupDismiss) {
-    popupDismiss.addEventListener('click', hidePopup);
-  }
-
-  if (popupOverlay) {
-    popupOverlay.addEventListener('click', function (e) {
-      if (e.target === popupOverlay) hidePopup();
-    });
-  }
-
-  if (popupOverlay) {
-    try {
-      if (!sessionStorage.getItem(POPUP_STORAGE_KEY)) {
-        setTimeout(showPopup, POPUP_DELAY);
-      }
-    } catch (e) {}
-  }
-
-  if (popupForm) {
-    popupForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var inputs = popupForm.querySelectorAll('input[required]');
-      var isValid = true;
-      inputs.forEach(function (input) {
-        if (!input.value.trim()) {
-          input.classList.add('form-control--error');
-          isValid = false;
-        } else {
-          input.classList.remove('form-control--error');
-        }
-      });
-
-      if (isValid) {
-        hidePopup();
-        alert('Спасибо! Мы свяжемся с вами в течение 2 часов.');
-        popupForm.reset();
+        // Redirect to success page
+        setTimeout(function () {
+          window.location.href = 'success.html?' + new URLSearchParams(utmParams).toString();
+        }, 1000);
       }
     });
   }
 
   /* ───────── FAQ Accordion ───────── */
-  var faqQuestions = document.querySelectorAll('.faq-question');
-  faqQuestions.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = this.closest('.faq-item');
+  document.addEventListener('click', function (e) {
+    var faqBtn = e.target.closest('.faq-question');
+    if (faqBtn) {
+      var item = faqBtn.closest('.faq-item');
       if (!item) return;
       var answer = item.querySelector('.faq-answer');
-      var icon = this.querySelector('.faq-question__icon');
+      var icon = faqBtn.querySelector('.faq-question__icon');
       var isOpen = item.classList.contains('faq-item--open');
 
+      // Close all
       document.querySelectorAll('.faq-item.faq-item--open').forEach(function (openItem) {
         if (openItem !== item) {
           openItem.classList.remove('faq-item--open');
           openItem.querySelector('.faq-answer').style.maxHeight = null;
-          openItem.querySelector('.faq-question__icon').textContent = '+';
+          var openIcon = openItem.querySelector('.faq-question__icon');
+          if (openIcon) openIcon.textContent = '+';
         }
       });
 
@@ -249,84 +286,37 @@
         answer.style.maxHeight = answer.scrollHeight + 'px';
         if (icon) icon.textContent = '−';
       }
-    });
-  });
-
-  /* ───────── Accordion (additional services) ───────── */
-  var accordionHeaders = document.querySelectorAll('.accordion-header');
-  accordionHeaders.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = this.closest('.accordion-item');
-      if (!item) return;
-      var body = item.querySelector('.accordion-body');
-      var isOpen = item.classList.contains('accordion-item--open');
-
-      // Close all
-      document.querySelectorAll('.accordion-item.accordion-item--open').forEach(function (openItem) {
-        if (openItem !== item) {
-          openItem.classList.remove('accordion-item--open');
-          openItem.querySelector('.accordion-body').style.maxHeight = null;
-        }
-      });
-
-      // Toggle current
-      if (isOpen) {
-        item.classList.remove('accordion-item--open');
-        body.style.maxHeight = null;
-      } else {
-        item.classList.add('accordion-item--open');
-        body.style.maxHeight = body.scrollHeight + 'px';
-      }
-    });
+    }
   });
 
   /* ───────── Phone Mask ───────── */
-  var phoneInputs = document.querySelectorAll('input[type="tel"]');
-  phoneInputs.forEach(function (input) {
-    input.addEventListener('input', function (e) {
-      var value = e.target.value.replace(/\D/g, '');
-      var formatted = '';
+  document.addEventListener('input', function (e) {
+    if (e.target.type !== 'tel') return;
+    var value = e.target.value.replace(/\D/g, '');
+    var formatted = '';
 
-      if (value.length === 0) {
-        formatted = '';
-      } else {
-        if (value[0] === '8') {
-          value = '7' + value.substring(1);
-        }
-        if (value[0] !== '7') {
-          value = '7' + value;
-        }
-
-        formatted = '+7';
-        if (value.length > 1) {
-          formatted += ' (' + value.substring(1, 4);
-        }
-        if (value.length >= 4) {
-          formatted += ') ';
-        }
-        if (value.length > 4) {
-          formatted += value.substring(4, 7);
-        }
-        if (value.length > 7) {
-          formatted += '-' + value.substring(7, 9);
-        }
-        if (value.length > 9) {
-          formatted += '-' + value.substring(9, 11);
-        }
+    if (value.length === 0) {
+      formatted = '';
+    } else {
+      if (value[0] === '8') {
+        value = '7' + value.substring(1);
+      }
+      if (value[0] !== '7') {
+        value = '7' + value;
       }
 
-      e.target.value = formatted;
-    });
+      formatted = '+7';
+      if (value.length > 1) formatted += ' (' + value.substring(1, 4);
+      if (value.length >= 4) formatted += ') ';
+      if (value.length > 4) formatted += value.substring(4, 7);
+      if (value.length > 7) formatted += '-' + value.substring(7, 9);
+      if (value.length > 9) formatted += '-' + value.substring(9, 11);
+    }
 
-    input.addEventListener('focus', function () {
-      if (!this.value) {
-        this.value = '';
-      }
-    });
+    e.target.value = formatted;
   });
 
   /* ───────── Scroll animations (Intersection Observer) ───────── */
-  var animatedElements = document.querySelectorAll('.animate-on-scroll');
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(
       function (entries) {
@@ -339,65 +329,14 @@
       },
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
-    animatedElements.forEach(function (el) {
+
+    document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
       observer.observe(el);
     });
   } else {
-    animatedElements.forEach(function (el) {
+    document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
       el.classList.add('animate-on-scroll--visible');
     });
-  }
-
-  /* ───────── Counter Animation ───────── */
-  var counters = document.querySelectorAll('.counter, .hero-stat__number');
-  if ('IntersectionObserver' in window && counters.length > 0) {
-    var counterObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !entry.target.classList.contains('is-counting')) {
-            entry.target.classList.add('is-counting');
-            animateCounter(entry.target);
-            counterObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-    counters.forEach(function (counter) {
-      counterObserver.observe(counter);
-    });
-  } else {
-    counters.forEach(function (counter) {
-      var target = parseInt(counter.getAttribute('data-target') || counter.getAttribute('data-count'), 10) || 0;
-      var suffix = counter.getAttribute('data-suffix') || '';
-      counter.textContent = target + suffix;
-    });
-  }
-
-  function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-target') || el.getAttribute('data-count'), 10) || 0;
-    var suffix = el.getAttribute('data-suffix') || '';
-    var duration = 2000;
-    var startTime = null;
-
-    function easeOutQuart(t) {
-      return 1 - Math.pow(1 - t, 4);
-    }
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var progress = Math.min((timestamp - startTime) / duration, 1);
-      var easedProgress = easeOutQuart(progress);
-      var currentValue = Math.floor(easedProgress * target);
-      el.textContent = currentValue + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target + suffix;
-      }
-    }
-
-    requestAnimationFrame(step);
   }
 
   /* ───────── Current year in footer ───────── */
@@ -406,74 +345,44 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  /* ───────── Swiper Cases Slider ───────── */
-  var casesSwiper = document.querySelector('.cases-swiper');
-  if (casesSwiper && typeof Swiper !== 'undefined') {
-    new Swiper(casesSwiper, {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        600: {
-          slidesPerView: 2
-        },
-        960: {
-          slidesPerView: 3
-        }
+  /* ───────── Cookie Notice ───────── */
+  var cookieNotice = document.querySelector('.cookie-notice');
+  if (cookieNotice) {
+    try {
+      if (!localStorage.getItem('dianomi_cookies_accepted')) {
+        cookieNotice.classList.add('cookie-notice--visible');
       }
-    });
-  }
+    } catch (e) {}
 
-  /* ───────── Case Filters ───────── */
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  var caseCards = document.querySelectorAll('.case-card[data-category]');
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = this.getAttribute('data-filter');
-      filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
-      this.classList.add('filter-btn--active');
-      caseCards.forEach(function (card) {
-        var category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+    var acceptBtn = cookieNotice.querySelector('.cookie-notice__accept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function () {
+        try { localStorage.setItem('dianomi_cookies_accepted', '1'); } catch (e) {}
+        cookieNotice.classList.remove('cookie-notice--visible');
       });
-    });
-  });
+    }
+  }
 
   /* ───────── Load shared header/footer ───────── */
   fetch('partials/header.html')
     .then(function(r) { return r.text(); })
     .then(function(html) {
       document.querySelector('head').insertAdjacentHTML('beforebegin', html);
-      // Инициализируем мобильное меню ПОСЛЕ загрузки header
       initMobileMenu();
       initDropdown();
+      initMegaMenu();
     })
     .catch(function() {
-      // Если header уже встроен в HTML — инициализируем сразу
       initMobileMenu();
       initDropdown();
+      initMegaMenu();
     });
 
-  // Load footer partial
   fetch('partials/footer.html')
     .then(function(r) { return r.text(); })
     .then(function(html) {
       document.body.insertAdjacentHTML('beforeend', html);
     })
-    .catch(function() { /* Fallback: footer already in HTML */ });
-
-  /* ───────── Composite Site SDK placeholder ───────── */
-  window.__dianomi_composite_stub = true;
+    .catch(function() {});
 
 })();

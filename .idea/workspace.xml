@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac93e952-8dd3-4bc7-81df-a99679c8681c" name="Список изменений" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.gigacode/plans/1790168112164-neon-star.plan.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bi-analytics.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/crm.html" afterDir="false" />
@@ -22,6 +23,10 @@
       <change beforePath="$PROJECT_DIR$/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gigaide/gigaide.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gigaide/gigaide.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
     "state": "OPEN",
@@ -43,6 +49,8 @@
     "accountId": "fed6f73b-d814-41d4-9737-9f592a82a76b"
   }
 }]]></component>
+=======
+>>>>>>> Stashed changes
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -61,7 +69,11 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+<<<<<<< Updated upstream
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalDependencies&quot;
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="TaskManager">

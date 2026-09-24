@@ -2,5 +2,54 @@
 <project version="4">
   <component name="GigaCodeAgentSettings">
     <option name="autoApproveEdits" value="true" />
+    <option name="autoApprovedCommands">
+      <list>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/.gigacode/plans&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="wc *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/business-systems.html').Count; (Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/web-systems.html').Count; (Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/integrations.html').Count&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/blog.html&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/crm.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/sites.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bi-analytics.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/process-audit.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/project-management.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/services.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bitrix.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bitrix_license.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/editions.html&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import subprocess; result = subprocess.run(['python', 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py'], capture_output=True, text=True); print(result.stdout); print(result.stderr)&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cd *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="node -e &quot;const fs = require('fs'); const path = require('path'); const base = 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix'; const header = fs.readFileSync(path.join(base, 'partials', 'header.html'), 'utf8'); const footer = fs.readFileSync(path.join(base, 'partials', 'footer.html'), 'utf8'); const files = ['index.html','business-systems.html','web-systems.html','integrations.html','data-bi.html','ai-bots.html','bitrix24.html','1c-bitrix.html','cases.html','approach.html','about.html','project.html','contacts.html','personal-data.html','privacy.html','success.html','404.html']; files.forEach(fn =&gt; { let c = fs.readFileSync(path.join(base, fn), 'utf8'); let mi = c.indexOf('&lt;main id=\&quot;main-content\&quot;&gt;'); if (mi &gt; 0) { c = c.slice(0, mi) + header + '\n' + c.slice(mi); } let bi = c.lastIndexOf('&lt;/body&gt;'); if (bi &gt; 0) { c = c.slice(0, bi) + footer + '\n' + c.slice(bi); } fs.writeFileSync(path.join(base, fn), c, 'utf8'); console.log('Processed: ' + fn); }); console.log('Done!');&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="where *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File add-header-footer.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command &quot;[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; cd 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix'; powershell -ExecutionPolicy Bypass -File 'add-header-footer.ps1'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/add-header-footer.ps1&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py&quot; -Force" />
+        </Execute>
+      </list>
+    </option>
   </component>
 </project>

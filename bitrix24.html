@@ -1,100 +1,474 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Внедрение CRM — dianomi | Этапы и сроки внедрения Битрикс24</title>
-  <meta name="description" content="Пошаговое внедрение CRM Битрикс24: аудит, проектирование, настройка, обучение. Сроки 2-4 недели. Фиксированная цена.">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <meta property="og:title" content="Внедрение CRM — dianomi">
-  <meta property="og:description" content="Пошаговое внедрение CRM Битрикс24 под ваш бизнес.">
+  <title>Битрикс24 — облачный и коробочный | Внедрение Dianomi</title>
+  <meta name="description" content="Внедряем, перезапускаем и развиваем облачный и коробочный Битрикс24 с учётом процессов, ролей, интеграций и требований к инфраструктуре.">
+  <meta property="og:title" content="Битрикс24 — облачный и коробочный | Внедрение Dianomi">
+  <meta property="og:description" content="Внедряем, перезапускаем и развиваем облачный и коробочный Битрикс24 с учётом процессов, ролей, интеграций и требований к инфраструктуре.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dianomi.ru/bitrix24.html">
-  <link rel="canonical" href="https://dianomi.ru/bitrix24.html">
+  <meta property="og:url" content="https://dianomi.ru/bitrix24/">
+  <meta property="og:image" content="https://dianomi.ru/img/og-default.jpg">
+  <link rel="canonical" href="https://dianomi.ru/bitrix24/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Header -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="index.html" class="header__logo"><img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36"><span>dianomi</span></a>
-    <nav class="header__nav" aria-label="Навигация"><ul class="header__nav-list">
-      <li><a href="index.html" class="header__nav-link">Главная</a></li><li><a href="about.html" class="header__nav-link">О компании</a></li><li><a href="services.html" class="header__nav-link">Услуги</a></li><li><a href="editions.html" class="header__nav-link">Тарифы</a></li><li><a href="cases.html" class="header__nav-link">Кейсы</a></li><li><a href="contacts.html" class="header__nav-link">Контакты</a></li>
-    </ul></nav>
-    <div class="header__cta"><a href="contacts.html" class="btn btn-accent btn-sm">Консультация</a></div>
-    <button class="burger" id="burger" aria-label="Меню"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
+    <a href="index.html" class="header__logo">
+      <img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
+      <span>dianomi</span>
+    </a>
+    <nav class="header__nav" aria-label="РћСЃРЅРѕРІРЅР°СЏ РЅР°РІРёРіР°С†РёСЏ">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">Р“Р»Р°РІРЅР°СЏ</a></li>
+        <li class="nav-dropdown">
+          <a href="business-systems.html" class="header__nav-link">Р РµС€РµРЅРёСЏ в–ѕ</a>
+          <div class="mega-menu">
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">РЈРїСЂР°РІР»РµРЅРёРµ</h4>
+              <ul class="mega-menu__list">
+                <li><a href="business-systems.html">РЎРёСЃС‚РµРјС‹ СѓРїСЂР°РІР»РµРЅРёСЏ</a></li>
+                <li><a href="business-systems.html">CRM Рё РїСЂРѕРґР°Р¶Рё</a></li>
+                <li><a href="business-systems.html">Р‘РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃС‹</a></li>
+                <li><a href="business-systems.html">Р—Р°РґР°С‡Рё Рё РїСЂРѕРµРєС‚С‹</a></li>
+                <li><a href="business-systems.html">Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚Р°РјРё</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Р’РµР±-СЃРёСЃС‚РµРјС‹</h4>
+              <ul class="mega-menu__list">
+                <li><a href="web-systems.html">РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Рµ СЃР°Р№С‚С‹</a></li>
+                <li><a href="web-systems.html">РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅС‹</a></li>
+                <li><a href="web-systems.html">B2B-РїРѕСЂС‚Р°Р»С‹</a></li>
+                <li><a href="web-systems.html">Р›РёС‡РЅС‹Рµ РєР°Р±РёРЅРµС‚С‹</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Р”Р°РЅРЅС‹Рµ Рё Р°РІС‚РѕРјР°С‚РёР·Р°С†РёСЏ</h4>
+              <ul class="mega-menu__list">
+                <li><a href="data-bi.html">Р”Р°РЅРЅС‹Рµ Рё BI-Р°РЅР°Р»РёС‚РёРєР°</a></li>
+                <li><a href="ai-bots.html">РР Рё С‡Р°С‚-Р±РѕС‚С‹</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">РРЅС‚РµРіСЂР°С†РёРё</h4>
+              <ul class="mega-menu__list">
+                <li><a href="integrations.html">Р‘РёС‚СЂРёРєСЃ24 Рё 1РЎ</a></li>
+                <li><a href="integrations.html">РЎР°Р№С‚ Рё 1РЎ</a></li>
+                <li><a href="integrations.html">РЎР°Р№С‚ Рё Р‘РёС‚СЂРёРєСЃ24</a></li>
+                <li><a href="integrations.html">API Рё РІРЅРµС€РЅРёРµ СЃРёСЃС‚РµРјС‹</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="bitrix24.html" class="header__nav-link">РџР»Р°С‚С„РѕСЂРјС‹ в–ѕ</a>
+          <div class="mega-menu">
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Р‘РёС‚СЂРёРєСЃ24</h4>
+              <ul class="mega-menu__list">
+                <li><a href="bitrix24.html#cloud">РћР±Р»Р°С‡РЅС‹Р№ Р‘РёС‚СЂРёРєСЃ24</a></li>
+                <li><a href="bitrix24.html#on-premise">РљРѕСЂРѕР±РѕС‡РЅС‹Р№ Р‘РёС‚СЂРёРєСЃ24</a></li>
+                <li><a href="bitrix24.html#compare">РћР±Р»Р°РєРѕ РёР»Рё РєРѕСЂРѕР±РєР°</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">1РЎ-Р‘РёС‚СЂРёРєСЃ</h4>
+              <ul class="mega-menu__list">
+                <li><a href="1c-bitrix.html">Р’РµР±-СЃРёСЃС‚РµРјС‹</a></li>
+                <li><a href="1c-bitrix.html#tariffs">РўР°СЂРёС„С‹</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">Рћ РїР»Р°С‚С„РѕСЂРјРµ</h4>
+              <p class="mega-menu__desc">Р‘РёС‚СЂРёРєСЃ24 вЂ” CRM, РїРѕСЂС‚Р°Р», РїСЂРѕС†РµСЃСЃС‹. 1РЎ-Р‘РёС‚СЂРёРєСЃ вЂ” СЃР°Р№С‚С‹, РјР°РіР°Р·РёРЅС‹, РїРѕСЂС‚Р°Р»С‹.</p>
+              <a href="bitrix24.html" class="btn btn-outline btn-sm btn-full">Р‘РёС‚СЂРёРєСЃ24</a>
+              <a href="1c-bitrix.html" class="btn btn-outline btn-sm btn-full" style="margin-top:8px;">1РЎ-Р‘РёС‚СЂРёРєСЃ</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="integrations.html" class="header__nav-link">РРЅС‚РµРіСЂР°С†РёРё в–ѕ</a>
+          <div class="mega-menu">
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">РџРѕРїСѓР»СЏСЂРЅС‹Рµ СЃРІСЏР·РєРё</h4>
+              <ul class="mega-menu__list">
+                <li><a href="integrations.html#bx1c">Р‘РёС‚СЂРёРєСЃ24 Рё 1РЎ</a></li>
+                <li><a href="integrations.html#site1c">РЎР°Р№С‚ Рё 1РЎ</a></li>
+                <li><a href="integrations.html#sitebx">РЎР°Р№С‚ Рё Р‘РёС‚СЂРёРєСЃ24</a></li>
+                <li><a href="integrations.html#full">РЎР°Р№С‚ вЂ” Р‘РёС‚СЂРёРєСЃ24 вЂ” 1РЎ</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu__col">
+              <h4 class="mega-menu__heading">РљРѕРјРјСѓРЅРёРєР°С†РёРё</h4>
+              <ul class="mega-menu__list">
+                <li><a href="integrations.html#telephony">РўРµР»РµС„РѕРЅРёСЏ</a></li>
+                <li><a href="integrations.html#api">API Рё РІРЅРµС€РЅРёРµ СЃРёСЃС‚РµРјС‹</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="cases.html" class="header__nav-link">РљРµР№СЃС‹</a></li>
+        <li><a href="approach.html" class="header__nav-link">РљР°Рє СЂР°Р±РѕС‚Р°РµРј</a></li>
+        <li><a href="about.html" class="header__nav-link">Рћ Dianomi</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a href="project.html" class="btn btn-accent btn-sm">РћР±СЃСѓРґРёС‚СЊ РїСЂРѕРµРєС‚</a>
+    </div>
+    <button class="burger" id="burger" aria-label="РћС‚РєСЂС‹С‚СЊ РјРµРЅСЋ" aria-expanded="false">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
 <div class="mobile-overlay" id="mobileOverlay"></div>
-<nav class="mobile-menu" id="mobileMenu">
+<nav class="mobile-menu" id="mobileMenu" aria-label="РњРѕР±РёР»СЊРЅР°СЏ РЅР°РІРёРіР°С†РёСЏ">
   <ul class="mobile-menu__list">
-    <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li><li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">О компании</a></li><li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Услуги</a></li><li class="mobile-menu__item"><a href="editions.html" class="mobile-menu__link">Тарифы</a></li><li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li><li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
+    <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Р“Р»Р°РІРЅР°СЏ</a></li>
+    <li class="mobile-menu__item mobile-menu__dropdown">
+      <button class="mobile-menu__dropdown-btn" aria-expanded="false">
+        <span>Р РµС€РµРЅРёСЏ</span>
+        <span class="mobile-menu__dropdown-icon">в–ѕ</span>
+      </button>
+      <ul class="mobile-menu__dropdown-list" style="display:none;">
+        <li><a href="business-systems.html">РЎРёСЃС‚РµРјС‹ СѓРїСЂР°РІР»РµРЅРёСЏ Р±РёР·РЅРµСЃРѕРј</a></li>
+        <li><a href="web-systems.html">Р’РµР±-СЃРёСЃС‚РµРјС‹</a></li>
+        <li><a href="integrations.html">РРЅС‚РµРіСЂР°С†РёРё</a></li>
+        <li><a href="data-bi.html">Р”Р°РЅРЅС‹Рµ Рё BI-Р°РЅР°Р»РёС‚РёРєР°</a></li>
+        <li><a href="ai-bots.html">РР Рё С‡Р°С‚-Р±РѕС‚С‹</a></li>
+      </ul>
+    </li>
+    <li class="mobile-menu__item mobile-menu__dropdown">
+      <button class="mobile-menu__dropdown-btn" aria-expanded="false">
+        <span>РџР»Р°С‚С„РѕСЂРјС‹</span>
+        <span class="mobile-menu__dropdown-icon">в–ѕ</span>
+      </button>
+      <ul class="mobile-menu__dropdown-list" style="display:none;">
+        <li><a href="bitrix24.html">Р‘РёС‚СЂРёРєСЃ24</a></li>
+        <li><a href="1c-bitrix.html">1РЎ-Р‘РёС‚СЂРёРєСЃ</a></li>
+      </ul>
+    </li>
+    <li class="mobile-menu__item"><a href="integrations.html" class="mobile-menu__link">РРЅС‚РµРіСЂР°С†РёРё</a></li>
+    <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">РљРµР№СЃС‹</a></li>
+    <li class="mobile-menu__item"><a href="approach.html" class="mobile-menu__link">РљР°Рє СЂР°Р±РѕС‚Р°РµРј</a></li>
+    <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">Рћ Dianomi</a></li>
+    <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">РљРѕРЅС‚Р°РєС‚С‹</a></li>
   </ul>
-  <div class="mobile-menu__cta"><a href="contacts.html" class="btn btn-accent btn-full">Консультация</a></div>
+  <div class="mobile-menu__cta">
+    <a href="project.html" class="btn btn-accent btn-full">РћР±СЃСѓРґРёС‚СЊ РїСЂРѕРµРєС‚</a>
+  </div>
+  <div class="mobile-menu__contacts">
+    <p style="font-size:0.875rem;color:var(--text-muted);margin:12px 0 4px;">+7 (3852) 000-00-00</p>
+    <p style="font-size:0.875rem;color:var(--text-muted);margin:0;">info@dianomi.ru</p>
+  </div>
 </nav>
+
+<a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:10000;padding:1rem;background:var(--primary);color:#fff;">Перейти к основному содержанию</a>
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="container">
+    <ul class="breadcrumbs__list">
+      <li><a href="index.html">Главная</a></li>
+      <li><span class="breadcrumbs__separator">/</span></li>
+      <li><a href="index.html">Платформы</a></li>
+      <li><span class="breadcrumbs__separator">/</span></li>
+      <li><span class="breadcrumbs__current">Битрикс24</span></li>
+    </ul>
+  </div>
+</nav>
+
 <main id="main-content">
-<div class="breadcrumb"><div class="container"><ul class="breadcrumb__list">
-  <li><a href="index.html">Главная</a></li><li class="breadcrumb__separator">/</li>
-  <li><a href="services.html">Услуги</a></li><li class="breadcrumb__separator">/</li>
-  <li><a href="crm.html">CRM Битрикс24</a></li><li class="breadcrumb__separator">/</li>
-  <li><strong>Внедрение CRM</strong></li>
-</ul></div></div>
-<section class="hero">
-  <div class="container"><div class="hero__inner">
-    <div class="hero__content">
-      <h1 class="hero__title">Внедрение CRM Битрикс24: от хаоса к системе за 4 недели</h1>
-      <p class="hero__desc">Пошаговый процесс внедрения: аудит ваших продаж, проектирование воронки, настройка автоматизации, обучение команды. Фиксированные сроки и цена.</p>
-      <div class="hero__actions"><a href="contacts.html" class="btn btn-accent">Обсудить внедрение</a><a href="crm.html" class="btn btn-outline">← CRM Битрикс24</a></div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title">Битрикс24, спроектированный под работу компании</h1>
+    <p class="page-hero__subtitle">Внедряем, перезапускаем и развиваем облачный и коробочный Битрикс24 с учётом процессов, ролей, интеграций и требований к инфраструктуре.</p>
+    <div style="margin-top:24px;">
+      <a href="project.html" class="btn btn-accent">Обсудить внедрение</a>
     </div>
-    <div class="hero__stats">
-      <div class="hero__stat"><div class="hero__stat-number">2-4</div><div class="hero__stat-label">недели внедрения</div></div>
-      <div class="hero__stat"><div class="hero__stat-number">30+</div><div class="hero__stat-label">проектов внедрений</div></div>
-      <div class="hero__stat"><div class="hero__stat-number">0</div><div class="hero__stat-label">просроченных дедлайнов</div></div>
-    </div>
-  </div></div>
+  </div>
 </section>
-<section class="section"><div class="container">
-  <h2 class="section__title" style="text-align:center;">Что входит во внедрение</h2>
-  <p class="section__subtitle" style="text-align:center;max-width:600px;margin:0 auto 48px;">Полный цикл: от аудита до обучения команды</p>
-  <div class="grid grid--2" style="gap:32px;align-items:center;">
-    <div class="animate-on-scroll"><div style="background:linear-gradient(135deg,#2A5B9A,#4A8FE0);border-radius:16px;padding:48px 32px;text-align:center;"><div style="font-size:4rem;margin-bottom:16px;">📋</div><div style="font-size:0.875rem;color:rgba(255,255,255,0.8);font-weight:600;text-transform:uppercase;letter-spacing:1px;">Полный цикл</div></div></div>
-    <div>
-      <h3 style="margin-bottom:16px;">Этапы внедрения:</h3>
-      <div style="margin-bottom:16px;"><h4 style="color:var(--accent);margin-bottom:4px;">1. Аудит продаж</h4><p style="color:var(--text-muted);font-size:0.9375rem;">Анализируем текущие процессы: как приходят лиды, как работают менеджеры, где теряются.</p></div>
-      <div style="margin-bottom:16px;"><h4 style="color:var(--accent);margin-bottom:4px;">2. Проектирование воронки</h4><p style="color:var(--text-muted);font-size:0.9375rem;">Создаём схему воронки под ваши этапы продаж. Согласовываем поля, этапы, правила.</p></div>
-      <div style="margin-bottom:16px;"><h4 style="color:var(--accent);margin-bottom:4px;">3. Настройка CRM</h4><p style="color:var(--text-muted);font-size:0.9375rem;">Подключаем телефонию, почту, мессенджеры. Настраиваем роботов, триггеры, шаблоны.</p></div>
-      <div style="margin-bottom:16px;"><h4 style="color:var(--accent);margin-bottom:4px;">4. Интеграции</h4><p style="color:var(--text-muted);font-size:0.9375rem;">Подключаем 1С, платёжные системы, рекламу. Сквозная аналитика.</p></div>
-      <div><h4 style="color:var(--accent);margin-bottom:4px;">5. Обучение и запуск</h4><p style="color:var(--text-muted);font-size:0.9375rem;">Обучаем менеджеров и руководителей. Запускаем CRM. 3 месяца поддержки.</p></div>
+
+<!-- Что можно организовать -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Что можно организовать</h2>
+    </div>
+    <div class="grid grid--2">
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">💬</div>
+        <h3 class="solution-card__title">CRM и продажи</h3>
+        <p class="solution-card__desc">Воронки продаж, автоматизация, контроль сделок, история коммуникаций.</p>
+      </div>
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">📞</div>
+        <h3 class="solution-card__title">Контакт-центр</h3>
+        <p class="solution-card__desc">Фиксация звонков, писем, сообщений. Единая история взаимодействий.</p>
+      </div>
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">⚙️</div>
+        <h3 class="solution-card__title">Внутренние процессы</h3>
+        <p class="solution-card__desc">Согласования, маршрутизация, автоматические уведомления и контроль сроков.</p>
+      </div>
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">📋</div>
+        <h3 class="solution-card__title">Задачи и проекты</h3>
+        <p class="solution-card__desc">Шаблоны проектов, роли, этапы, зависимости, отчётность.</p>
+      </div>
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">🏢</div>
+        <h3 class="solution-card__title">Корпоративный портал</h3>
+        <p class="solution-card__desc">Структура компании, рабочие группы, база знаний, сервисы для сотрудников.</p>
+      </div>
+      <div class="solution-card animate-on-scroll">
+        <div class="solution-card__icon">📊</div>
+        <h3 class="solution-card__title">Отчётность</h3>
+        <p class="solution-card__desc">Показатели по отделам, сотрудникам, сделкам и процессам.</p>
+      </div>
     </div>
   </div>
-</div></section>
-<section class="section section--alt"><div class="container">
-  <h2 class="section__title" style="text-align:center;">Что вы получите</h2>
-  <div class="grid grid--3" style="margin-top:48px;">
-    <div class="card animate-on-scroll" style="text-align:center;"><div style="font-size:2rem;margin-bottom:12px;">📊</div><h3 style="margin-bottom:8px;">Прозрачные продажи</h3><p style="color:var(--text-muted);font-size:0.9375rem;">Видите каждый лид, каждый этап, каждый звонок. Дашборды в реальном времени.</p></div>
-    <div class="card animate-on-scroll" style="text-align:center;"><div style="font-size:2rem;margin-bottom:12px;">⚡</div><h3 style="margin-bottom:8px;">Автоматизация рутины</h3><p style="color:var(--text-muted);font-size:0.9375rem;">Менеджеры тратят время на продажи, а не на перенос данных. 80% рутины на автопилоте.</p></div>
-    <div class="card animate-on-scroll" style="text-align:center;"><div style="font-size:2rem;margin-bottom:12px;">📈</div><h3 style="margin-bottom:8px;">Рост конверсии</h3><p style="color:var(--text-muted);font-size:0.9375rem;">Средний рост конверсии из лида в сделку — 40%. Снижение стоимости лида на 25-35%.</p></div>
+</section>
+
+<!-- Сценарии проекта -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Сценарии проекта</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card animate-on-scroll">внедрение с нуля</div>
+      <div class="problem-card animate-on-scroll">аудит</div>
+      <div class="problem-card animate-on-scroll">перезапуск</div>
+      <div class="problem-card animate-on-scroll">развитие</div>
+      <div class="problem-card animate-on-scroll">миграция</div>
+      <div class="problem-card animate-on-scroll">интеграция</div>
+      <div class="problem-card animate-on-scroll">сопровождение</div>
+    </div>
   </div>
-</div></section>
-<section class="section"><div class="container">
-  <div class="cta-banner animate-on-scroll">
-    <h2 class="cta-banner__title">Готовы к внедрению?</h2>
-    <p class="cta-banner__desc">Бесплатный аудит CRM — покажем, где вы теряете лиды.</p>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><a href="contacts.html" class="btn btn-accent">Бесплатный аудит</a><a href="tel:+79120767025" class="btn btn-outline">+7 (912) 076-70-25</a></div>
+</section>
+
+<!-- Облако или коробка -->
+<section class="section" id="compare">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Облако или коробка</h2>
+    </div>
+    <div style="overflow-x:auto;" class="animate-on-scroll">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Критерий</th>
+            <th>Облачный Битрикс24</th>
+            <th>Коробочный Битрикс24</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Размещение</td><td>Инфраструктура поставщика</td><td>Собственный или арендованный сервер</td></tr>
+          <tr><td>Запуск</td><td>Обычно быстрее</td><td>Требует подготовки инфраструктуры</td></tr>
+          <tr><td>Серверное администрирование</td><td>Не требуется со стороны клиента</td><td>Требуется</td></tr>
+          <tr><td>Глубокая доработка</td><td>Ограничена возможностями облака</td><td>Доступно больше вариантов</td></tr>
+          <tr><td>Контроль инфраструктуры</td><td>Ограниченный</td><td>Расширенный</td></tr>
+          <tr><td>Закрытый контур</td><td>Не основной сценарий</td><td>Возможен</td></tr>
+          <tr><td>Обновления</td><td>Выполняются поставщиком</td><td>Требуют планирования</td></tr>
+          <tr><td>Стоимость владения</td><td>Обычно проще на старте</td><td>Включает инфраструктуру и обслуживание</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div></section>
-<div class="sticky-cta" id="stickyCta"><a href="tel:+79120767025" class="btn btn-primary">📞 Позвонить</a><a href="contacts.html" class="btn btn-accent">Заявка</a></div>
-<div class="popup-overlay" id="popupOverlay"><div class="popup"><button class="popup__close" id="popupClose">&times;</button><div style="font-size:2rem;margin-bottom:12px;">📊</div><h3 class="popup__title">Бесплатный аудит CRM</h3><p class="popup__desc">Покажем, где вы теряете лиды</p><form id="popupForm" novalidate><div class="form-group"><input type="text" class="form-control" placeholder="Ваше имя" required></div><div class="form-group"><input type="tel" class="form-control" placeholder="+7 (___) ___-__-__" required></div><div class="consent-group"><label><input type="checkbox" required><span>Даю согласие на обработку <a href="privacy.html">персональных данных</a></span></label></div><button type="submit" class="btn btn-accent btn-full">Получить аудит</button><p class="quick-form__guarantee">Ответим в течение 2 часов</p></form><button class="popup__dismiss" id="popupDismiss">Пока нет</button></div></div>
-<footer class="footer"><div class="container"><div class="footer__inner">
-  <div class="footer__brand"><div class="footer__logo"><img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32"><span>dianomi</span></div><p class="footer__desc">Авторизованный партнёр 1С-Битрикс.</p></div>
-  <div><h4 class="footer__heading">Навигация</h4><ul class="footer__list"><li><a href="index.html">Главная</a></li><li><a href="about.html">О компании</a></li><li><a href="services.html">Услуги</a></li><li><a href="editions.html">Тарифы</a></li><li><a href="cases.html">Кейсы</a></li></ul></div>
-  <div><h4 class="footer__heading">Контакты</h4><div class="footer__contact-item"><span class="footer__contact-icon">📞</span><div><a href="tel:+79120767025">+7 (912) 076-70-25</a></div></div><div class="footer__contact-item"><span class="footer__contact-icon">✉️</span><div><a href="mailto:hello@dianomi.ru">hello@dianomi.ru</a></div></div></div>
-</div><div class="footer__copyright"><p>&copy; <span id="currentYear"></span> dianomi. Все права защищены.</p></div></div></footer>
-<script src="js/main.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://dianomi.ru/"},{"@type":"ListItem","position":2,"name":"Услуги","item":"https://dianomi.ru/services.html"},{"@type":"ListItem","position":3,"name":"CRM Битрикс24","item":"https://dianomi.ru/crm.html"},{"@type":"ListItem","position":4,"name":"Внедрение CRM","item":"https://dianomi.ru/bitrix24.html"}]}</script>
+</section>
+
+<!-- Коробочный Битрикс24 -->
+<section class="section section--alt" id="on-premise">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Коробочный Битрикс24</h2>
+    </div>
+    <div class="solution-card animate-on-scroll" style="max-width:720px;margin:0 auto;">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ собственное размещение</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ глубокая кастомизация</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ интеграци�� с внутренними системами</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ резервное копирование</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ обновления</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ мониторинг</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);border-bottom:1px solid var(--border);">→ разграничение ответственности</li>
+        <li style="padding:8px 0;font-size:0.9375rem;color:var(--text-light);">→ миграция из облака</li>
+      </ul>
+      <div style="background:rgba(231,76,60,0.06);border-left:3px solid var(--error);padding:12px 16px;border-radius:0 var(--card-radius) var(--card-radius) 0;margin-top:20px;">
+        <p style="font-size:0.875rem;color:var(--text-light);margin:0;">Не используем утверждение «коробка всегда безопаснее». Безопасность зависит от архитектуры, администрирования и организации доступа.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Сопровождение -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Сопровождение</h2>
+    </div>
+    <div class="format-grid grid grid--2">
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Поддержка пользователей</h4>
+        <p class="format-card__desc">Консультации, обучение, оперативная помощь в работе с системой.</p>
+      </div>
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Развитие процессов</h4>
+        <p class="format-card__desc">Поэтапное расширение функциональности по мере роста бизнеса.</p>
+      </div>
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Новые интеграции</h4>
+        <p class="format-card__desc">Подключение новых систем и сервисов к Битрикс24.</p>
+      </div>
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Контроль кастомных доработок</h4>
+        <p class="format-card__desc">Мониторинг и поддержка индивидуальных доработок.</p>
+      </div>
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Исправление ошибок</h4>
+        <p class="format-card__desc">Оперативное устранение неполадок и багов.</p>
+      </div>
+      <div class="format-card animate-on-scroll">
+        <h4 class="format-card__title">Консультации</h4>
+        <p class="format-card__desc">Рекомендации по оптимизации использования платформы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section animate-on-scroll">
+      <h2 class="cta-section__title">Подберём вариант Битрикс24</h2>
+      <p class="cta-section__desc">Расскажите о вашей задаче и требованиях. Определим, какой вариант размещения подходит именно вам.</p>
+      <a href="project.html" class="btn btn-accent">Обсудить вариант</a>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<script src="js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Внедрение Битрикс24",
+  "provider": { "@type": "Organization", "name": "dianomi" },
+  "description": "Внедряем, перезапускаем и развиваем облачный и коробочный Битрикс24 с учётом процессов, ролей, интеграций и требований к инфраструктуре."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://dianomi.ru/" },
+    { "@type": "ListItem", "position": 2, "name": "Платформы", "item": "https://dianomi.ru/" },
+    { "@type": "ListItem", "position": 3, "name": "Битрикс24" }
+  ]
+}
+</script>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
+          dianomi
+        </div>
+        <p class="footer__desc">РџСЂРѕРµРєС‚РёСЂСѓРµРј Рё РІРЅРµРґСЂСЏРµРј СЃРІСЏР·Р°РЅРЅС‹Рµ С†РёС„СЂРѕРІС‹Рµ СЃРёСЃС‚РµРјС‹ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РєРѕРјРїР°РЅРёРµР№ Рё СЂР°Р±РѕС‚С‹ СЃ РєР»РёРµРЅС‚Р°РјРё.</p>
+        <div class="contact-block" style="margin-top:20px;">
+          <div class="contact-block__item">
+            <div class="contact-block__icon">рџ“ћ</div>
+            <div class="contact-block__text">
+              <a href="tel:+738520000000" style="color:rgba(255,255,255,0.9);">+7 (3852) 000-00-00</a>
+            </div>
+          </div>
+          <div class="contact-block__item">
+            <div class="contact-block__icon">вњ‰пёЏ</div>
+            <div class="contact-block__text">
+              <a href="mailto:info@dianomi.ru" style="color:rgba(255,255,255,0.9);">info@dianomi.ru</a>
+            </div>
+          </div>
+          <div class="contact-block__item">
+            <div class="contact-block__icon">рџ“Ќ</div>
+            <div class="contact-block__text">
+              <span style="color:rgba(255,255,255,0.7);">Рі. Р‘Р°СЂРЅР°СѓР»</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 class="footer__heading">Р РµС€РµРЅРёСЏ</h5>
+        <ul class="footer__list">
+          <li><a href="business-systems.html">РЎРёСЃС‚РµРјС‹ СѓРїСЂР°РІР»РµРЅРёСЏ Р±РёР·РЅРµСЃРѕРј</a></li>
+          <li><a href="web-systems.html">Р’РµР±-СЃРёСЃС‚РµРјС‹</a></li>
+          <li><a href="integrations.html">РРЅС‚РµРіСЂР°С†РёРё</a></li>
+          <li><a href="data-bi.html">Р”Р°РЅРЅС‹Рµ Рё BI-Р°РЅР°Р»РёС‚РёРєР°</a></li>
+          <li><a href="ai-bots.html">РР Рё С‡Р°С‚-Р±РѕС‚С‹</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer__heading">РџР»Р°С‚С„РѕСЂРјС‹</h5>
+        <ul class="footer__list">
+          <li><a href="bitrix24.html">Р‘РёС‚СЂРёРєСЃ24</a></li>
+          <li><a href="bitrix24.html#cloud">РћР±Р»Р°С‡РЅС‹Р№ Р‘РёС‚СЂРёРєСЃ24</a></li>
+          <li><a href="bitrix24.html#on-premise">РљРѕСЂРѕР±РѕС‡РЅС‹Р№ Р‘РёС‚СЂРёРєСЃ24</a></li>
+          <li><a href="1c-bitrix.html">1РЎ-Р‘РёС‚СЂРёРєСЃ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer__heading">РРЅС‚РµРіСЂР°С†РёРё</h5>
+        <ul class="footer__list">
+          <li><a href="integrations.html#bx1c">Р‘РёС‚СЂРёРєСЃ24 Рё 1РЎ</a></li>
+          <li><a href="integrations.html#site1c">РЎР°Р№С‚ Рё 1РЎ</a></li>
+          <li><a href="integrations.html#sitebx">РЎР°Р№С‚ Рё Р‘РёС‚СЂРёРєСЃ24</a></li>
+          <li><a href="integrations.html#api">API-РёРЅС‚РµРіСЂР°С†РёРё</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer__heading">Dianomi</h5>
+        <ul class="footer__list">
+          <li><a href="cases.html">РљРµР№СЃС‹</a></li>
+          <li><a href="approach.html">РљР°Рє СЂР°Р±РѕС‚Р°РµРј</a></li>
+          <li><a href="about.html">Рћ РєРѕРјРїР°РЅРёРё</a></li>
+          <li><a href="contacts.html">РљРѕРЅС‚Р°РєС‚С‹</a></li>
+          <li><a href="project.html">РћР±СЃСѓРґРёС‚СЊ РїСЂРѕРµРєС‚</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer__heading">Р”РѕРєСѓРјРµРЅС‚С‹</h5>
+        <ul class="footer__list">
+          <li><a href="privacy.html">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a></li>
+          <li><a href="personal-data.html">РЎРѕРіР»Р°СЃРёРµ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РґР°РЅРЅС‹С…</a></li>
+          <li><a href="license.html">Р РµРєРІРёР·РёС‚С‹</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      В© <span id="currentYear">2026</span> dianomi. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.
+    </div>
+  </div>
+</footer>
 </body>
 </html>
