@@ -199,6 +199,9 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\remove-mobile-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-all.ps1' -Force; Write-Output 'Temp files removed'&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git add -A; git commit -m 'Fix mobile menu - remove duplicates and broken fetch&#10;&#10;- Removed duplicate mobile-menu and mobile-overlay from all 18 HTML files&#10;- Removed broken fetch() calls for header/footer from main.js&#10;- Mobile menu should now work correctly on mobile devices'&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
