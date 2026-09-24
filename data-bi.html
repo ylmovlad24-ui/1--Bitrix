@@ -27,9 +27,12 @@
       <img src="img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
       <span>dianomi</span>
     </a>
+
     <nav class="header__nav" aria-label="Основная навигация">
       <ul class="header__nav-list">
         <li><a href="index.html" class="header__nav-link">Главная</a></li>
+        
+        <!-- Решения -->
         <li class="nav-dropdown">
           <a href="business-systems.html" class="header__nav-link">Решения ▾</a>
           <div class="mega-menu">
@@ -70,6 +73,8 @@
             </div>
           </div>
         </li>
+
+        <!-- Платформы -->
         <li class="nav-dropdown">
           <a href="bitrix24.html" class="header__nav-link">Платформы ▾</a>
           <div class="mega-menu">
@@ -79,6 +84,7 @@
                 <li><a href="bitrix24.html#cloud">Облачный Битрикс24</a></li>
                 <li><a href="bitrix24.html#on-premise">Коробочный Битрикс24</a></li>
                 <li><a href="bitrix24.html#compare">Облако или коробка</a></li>
+                <li><a href="bitrix24-prices.html">Тарифы</a></li>
               </ul>
             </div>
             <div class="mega-menu__col">
@@ -96,6 +102,8 @@
             </div>
           </div>
         </li>
+
+        <!-- Интеграции -->
         <li class="nav-dropdown">
           <a href="integrations.html" class="header__nav-link">Интеграции ▾</a>
           <div class="mega-menu">
@@ -117,14 +125,17 @@
             </div>
           </div>
         </li>
+
         <li><a href="cases.html" class="header__nav-link">Кейсы</a></li>
         <li><a href="approach.html" class="header__nav-link">Как работаем</a></li>
         <li><a href="about.html" class="header__nav-link">О Dianomi</a></li>
       </ul>
     </nav>
+
     <div class="header__cta">
       <a href="project.html" class="btn btn-accent btn-sm">Обсудить проект</a>
     </div>
+
     <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
       <span class="burger__line"></span>
       <span class="burger__line"></span>
@@ -132,10 +143,13 @@
     </button>
   </div>
 </header>
+
 <div class="mobile-overlay" id="mobileOverlay"></div>
+
 <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
+    
     <li class="mobile-menu__item mobile-menu__dropdown">
       <button class="mobile-menu__dropdown-btn" aria-expanded="false">
         <span>Решения</span>
@@ -149,6 +163,7 @@
         <li><a href="ai-bots.html">ИИ и чат-боты</a></li>
       </ul>
     </li>
+    
     <li class="mobile-menu__item mobile-menu__dropdown">
       <button class="mobile-menu__dropdown-btn" aria-expanded="false">
         <span>Платформы</span>
@@ -159,6 +174,7 @@
         <li><a href="1c-bitrix.html">1С-Битрикс</a></li>
       </ul>
     </li>
+    
     <li class="mobile-menu__item"><a href="integrations.html" class="mobile-menu__link">Интеграции</a></li>
     <li class="mobile-menu__item"><a href="cases.html" class="mobile-menu__link">Кейсы</a></li>
     <li class="mobile-menu__item"><a href="approach.html" class="mobile-menu__link">Как работаем</a></li>
@@ -173,6 +189,8 @@
     <p style="font-size:0.875rem;color:var(--text-muted);margin:0;">info@dianomi.ru</p>
   </div>
 </nav>
+
+
 
 <!-- Breadcrumbs -->
 <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -375,6 +393,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
+      <!-- Brand -->
       <div class="footer__brand">
         <div class="footer__logo">
           <img src="img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
@@ -402,6 +421,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Решения -->
       <div>
         <h5 class="footer__heading">Решения</h5>
         <ul class="footer__list">
@@ -412,15 +433,20 @@
           <li><a href="ai-bots.html">ИИ и чат-боты</a></li>
         </ul>
       </div>
+
+      <!-- Платформы -->
       <div>
         <h5 class="footer__heading">Платформы</h5>
         <ul class="footer__list">
           <li><a href="bitrix24.html">Битрикс24</a></li>
           <li><a href="bitrix24.html#cloud">Облачный Битрикс24</a></li>
           <li><a href="bitrix24.html#on-premise">Коробочный Битрикс24</a></li>
+          <li><a href="bitrix24-prices.html">Тарифы Битрикс24</a></li>
           <li><a href="1c-bitrix.html">1С-Битрикс</a></li>
         </ul>
       </div>
+
+      <!-- Интеграции -->
       <div>
         <h5 class="footer__heading">Интеграции</h5>
         <ul class="footer__list">
@@ -430,6 +456,8 @@
           <li><a href="integrations.html#api">API-интеграции</a></li>
         </ul>
       </div>
+
+      <!-- Dianomi -->
       <div>
         <h5 class="footer__heading">Dianomi</h5>
         <ul class="footer__list">
@@ -440,6 +468,8 @@
           <li><a href="project.html">Обсудить проект</a></li>
         </ul>
       </div>
+
+      <!-- Документы -->
       <div>
         <h5 class="footer__heading">Документы</h5>
         <ul class="footer__list">
@@ -449,11 +479,13 @@
         </ul>
       </div>
     </div>
+
     <div class="footer__copyright">
       © <span id="currentYear">2026</span> dianomi. Все права защищены.
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>

@@ -363,26 +363,9 @@
     }
   }
 
-  /* ───────── Load shared header/footer ───────── */
-  fetch('partials/header.html')
-    .then(function(r) { return r.text(); })
-    .then(function(html) {
-      document.querySelector('head').insertAdjacentHTML('beforebegin', html);
-      initMobileMenu();
-      initDropdown();
-      initMegaMenu();
-    })
-    .catch(function() {
-      initMobileMenu();
-      initDropdown();
-      initMegaMenu();
-    });
-
-  fetch('partials/footer.html')
-    .then(function(r) { return r.text(); })
-    .then(function(html) {
-      document.body.insertAdjacentHTML('beforeend', html);
-    })
-    .catch(function() {});
+  /* ───────── Initialize all modules ───────── */
+  initMobileMenu();
+  initDropdown();
+  initMegaMenu();
 
 })();

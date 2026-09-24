@@ -172,6 +172,33 @@
         <Execute>
           <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/fix-encoding.ps1&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/fix-bom.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-encoding.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-bom.ps1' -Force; Write-Output 'Temp files removed'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git commit -m 'Fix UTF-8 encoding with BOM for all HTML files&#10;&#10;- Added UTF-8 BOM to all 18 HTML files&#10;- Fixes display of header and footer with Cyrillic text&#10;- Resolves mojibake (garbled text) issue in browsers'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/replace-header-footer.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-duplicates.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix24.html' -Pattern 'mobileMenu' -AllMatches | ForEach-Object { $_.LineNumber }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix24.html' -Pattern 'mobileMenu' | ForEach-Object { $_.LineNumber }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/remove-mobile-duplicates.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\remove-mobile-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-all.ps1' -Force; Write-Output 'Temp files removed'&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
