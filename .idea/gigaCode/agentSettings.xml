@@ -49,6 +49,136 @@
         <Execute>
           <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py&quot; -Force" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="git status *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-Location&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Ptodjec' -Directory | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad' -Directory | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive' -Directory 2&gt;$null | Select-Object Name; Get-ChildItem -Path 'C:\Users\Vlad\YandexDisk' -Directory 2&gt;$null | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive\Documents' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec' -Recurse | Select-Object FullName&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git status --short&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix' -Filter '*.html' | ForEach-Object { $content = Get-Content $_.FullName -Raw -Encoding UTF8; $hasHeader = $content -match 'class=\&quot;header\&quot;'; $hasFooter = $content -match 'class=\&quot;footer\&quot;'; [PSCustomObject]@{Name=$_.Name; Header=$hasHeader; Footer=$hasFooter} } | Format-Table -AutoSize&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix' -Filter '*.html' | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $h = if ($c -match 'class=.header.') { 'YES' } else { 'NO' }; $f = if ($c -match 'class=.footer.') { 'YES' } else { 'NO' }; Write-Output ('{0} | H: {1} | F: {2}' -f $_.Name, $h, $f) }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-header.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-header.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\update-nav.ps1' -Force; Write-Output 'Temporary files removed'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$files = @('index.html', 'bitrix24.html', '1c-bitrix.html', 'project.html', 'bitrix24-prices.html'); foreach ($f in $files) { $path = 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\' + $f; $c = Get-Content $path -Raw -Encoding UTF8; $hasBody = if ($c -match '&lt;body') { 'YES' } else { 'NO' }; $hasCloseBody = if ($c -match '&lt;/body&gt;') { 'YES' } else { 'NO' }; $hasHtmlOpen = if ($c -match '&lt;html') { 'YES' } else { 'NO' }; $hasHtmlClose = if ($c -match '&lt;/html&gt;') { 'YES' } else { 'NO' }; Write-Output ('{0} | Body: {1} | /Body: {2} | &lt;html: {3} | &lt;/html: {4}' -f $f, $hasBody, $hasCloseBody, $hasHtmlOpen, $hasHtmlClose) }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-html.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-html-2.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html-2.ps1' -Force; Write-Output 'Temporary files removed'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$c = Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\css\style.css' -Raw; $components = @('arch-diagram', 'comparison-table', 'result-table', 'process-steps', 'solution-card', 'problem-card', 'format-card', 'platform-card', 'integration-card', 'cta-section', 'case-card-nov', 'breadcrumbs', 'section-heading', 'contact-block', 'cookie-notice', 'success-message'); foreach ($comp in $components) { $found = if ($c -match [regex]::Escape($comp)) { 'FOUND' } else { 'MISSING' }; Write-Output ($comp + ': ' + $found) }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-css.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-css.ps1' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-js.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$c = Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\js\main.js' -Raw; $patterns = @('dynamic', 'phone', 'mask', 'scroll', 'animation', 'FAQ', 'accordion', 'cookie', 'megamenu', 'burger'); foreach ($p in $patterns) { $found = if ($c -match [regex]::Escape($p)) { 'FOUND' } else { 'MISSING' }; Write-Output ($p + ' : ' + $found) }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-js.ps1' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-css.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-header.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-js.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\update-nav.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html-2.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html.ps1'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git add -A; git status --short&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 5 --oneline&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 1 --pretty=format:'%H%n%s%n%b%n' -- . &quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L -A &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&quot; &quot;https://www.1c-bitrix.ru/products/cms/#tab-section-2&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L -A &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&quot; &quot;https://www.1c-bitrix.ru/products/bitrix24/&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L --max-time 20 -H &quot;User-Agent: Mozilla/5.0&quot; &quot;https://www.1c-bitrix.ru/products/cms/&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/' -UseBasicParsing -OutFile 'C:\tmp\bitrix_page.html'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir C:\tmp 2&gt;$null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path $env:TEMP -Filter 'bitrix24*' -Recurse 2&gt;$null | Select-Object FullName, Length&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/bitrix24/' -UserAgent 'Mozilla/5.0' -UseBasicParsing | Select-Object -ExpandProperty Content | Out-File -FilePath 'C:\temp\bitrix24.html' -Encoding UTF8&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;if (Test-Path 'C:\temp\bitrix24.html') { Write-Output ('File exists: ' + (Get-Item 'C:\temp\bitrix24.html').Length + ' bytes') } else { Write-Output 'File not found' }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-updated.ps1&quot;" />
+        </Execute>
+      </list>
+    </option>
+    <option name="autoApprovedReads">
+      <list>
+        <Read>
+          <option name="pattern" value="D:/Projects/Dianomi/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../runneradmin/AppData/Local/Temp/bitrix24.html" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../../tmp/bitrix_page.html" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../../temp/bitrix24.html" />
+        </Read>
       </list>
     </option>
   </component>
