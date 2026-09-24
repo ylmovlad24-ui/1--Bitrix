@@ -363,6 +363,19 @@
     }
   }
 
+  /* ───────── CTA Form Handler ───────── */
+  window.handleFormSubmit = function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var name = form.querySelector('[name="name"]').value;
+    var phone = form.querySelector('[name="phone"]').value;
+    var message = form.querySelector('[name="message"]').value;
+    console.log('Form submitted:', {name, phone, message});
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+    form.reset();
+    return false;
+  };
+
   /* ───────── Initialize all modules ───────── */
   initMobileMenu();
   initDropdown();

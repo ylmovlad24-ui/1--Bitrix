@@ -872,3 +872,9 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   body { color: #000; background: #FFF; }
   .section { padding: 24px 0; }
 }
+
+/* Компактные блоки для мобильных */
+@media (max-width: 960px) {
+  .platform-card { padding: 16px; }
+  .platform-card__desc { font-size: 0.875rem; }
+}
