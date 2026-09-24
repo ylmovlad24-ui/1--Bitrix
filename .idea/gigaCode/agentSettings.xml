@@ -160,6 +160,15 @@
         <Execute>
           <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-updated.ps1&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-updated.ps1' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 3 --oneline&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git commit -m 'Обновлены страницы Битрикс24 и 1С-Битрикс&#10;&#10;bitrix24.html:&#10;- Добавлена секция CoPilot (AI-ассистент)&#10;- Добавлена секция Enterprise (для крупных предприятий)&#10;- Расширены возможности платформы (автоматизация, BI)&#10;- Обновлены мета-данные&#10;&#10;1c-bitrix.html:&#10;- Добавлена секция преимуществ платформы (6 карточек)&#10;- Добавлена секция возможностей для интернет-магазинов&#10;- Добавлена секция возможностей для корпоративных сайтов&#10;- Обновлены мета-данные&#10;&#10;Обновлены JSON-LD микроразметка на обеих страницах'&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
