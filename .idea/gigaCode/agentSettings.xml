@@ -202,6 +202,96 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git add -A; git commit -m 'Fix mobile menu - remove duplicates and broken fetch&#10;&#10;- Removed duplicate mobile-menu and mobile-overlay from all 18 HTML files&#10;- Removed broken fetch() calls for header/footer from main.js&#10;- Mobile menu should now work correctly on mobile devices'&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="git log *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git reset *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git show *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git status" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git diff *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git stash *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git add *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git commit *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="start &quot;&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\index.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Invoke-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\index.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Filter '*.html' -File | ForEach-Object { $content = Get-Content $_.FullName -Raw -Encoding UTF8; $content = $content -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $content = $content -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $content -Encoding UTF8 -NoNewline }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$dir = Get-Location; Get-ChildItem -Path $dir -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -NonInteractive -Command &quot;$root = 'C:\Users\Анна\IdeaProjects\bitrix'; Get-ChildItem -Path $root -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="node &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.js&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.js&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix24.html&quot; -Pattern &quot;Коробочный Битрикс24&quot; -Context 0,5" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import sys; lines = open(r'C:\Users\Анна\IdeaProjects\bitrix\bitrix24.html', encoding='utf-8').readlines(); start = end = -1; [setattr(sys.modules[__name__], 'start', i) or None for i, l in enumerate(lines) if '&lt;!-- Коробочный Битрикс24 --&gt;' in l] or None; start = [i for i, l in enumerate(lines) if '&lt;!-- Коробочный Битрикс24 --&gt;' in l][0] if any('&lt;!-- Коробочный Битрикс24 --&gt;' in l for l in lines) else -1; end = [i for i, l in enumerate(lines[start+1:]) if '&lt;!-- Бизнес-задачи --&gt;' in l][0] + start + 1 if any('&lt;!-- Бизнес-задачи --&gt;' in l for l in lines[start+1:]) else -1; print(f'Start: {start}, End: {end}'); print(f'Start line: {lines[start].strip()}'); print(f'End line: {lines[end].strip()}')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:/Users/Анна/IdeaProjects/bitrix/_debug_bitrix24.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -u C:/Users/Анна/IdeaProjects/bitrix/_debug_bitrix24.py 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$content = Get-Content 'bitrix24.html' -Raw; $s = $content.IndexOf('&lt;!-- Коробочный Битрикс24 --&gt;'); $e = $content.IndexOf('&lt;!-- Бизнес-задачи --&gt;'); Write-Host 'Start:' $s 'End:' $e&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$env:OLDPWD = pwd; Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; $content = Get-Content 'bitrix24.html' -Raw -Encoding UTF8; $s = $content.IndexOf('&lt;!-- Коробочный Битрикс24 --&gt;'); $e = $content.IndexOf('&lt;!-- Бизнес-задачи --&gt;'); Write-Host ('Start: ' + $s + ' End: ' + $e)&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/_find_section.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git restore *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.py&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_find_section.ps1&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_section_to_remove.txt&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_section.txt&quot; 2&gt;nul" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.py' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_find_section.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section_to_remove.txt' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section.txt' -Force -ErrorAction SilentlyContinue; Write-Host 'Cleaned'&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
