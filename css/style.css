@@ -947,6 +947,22 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .edition-card--popular::before { content: "Популярный"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 16px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
 .price-old { text-decoration: line-through; color: var(--text-muted); font-size: 0.875rem; display: block; }
 .price-new { font-size: 1.5rem; font-weight: 700; color: var(--text); display: block; }
+
+/* === 10. BILLING TOGGLE === */
+.billing-toggle { padding: 0 16px; }
+.billing-toggle__inner { display: inline-flex; gap: 0; background: var(--bg-alt); border: 2px solid var(--primary); border-radius: 50px; overflow: hidden; }
+.billing-toggle__btn { background: transparent; border: none; padding: 12px 24px; font-size: 0.9375rem; font-weight: var(--font-weight-semibold); color: var(--text-light); cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; gap: 8px; }
+.billing-toggle__btn:hover { background: rgba(42,91,154,0.05); }
+.billing-toggle__btn--active { background: var(--primary); color: #fff; }
+.billing-toggle__badge { background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+
+/* === 11. FREE CARD === */
+.edition-card--free { background: rgba(39,174,96,0.05); border: 2px solid var(--success); }
+.edition-card--free h3 { color: var(--success); }
+
+/* === 12. ENTERPRISE CARD === */
+.edition-card--enterprise { background: rgba(139,92,246,0.05); border: 2px solid #8B5CF6; }
+.edition-card--enterprise h3 { color: #8B5CF6; }
   .approach-grid > div { width: auto !important; }
 }
 

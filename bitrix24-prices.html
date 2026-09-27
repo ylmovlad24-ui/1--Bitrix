@@ -140,23 +140,35 @@
   <div class="container">
     <div class="section-heading animate-on-scroll">
       <h2 class="section-heading__title">Облачные тарифы</h2>
-      <p class="section-heading__subtitle">Выберите подходящий тариф в зависимости от размера компании и задач. При оплате за год — скидка 20%.</p>
+      <p class="section-heading__subtitle">Цены указаны за всю компанию, а не за отдельных пользователей</p>
     </div>
+    
+    <!-- Переключатель месяц/год -->
+    <div class="billing-toggle animate-on-scroll" style="text-align:center;margin-bottom:40px;">
+      <div class="billing-toggle__inner">
+        <button class="billing-toggle__btn billing-toggle__btn--active" data-billing="month" onclick="switchBilling('month')">Купить на месяц</button>
+        <button class="billing-toggle__btn" data-billing="year" onclick="switchBilling('year')">
+          Купить на год
+          <span class="billing-toggle__badge">-20%</span>
+        </button>
+      </div>
+    </div>
+    
     <div class="grid grid--5">
       <!-- Бесплатный -->
-      <div class="edition-card animate-on-scroll">
+      <div class="edition-card edition-card--free animate-on-scroll">
         <h3 class="edition-card__name">Бесплатный</h3>
         <p class="edition-card__desc">Начните работать онлайн и продавать больше с CRM</p>
-        <div class="edition-card__users">Неограниченно пользователей</div>
+        <div class="edition-card__users">Неограниченно <span style="color:var(--success);">👍</span></div>
         <div class="edition-card__storage">25 ГБ диск</div>
         <div class="edition-card__price">
-          <span class="price-new">Бесплатно</span>
+          <span class="price-new" style="font-size:2rem;">Бесплатно</span>
         </div>
-        <a href="project.html" class="btn btn-outline btn-full">Начать</a>
+        <a href="project.html" class="btn btn-full" style="background:var(--success);color:#fff;">Создать</a>
       </div>
       
       <!-- Базовый -->
-      <div class="edition-card animate-on-scroll">
+      <div class="edition-card animate-on-scroll" data-month-price="2490" data-year-price="1990">
         <h3 class="edition-card__name">Базовый</h3>
         <p class="edition-card__desc">CRM для небольших отделов продаж</p>
         <div class="edition-card__users">5 пользователей</div>
@@ -165,12 +177,12 @@
           <span class="price-old">2 490 ₽</span>
           <span class="price-new">1 990 ₽</span>
         </div>
-        <div class="edition-card__price-period">в месяц за всю компанию</div>
-        <a href="project.html" class="btn btn-outline btn-full">Выбрать</a>
+        <div class="edition-card__price-period">в месяц за всех пользователей</div>
+        <a href="project.html" class="btn btn-full" style="background:#0077FF;color:#fff;">Выбрать тариф</a>
       </div>
       
       <!-- Стандартный -->
-      <div class="edition-card animate-on-scroll">
+      <div class="edition-card animate-on-scroll" data-month-price="6990" data-year-price="5590">
         <h3 class="edition-card__name">Стандартный</h3>
         <p class="edition-card__desc">Для совместной работы всей компании или рабочих групп</p>
         <div class="edition-card__users">50 пользователей</div>
@@ -179,36 +191,42 @@
           <span class="price-old">6 990 ₽</span>
           <span class="price-new">5 590 ₽</span>
         </div>
-        <div class="edition-card__price-period">в месяц за всю компанию</div>
-        <a href="project.html" class="btn btn-outline btn-full">Выбрать</a>
+        <div class="edition-card__price-period">в месяц за всех пользователей</div>
+        <a href="project.html" class="btn btn-full" style="background:#0077FF;color:#fff;">Выбрать тариф</a>
       </div>
       
       <!-- Профессиональный -->
-      <div class="edition-card edition-card--popular animate-on-scroll">
+      <div class="edition-card edition-card--popular animate-on-scroll" data-month-price="13990" data-year-price="11190">
         <h3 class="edition-card__name">Профессиональный</h3>
         <p class="edition-card__desc">Для максимальной автоматизации всех процессов в компании</p>
-        <div class="edition-card__users">100 пользователей</div>
+        <div class="edition-card__users">100 <span style="color:var(--accent);">🔥</span></div>
         <div class="edition-card__storage">10 ТБ диск</div>
         <div class="edition-card__price">
           <span class="price-old">13 990 ₽</span>
           <span class="price-new">11 190 ₽</span>
         </div>
-        <div class="edition-card__price-period">в месяц за всю компанию</div>
-        <a href="project.html" class="btn btn-accent btn-full">Выбрать</a>
+        <div class="edition-card__price-period">в месяц за всех пользователей</div>
+        <a href="project.html" class="btn btn-full" style="background:#0077FF;color:#fff;">Выбрать тариф</a>
       </div>
       
       <!-- Энтерпрайз -->
-      <div class="edition-card animate-on-scroll">
+      <div class="edition-card edition-card--enterprise animate-on-scroll" data-month-price="33990" data-year-price="27190">
         <h3 class="edition-card__name">Энтерпрайз</h3>
-        <p class="edition-card__desc">Для крупного бизнеса с особыми требованиями</p>
-        <div class="edition-card__users">250 пользователей</div>
+        <p class="edition-card__desc" style="font-size:0.875rem;"><a href="https://www.bitrix24.ru/products/bx24/enterprise/" style="color:var(--primary);" target="_blank" rel="noopener">Почему Битрикс24 Энтерпрайз?</a></p>
+        <div class="edition-card__users">
+          <select style="width:100%;padding:8px;border:1px solid var(--border);border-radius:var(--card-radius);font-size:1rem;">
+            <option>250 пользователей</option>
+            <option>500 пользователей</option>
+            <option>1000 пользователей</option>
+          </select>
+        </div>
         <div class="edition-card__storage">15 ТБ диск</div>
         <div class="edition-card__price">
           <span class="price-old">33 990 ₽</span>
           <span class="price-new">27 190 ₽</span>
         </div>
-        <div class="edition-card__price-period">в месяц за всю компанию</div>
-        <a href="project.html" class="btn btn-outline btn-full">Выбрать</a>
+        <div class="edition-card__price-period">в месяц за всех пользователей</div>
+        <a href="project.html" class="btn btn-full" style="background:#8B5CF6;color:#fff;">Выбрать тариф</a>
       </div>
     </div>
   </div>
@@ -268,50 +286,6 @@
       <a href="https://www.bitrix24.ru/products/bx24/compare/" class="btn btn-outline btn-full" target="_blank" rel="noopener">
         Подробное сравнение тарифов
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- Годовая оплата -->
-<section class="section">
-  <div class="container">
-    <div class="section-heading animate-on-scroll">
-      <h2 class="section-heading__title">Годовая оплата — выгоднее</h2>
-      <p class="section-heading__subtitle">При оплате за год — скидка 20% на любой тариф</p>
-    </div>
-    <div class="grid grid--4">
-      <div class="edition-card animate-on-scroll">
-        <h3 class="edition-card__name">Базовый</h3>
-        <div class="edition-card__price">
-          <span class="price-old">2 490 ₽</span>
-          <span class="price-new">1 990 ₽</span>
-        </div>
-        <div class="edition-card__price-period">в месяц за всю компанию при оплате за год</div>
-      </div>
-      <div class="edition-card animate-on-scroll">
-        <h3 class="edition-card__name">Стандартный</h3>
-        <div class="edition-card__price">
-          <span class="price-old">6 990 ₽</span>
-          <span class="price-new">5 590 ₽</span>
-        </div>
-        <div class="edition-card__price-period">в месяц за всю компанию при оплате за год</div>
-      </div>
-      <div class="edition-card edition-card--popular animate-on-scroll">
-        <h3 class="edition-card__name">Профессиональный</h3>
-        <div class="edition-card__price">
-          <span class="price-old">13 990 ₽</span>
-          <span class="price-new">11 190 ₽</span>
-        </div>
-        <div class="edition-card__price-period">в месяц за всю компанию при оплате за год</div>
-      </div>
-      <div class="edition-card animate-on-scroll">
-        <h3 class="edition-card__name">Энтерпрайз</h3>
-        <div class="edition-card__price">
-          <span class="price-old">33 990 ₽</span>
-          <span class="price-new">27 190 ₽</span>
-        </div>
-        <div class="edition-card__price-period">в месяц за всю компанию при оплате за год</div>
-      </div>
     </div>
   </div>
 </section>
@@ -480,6 +454,51 @@
     { "@type": "ListItem", "position": 3, "name": "Тарифы" }
   ]
 }
+</script>
+
+<script>
+// Переключение месяц/год
+function switchBilling(type) {
+  const cards = document.querySelectorAll('.edition-card[data-month-price]');
+  const buttons = document.querySelectorAll('.billing-toggle__btn');
+  
+  // Обновляем кнопки
+  buttons.forEach(btn => {
+    if (btn.dataset.billing === type) {
+      btn.classList.add('billing-toggle__btn--active');
+    } else {
+      btn.classList.remove('billing-toggle__btn--active');
+    }
+  });
+  
+  // Обновляем цены
+  cards.forEach(card => {
+    const monthPrice = parseInt(card.dataset.monthPrice);
+    const yearPrice = parseInt(card.dataset.yearPrice);
+    const priceNew = card.querySelector('.price-new');
+    const priceOld = card.querySelector('.price-old');
+    const pricePeriod = card.querySelector('.edition-card__price-period');
+    
+    if (type === 'year' && priceOld && priceNew) {
+      // Показываем скидку
+      priceOld.style.display = 'block';
+      priceOld.textContent = monthPrice.toLocaleString('ru-RU') + ' ₽';
+      priceNew.textContent = yearPrice.toLocaleString('ru-RU') + ' ₽';
+      pricePeriod.textContent = 'в месяц при оплате за год';
+    } else if (type === 'month' && priceOld && priceNew) {
+      // Показываем обычную цену
+      priceOld.style.display = 'none';
+      priceNew.textContent = monthPrice.toLocaleString('ru-RU') + ' ₽';
+      pricePeriod.textContent = 'в месяц за всех пользователей';
+    }
+  });
+}
+
+// Инициализация: скрываем старую цену по умолчанию
+document.addEventListener('DOMContentLoaded', function() {
+  const priceOlds = document.querySelectorAll('.price-old');
+  priceOlds.forEach(el => el.style.display = 'none');
+});
 </script>
 
 </body>
