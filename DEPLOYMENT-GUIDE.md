@@ -120,43 +120,26 @@ $DB->Query("SET NAMES 'utf8'");
 php /var/www/dianomi.ru/bitrix/modules/main/admin/restore.php
 ```
 
-## 6. Создание инфоблоков
+## 6. Создание инфоблоков и контента
 
-### Через скрипт
-1. Открыть в браузере: `http://dianomi.ru/local/php/install_iblocks.php`
-2. Скрипт создаст все необходимые инфоблоки
-3. **Удалить файл `install_iblocks.php` после использования!**
+### Вариант 1: Автоматическая установка (РЕКОМЕНДУЕТСЯ)
+1. Открыть в браузере: `http://dianomi.ru/local/php/install_full_site.php`
+2. Скрипт автоматически:
+   - Создаст все 7 инфоблоков
+   - Создаст все свойства
+   - Заполнит контентом все элементы:
+     - Hero для index (счётчики, преимущества)
+     - 6 проблем
+     - 3 решения
+     - До/После
+     - 6 шагов подхода
+     - О компании
+     - 8 FAQ вопросов
+3. **Удалить файл `install_full_site.php` после использования!**
 
-### Заполнение инфоблоков
-Через Админку → Контент → Информационные блоки:
-
-**page_hero** (Hero-блоки):
-- Создать элемент с кодом `index`
-- Заполнить поля: BADGE_TEXT, TITLE, DESCRIPTION, COUNTER_1-3, COUNTER_LABEL_1-3, BENEFITS_LIST
-
-**page_problems** (Проблемы):
-- Создать 6 элементов (по одному на каждую проблему)
-- Заполнить: ICON, TITLE, DESCRIPTION, ORDER
-
-**page_solutions** (Решения):
-- Создать 3 элемента
-- Заполнить: ICON, TITLE, DESCRIPTION, BENEFITS, LINK_TEXT, LINK_URL, BORDER_COLOR
-
-**page_before_after** (До/После):
-- Создать 1 элемент
-- Заполнить: BEFORE_TITLE, AFTER_TITLE, BEFORE_LIST, AFTER_LIST
-
-**page_approach** (Подход):
-- Создать 6 элементов (по одному на каждый шаг)
-- Заполнить: STEP_NUMBER, TITLE, ORDER
-
-**page_about** (О компании):
-- Создать 1 элемент
-- Заполнить: DESCRIPTION, OFFICE, FEATURES
-
-**page_faq** (FAQ):
-- Создать 8 элементов (по одному на каждый вопрос)
-- Заполнить: QUESTION, ANSWER, ORDER
+### Вариант 2: Ручное создание через Админку
+1. Админка → Контент → Информационные блоки
+2. Создать инфоблоки и заполнить вручную (см. инструкцию ниже)
 
 ## 7. Настройка меню
 
