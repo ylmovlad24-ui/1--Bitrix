@@ -2,12 +2,16 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main;
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Iblock\ElementTable;
+
+Loc::loadMessages(__FILE__);
 
 class CBitrixComponentDianomiFaq extends CBitrixComponent
 {
     const CODE_IBLOCK = 'page_faq';
     
-    public function executeComponent()
+    public function prepareResult()
     {
         $arResult = array();
         
@@ -25,37 +29,80 @@ class CBitrixComponentDianomiFaq extends CBitrixComponent
         
         foreach ($arFaqs as $faq) {
             $arResult['FAQ'][] = array(
-                'ID' => $faq['ID'],
+                'ID' => intval($faq['ID']),
                 'QUESTION' => htmlspecialcharsbx($faq['PROPERTY_QUESTION_VALUE']),
                 'ANSWER' => $faq['PROPERTY_ANSWER_VALUE'],
             );
         }
         
         $this->arResult = $arResult;
-        $this->includeComponentTemplate();
     }
     
     protected function checkRights()
     {
         global $USER;
-        return $USER->isAuthorized();
+        
+        if (!$USER->isAuthorized()) {
+            return false;
+        }
+        
+        $ibID = $this->getIblockID();
+        if (!$ibID) {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    protected function getIblockID()
+    {
+        static $ibID = null;
+        
+        if ($ibID === null) {
+            $res = \Bitrix\Iblock\IblockTable::getList(array(
+                'filter' => array(
+                    'CODE' => self::CODE_IBLOCK,
+                    'SITE_ID' => SITE_ID,
+                ),
+                'select' => array('ID'),
+                'limit' => 1,
+            ));
+            
+            $ibID = $res->fetch();
+            $ibID = $ibID ? intval($ibID['ID']) : 0;
+        }
+        
+        return $ibID;
     }
     
     protected function getFaqList()
     {
-        $res = CIBlockElement::GetList(
-            array("PROPERTY_ORDER" => "ASC"),
-            array("IBLOCK_CODE" => self::CODE_IBLOCK, "ACTIVE" => "Y"),
-            false,
-            false,
-            array("ID", "NAME", "PROPERTY_QUESTION", "PROPERTY_ANSWER", "PROPERTY_ORDER")
-        );
+        $res = ElementTable::getList(array(
+            'filter' => array(
+                'IBLOCK_CODE' => self::CODE_IBLOCK,
+                'ACTIVE' => 'Y',
+            ),
+            'select' => array(
+                'ID',
+                'NAME',
+                'PROPERTY_QUESTION',
+                'PROPERTY_ANSWER',
+                'PROPERTY_ORDER',
+            ),
+            'order' => array('PROPERTY_ORDER' => 'ASC'),
+        ));
         
         $results = array();
-        while ($arItem = $res->GetNext()) {
+        while ($arItem = $res->fetch()) {
             $results[] = $arItem;
         }
         
         return $results;
+    }
+    
+    public function getAction()
+    {
+        $this->prepareResult();
+        $this->includeComponentTemplate();
     }
 }
