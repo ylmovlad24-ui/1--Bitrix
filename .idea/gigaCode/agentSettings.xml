@@ -493,6 +493,12 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\404.html' | Measure-Object -Line).Lines&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Pattern &quot;&lt;!--.*--&gt;&quot; -Context 0,3" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'css/style.css' | Measure-Object -Line).Lines&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">

@@ -914,6 +914,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--5 { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .editions-grid { grid-template-columns: repeat(2, 1fr); }
   .cases-grid { grid-template-columns: repeat(2, 1fr); }
@@ -929,6 +930,23 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .why-us-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-channels { grid-template-columns: repeat(3, 1fr); }
   .approach-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* === 8. COMPARISON TABLE === */
+.comparison-table { overflow-x: auto; margin: 32px 0; }
+.comparison-table__grid { width: 100%; border-collapse: collapse; min-width: 800px; }
+.comparison-table__grid th,
+.comparison-table__grid td { padding: 12px 16px; text-align: center; border-bottom: 1px solid var(--border); }
+.comparison-table__grid th { background: var(--bg-alt); font-weight: 600; }
+.comparison-table__th--feature { text-align: left; min-width: 200px; }
+.comparison-table__legend { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+.comparison-table__legend span { font-size: 0.875rem; color: var(--text-muted); }
+
+/* === 9. PRICING CARDS === */
+.edition-card--popular { border: 2px solid var(--accent); position: relative; }
+.edition-card--popular::before { content: "Популярный"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 16px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+.price-old { text-decoration: line-through; color: var(--text-muted); font-size: 0.875rem; display: block; }
+.price-new { font-size: 1.5rem; font-weight: 700; color: var(--text); display: block; }
   .approach-grid > div { width: auto !important; }
 }
 
@@ -947,6 +965,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .hero__stat { padding: 1rem 1.5rem; }
   .grid--3 { grid-template-columns: repeat(3, 1fr); }
   .grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .grid--5 { grid-template-columns: repeat(5, 1fr); }
   .steps { grid-template-columns: repeat(4, 1fr); }
   .editions-grid { grid-template-columns: repeat(3, 1fr); }
   .cases-grid { grid-template-columns: repeat(3, 1fr); }
