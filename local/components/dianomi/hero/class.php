@@ -57,24 +57,7 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
     
     protected function checkRights()
     {
-        global $USER;
-        
-        // Проверка авторизации
-        if (!$USER->isAuthorized()) {
-            return false;
-        }
-        
-        // Проверка прав на чтение инфоблока
-        $ibID = $this->getIblockID();
-        if (!$ibID) {
-            return false;
-        }
-        
-        $ibRight = $GLOBALS['USER_FIELD_MANAGER']->GetRights($ibID);
-        if (!isset($ibRight['U']) || !in_array($USER->GetID(), $ibRight['U'])) {
-            return false;
-        }
-        
+        // Компонент доступен всем для чтения
         return true;
     }
     
@@ -120,6 +103,7 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
                 'IBLOCK_CODE' => self::CODE_IBLOCK,
                 'CODE' => $pageCode,
                 'ACTIVE' => 'Y',
+                'IBLOCK_LID' => SITE_ID,
             ),
             'select' => array(
                 'ID',

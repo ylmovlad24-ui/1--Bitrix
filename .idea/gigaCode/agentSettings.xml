@@ -640,6 +640,24 @@
         <Execute>
           <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\hero\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\problems\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\solutions\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\faq\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\cta-form\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\before-after\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\approach\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\about-company\templates\.default&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\approach\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\about-company\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\faq\.default\template.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\cta-form\.default\template.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\approach\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\about-company\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\faq\.default\template.php','C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\cta-form\.default\template.php'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\.default\template.php' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\.default\template.php' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\.default\template.php' -Force&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\.default\template.php' -Force&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">

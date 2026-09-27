@@ -41,17 +41,7 @@ class CBitrixComponentDianomiProblems extends CBitrixComponent
     
     protected function checkRights()
     {
-        global $USER;
-        
-        if (!$USER->isAuthorized()) {
-            return false;
-        }
-        
-        $ibID = $this->getIblockID();
-        if (!$ibID) {
-            return false;
-        }
-        
+        // Компонент доступен всем для чтения
         return true;
     }
     
@@ -82,6 +72,7 @@ class CBitrixComponentDianomiProblems extends CBitrixComponent
             'filter' => array(
                 'IBLOCK_CODE' => self::CODE_IBLOCK,
                 'ACTIVE' => 'Y',
+                'IBLOCK_LID' => SITE_ID,
             ),
             'select' => array(
                 'ID',
