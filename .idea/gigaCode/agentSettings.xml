@@ -499,6 +499,18 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;(Get-Content 'css/style.css' | Measure-Object -Line).Lines&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path analyze.ps1, check_mvp.py, fix_corrupted.py, fix_temp.ps1, fix_temp.py, replace-header-footer.ps1, update_mvp.ps1, update_mvp.py, img.png, output.txt, PLAN.md -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;1--Bitrix&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;1--Bitrix.iml&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item nov *" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
