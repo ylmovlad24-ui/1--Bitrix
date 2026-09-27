@@ -628,6 +628,18 @@
         <Execute>
           <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\lang\ru&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\bitrix\menu\templates\megamenu&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\bitrix\menu\templates\megamenu&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\bitrix\form\templates\project_form&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\bitrix\main.feedback\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\php\include&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\approach\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\about-company\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\faq\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\cta-form\templates\.default&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\common.css&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\common.js&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\common.css&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\common.js&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\hero\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\problems\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\solutions\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\faq\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\cta-form\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\before-after\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\approach\templates\.default&quot;,&quot;C:\Users\Анна\IdeaProjects\bitrix\local\modules\dianomi\install\components\dianomi\about-company\templates\.default&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">

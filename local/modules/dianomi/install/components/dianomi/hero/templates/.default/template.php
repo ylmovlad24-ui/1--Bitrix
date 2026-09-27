@@ -3,6 +3,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 /** @var array $arResult */
 /** @var CBitrixComponentTemplate $this */
+/** @var string $templateFolder */
 
 if (!empty($arResult['ELEMENT'])):
     $el = $arResult['ELEMENT'];
