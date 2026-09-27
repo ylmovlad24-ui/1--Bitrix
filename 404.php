@@ -1,5 +1,6 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-<?$APPLICATION->SetTitle("Страница не найдена — Dianomi");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Страница не найдена — Dianomi");
+?>
 
 <section class="section">
   <div class="container" style="text-align:center;">

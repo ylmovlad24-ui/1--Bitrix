@@ -1,13 +1,13 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-<?$APPLICATION->SetTitle("Контакты — Dianomi");?>
-
-<?$APPLICATION->SetPageProperty("description", "Свяжитесь с нами: телефон, email, адрес в Барнауле.");
-<?$APPLICATION->SetPageProperty("og:title", "Контакты — Dianomi");
-<?$APPLICATION->SetPageProperty("og:description", "Свяжитесь с нами: телефон, email, адрес в Барнауле.");
-<?$APPLICATION->SetPageProperty("og:type", "website");
-<?$APPLICATION->SetPageProperty("og:url", "https://dianomi.ru/contacts.php");
-<?$APPLICATION->SetPageProperty("og:image", "https://dianomi.ru/img/og-default.jpg");
-<?$APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/contacts.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Контакты — Dianomi");
+$APPLICATION->SetPageProperty("description", "Свяжитесь с нами: телефон, email, адрес в Барнауле.");
+$APPLICATION->SetPageProperty("og:title", "Контакты — Dianomi");
+$APPLICATION->SetPageProperty("og:description", "Свяжитесь с нами: телефон, email, адрес в Барнауле.");
+$APPLICATION->SetPageProperty("og:type", "website");
+$APPLICATION->SetPageProperty("og:url", "https://dianomi.ru/contacts.php");
+$APPLICATION->SetPageProperty("og:image", "https://dianomi.ru/img/og-default.jpg");
+$APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/contacts.php");
+?>
 
 <section class="section">
   <div class="container">
@@ -41,5 +41,10 @@
     </div>
   </div>
 </section>
+
+<?$APPLICATION->IncludeComponent("dianomi:cta-form", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

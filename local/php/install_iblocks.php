@@ -25,7 +25,6 @@ if(!$ibID) {
     ));
 }
 
-// Свойства для page_hero
 $properties = array(
     "BADGE_TEXT" => array("NAME" => "Текст бейджа", "TYPE" => "STRING"),
     "TITLE" => array("NAME" => "H1 заголовок", "TYPE" => "STRING"),

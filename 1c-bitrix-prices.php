@@ -1,37 +1,30 @@
-<?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Тарифы 1С-Битрикс — Dianomi");
-
-$APPLICATION->SetPageProperty("description", "Тарифы 1С-Битрикс: Старт, Малый бизнес, Бизнес, Энтерпрайз. Выбор подходящей редакции для вашего проекта.");
-$APPLICATION->SetPageProperty("keywords", "тарифы 1С-Битрикс, цена, стоимость, редакция");
+$APPLICATION->SetPageProperty("description", "Актуальные тарифы 1С-Битрикс для интернет-магазинов и корпоративных порталов.");
 $APPLICATION->SetPageProperty("og:title", "Тарифы 1С-Битрикс — Dianomi");
-$APPLICATION->SetPageProperty("og:description", "Тарифы 1С-Битрикс: от Старт до Энтерпрайз.");
-$APPLICATION->SetPageProperty("og:image", "/img/og-web-systems.jpg");
+$APPLICATION->SetPageProperty("og:description", "Актуальные тарифы 1С-Битрикс для интернет-магазинов и корпоративных порталов.");
+$APPLICATION->SetPageProperty("og:type", "website");
+$APPLICATION->SetPageProperty("og:url", "https://dianomi.ru/1c-bitrix-prices.php");
+$APPLICATION->SetPageProperty("og:image", "https://dianomi.ru/img/og-default.jpg");
+$APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/1c-bitrix-prices.php");
 ?>
 
-<!-- Hero -->
-<?$APPLICATION->IncludeComponent(
-    "dianomi:hero",
-    ".default",
-    array(
-        "PAGE_CODE" => "1c-bitrix-prices",
-        "CACHE_TYPE" => "N",
-        "CACHE_TIME" => "3600",
-    ),
-    false
-);?>
+<section class="section">
+  <div class="container">
+    <div class="section-heading animate-on-scroll">
+      <h2 class="section-heading__title">Тарифы 1С-Битрикс</h2>
+      <p class="section-heading__subtitle" style="max-width:640px;margin:12px auto 0;">Выберите подходящую редакцию для вашего бизнеса</p>
+    </div>
+    
+    <div style="max-width:960px;margin:0 auto;">
+      <p style="text-align:center;color:var(--text-light);">Здесь будут размещены актуальные тарифы 1С-Битрикс</p>
+    </div>
+  </div>
+</section>
 
-<!-- CTA -->
-<?$APPLICATION->IncludeComponent(
-    "dianomi:cta-form",
-    ".default",
-    array(
-        "PAGE_CODE" => "1c-bitrix-prices",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "3600",
-    ),
-    false
-);?>
+<?$APPLICATION->IncludeComponent("dianomi:cta-form", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
 
-<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php"); ?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

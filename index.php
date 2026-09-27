@@ -9,13 +9,45 @@ $APPLICATION->SetPageProperty("og:image", "https://dianomi.ru/img/og-default.jpg
 $APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/");
 ?>
 
-<?$APPLICATION->IncludeComponent("dianomi:hero", ".default", array("PAGE_CODE" => "index", "CACHE_TYPE" => "N", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:problems", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:solutions", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:before-after", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:approach", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:about-company", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:faq", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
-<?$APPLICATION->IncludeComponent("dianomi:cta-form", ".default", array("CACHE_TYPE" => "A", "CACHE_TIME" => "3600"), false);?>
+<?$APPLICATION->IncludeComponent("dianomi:hero", ".default", array(
+    "PAGE_CODE" => "index",
+    "CACHE_TYPE" => "N",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:problems", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:solutions", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:before-after", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:approach", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:about-company", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:faq", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
+
+<?$APPLICATION->IncludeComponent("dianomi:cta-form", ".default", array(
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+), false);?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
