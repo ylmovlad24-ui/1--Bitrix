@@ -292,6 +292,120 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.py' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_find_section.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section_to_remove.txt' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section.txt' -Force -ErrorAction SilentlyContinue; Write-Host 'Cleaned'&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/about.html&quot; -Pattern &quot;1c-bitrix-prices&quot; -Context 1,1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/business-systems.html&quot; -Pattern &quot;&lt;!-- Когда нужна система --&gt;&quot; -Context 0,2" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/business-systems.html&quot; -Pattern &quot;Решения&quot; -Context 1,1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot; -o &quot;C:/Users/Анна/IdeaProjects/bitrix/temp_license.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/license.php' -OutFile 'C:/Users/Анна/IdeaProjects/bitrix/temp_license.html'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot; -H &quot;User-Agent: Mozilla/5.0&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="grep *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern '&lt;/section&gt;' | ForEach-Object { $_.LineNumber }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern '&lt;!--' | ForEach-Object { $_.LineNumber.ToString() + ': ' + $_.Line.Trim() }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;$lines = Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'; for($i=0; $i -lt $lines.Count; $i++) { if($lines[$i] -match '&lt;/section&gt;') { Write-Output ($i+1) } }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\analyze.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/analyze.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$lines = Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'; $lines[642..813] = $null; $lines | Where-Object { $_ -ne $null } | Set-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html.tmp'; Move-Item -Force 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html.tmp' 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;with open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'r', encoding='utf-8') as f: lines = f.readlines(); open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'w', encoding='utf-8').writelines(lines[:642] + lines[814:])&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;with open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'r', encoding='utf-8') as f: lines = f.readlines(); [print(f'{i+1}: {l.rstrip()}') for i, l in enumerate(lines) if 'Услуги внедрения' in l or '&lt;!-- CTA --&gt;' in l]&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import re; f=open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html','r',encoding='utf-8'); lines=f.readlines(); [print(f'{i+1}') for i,l in enumerate(lines) if 'Услуги внедрения' in l or '&lt;!-- CTA --&gt;' in l]&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="findstr /n &quot;Услуги внедрения&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot; &gt; &quot;C:\Users\Анна\IdeaProjects\bitrix\output.txt&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-Content &quot;C:\Users\Анна\IdeaProjects\bitrix\output.txt&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="py &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cmd /c &quot;python C:\Users\Анна\IdeaProjects\bitrix\fix_corrupted.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="dir &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices-fixed.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="node -e &quot;const fs=require('fs'); const lines=fs.readFileSync('C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html','utf8').split('\\n'); const fixed=lines.slice(0,638).concat(lines.slice(812)).join('\\n'); fs.writeFileSync('C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices-fixed.html',fixed,'utf8'); console.log('Done. Original:',lines.length,'Fixed:',fixed.split('\\n').length,'Removed:',lines.length-fixed.split('\\n').length);&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File C:/temp/fix_bitrix.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$env:USERPROFILE; (Get-Item $env:USERPROFILE).Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -InputFormat None -File C:/temp/fix_bitrix2.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -Command &quot;Get-ChildItem $env:USERPROFILE -Recurse -Filter '1c-bitrix-prices.html' -ErrorAction SilentlyContinue | Select-Object FullName&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -Command &quot;$f='$env:USERPROFILE'+ '/IdeaProjects/bitrix/1c-bitrix-prices.html'; $lines=Get-Content $f -Encoding UTF8; $fixed=@($lines[0..637]+$lines[812..($lines.Count-1)]); $fixed|Set-Content ('$env:USERPROFILE'+ '/IdeaProjects/bitrix/1c-bitrix-prices-fixed.html') -Encoding UTF8; Write-Host 'Done'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cp &quot;C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html&quot; /tmp/prices.html" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="xcopy &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html&quot; &quot;C:\temp\prices.html&quot; /Y" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern 'section-header' | Select-Object LineNumber,Line&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -File C:/temp/update_headers.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -File C:/temp/update_headers2.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/index.html' -Pattern 'header__nav-link' | Select-Object Line&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
