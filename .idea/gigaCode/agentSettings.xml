@@ -583,6 +583,39 @@
         <Execute>
           <option name="pattern" value="mkdir img *" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item create_images.ps1, finalize_mvp.ps1, gen_og.py, gen_og2.py, test_output.txt -ErrorAction SilentlyContinue" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -sL &quot;https://dev.1c-bitrix.ru/learning/&quot; --max-time 15 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -sL &quot;https://dev.1c-bitrix.ru/documentation/&quot; --max-time 15 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -sL &quot;https://dev.1c-bitrix.ru/learning/&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -sL &quot;https://dev.1c-bitrix.ru/documentation/&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L --max-time 30 &quot;https://dev.1c-bitrix.ru/&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L --max-time 30 &quot;https://dev.1c-bitrix.ru/learning/course/?COURSE_ID=28&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://dev.1c-bitrix.ru/' -UseBasicParsing -TimeoutSec 30 | Select-Object -ExpandProperty Content | Select-Object -First 500&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p local/templates/dianomi/lang/ru local/templates/dianomi/components/bitrix/menu/templates/megamenu local/components/bitrix/menu/templates/megamenu local/components/bitrix/form/templates/project_form local/components/bitrix/main.feedback/templates/.default local/php/include" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;New-Item -ItemType Directory -Force -Path 'local/templates/dianomi/lang/ru','local/templates/dianomi/components/bitrix/menu/templates/megamenu','local/components/bitrix/menu/templates/megamenu','local/components/bitrix/form/templates/project_form','local/components/bitrix/main.feedback/templates/.default','local/php/include' | Out-Null; Write-Host 'Directories created'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/lang/ru&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/components/bitrix/menu/templates/megamenu&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/components/bitrix/menu/templates/megamenu&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/components/bitrix/form/templates/project_form&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/components/bitrix/main.feedback/templates/.default&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/php/include&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
