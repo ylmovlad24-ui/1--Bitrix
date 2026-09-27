@@ -511,6 +511,78 @@
         <Execute>
           <option name="pattern" value="Remove-Item nov *" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;.gigacode\plans\1789992383185-gentle-meadow.plan.md&quot;, &quot;.gigacode\plans\1790143615402-eager-island.plan.md&quot;, &quot;.gigacode\plans\1790149433554-brave-tiger.plan.md&quot;, &quot;.gigacode\plans\1790168112164-neon-star.plan.md&quot;, &quot;.gigacode\plans\1790231798142-tidy-forest.plan.md&quot;, &quot;.gigacode\plans\1790337184333-playful-comet.plan.md&quot;, &quot;.gigacode\plans\1790338086500-misty-sailor.plan.md&quot;, &quot;.gigacode\plans\content-redesign.md&quot;, &quot;.gigacode\plans\index-redesign.md&quot;, &quot;.gigacode\plans\rework-index-page.md&quot;, &quot;.gigacode\plans\site-improvements.md&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;.gigacode\plans\1789992383185-gentle-meadow.plan.md&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;.gigacode\plans&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;from PIL import Image; img = Image.new('RGB', (1200, 630), color=(73, 103, 216)); img.save('img/og-default.jpg'); img.save('img/og-business-systems.jpg'); img.save('img/og-web-systems.jpg'); print('Created placeholder images')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Add-Type -AssemblyName System.Drawing; $img = New-Object System.Drawing.Bitmap(1200, 630); $graphics = [System.Drawing.Graphics]::FromImage($img); $graphics.Clear([System.Drawing.Color]::FromArgb(73, 103, 216)); $img.Save('C:/Users/Анна/IdeaProjects/bitrix/img/og-default.jpg'); $img.Save('C:/Users/Анна/IdeaProjects/bitrix/img/og-business-systems.jpg'); $img.Save('C:/Users/Анна/IdeaProjects/bitrix/img/og-web-systems.jpg'); $graphics.Dispose(); $img.Dispose(); Write-Host 'Created placeholder images'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File C:/Users/Анна/IdeaProjects/bitrix/create_images.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem 'C:\Users\' | Select-Object Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Test-Path 'C:\Users\Анна\IdeaProjects\bitrix\img'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File create_images.ps1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="npm install *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="php -r &quot;$img = imagecreatetruecolor(1200, 630); $color = imagecolorallocate($img, 73, 103, 216); imagefill($img, 0, 0, $color); imagejpeg($img, 'img/og-default.jpg'); imagedestroy($img); echo 'Created og-default.jpg';&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="node" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/create_images.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;from PIL import Image; print('PIL available')&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;from PIL import Image; print('PIL available')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:/Users/Анна/IdeaProjects/bitrix/gen_og.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;print('hello')&quot; &gt; C:/Users/Анна/IdeaProjects/bitrix/test_output.txt 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:/Users/Анна/IdeaProjects/bitrix/gen_og2.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;&amp; 'C:/Users/Анна/IdeaProjects/bitrix/create_images.ps1'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;from PIL import Image; img = Image.new('RGB', (1200, 630), color=(73, 103, 216)); img.save('img/og-default.jpg'); img.save('img/og-business-systems.jpg'); img.save('img/og-web-systems.jpg')&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="node -e &quot;&#10;const { createCanvas } = require('canvas');&#10;const fs = require('fs');&#10;const colors = {&#10;  'img/og-default.jpg': [73, 103, 216],&#10;  'img/og-business-systems.jpg': [73, 103, 216],&#10;  'img/og-web-systems.jpg': [73, 103, 216]&#10;};&#10;Object.entries(colors).forEach(([path, [r,g,b]]) =&gt; {&#10;  const canvas = createCanvas(1200, 630);&#10;  const ctx = canvas.getContext('2d');&#10;  ctx.fillStyle = \`rgb(\${r},\${g},\${b})\`;&#10;  ctx.fillRect(0, 0, 1200, 630);&#10;  const buf = canvas.toBuffer('image/jpeg');&#10;  fs.writeFileSync(path, buf);&#10;  console.log('Created ' + path);&#10;});&#10;&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="convert -size 1200x630 xc:'#4967D8' img/og-default.jpg 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir img *" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
