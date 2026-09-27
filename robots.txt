@@ -1,9 +1,11 @@
-# Sitemap
-Sitemap: https://dianomi.ru/sitemap.xml
-
-# Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /bitrix/
+Disallow: /admin/
+Disallow: /local/
+Disallow: /upload/
+Disallow: /*?print=Y
+Disallow: /*&print=Y
 
-# Crawl delay
-Crawl-delay: 1
+Sitemap: http://dianomi.ru/sitemap.xml
+Host: dianomi.ru
