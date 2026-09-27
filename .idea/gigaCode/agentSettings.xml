@@ -406,6 +406,93 @@
         <Execute>
           <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/index.html' -Pattern 'header__nav-link' | Select-Object Line&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="git checkout *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git branch" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git rm *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git ls-files *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="ls *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem about.html, contacts.html, 404.html" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="echo *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git ls-tree *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="test -f 404.html" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-String -Pattern &quot;about|contacts|404|index&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\miiesnikova\Documents\NewProjectBitric\mvp\404.html&quot; -ErrorAction SilentlyContinue" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git branch *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$files = @('index.html','business-systems.html','bitrix24.html','bitrix24-prices.html','web-systems.html','1c-bitrix.html','1c-bitrix-prices.html','data-bi.html','about.html','contacts.html','404.html'); $headerStart = '&lt;!-- Header --&gt;'; $headerEnd = '&lt;/nav&gt;'; $footerStart = '&lt;!-- Footer --&gt;'; $footerEnd = '&lt;/footer&gt;'; $newHeader = Get-Content 'partials/header.html' -Raw; $newFooter = Get-Content 'partials/footer.html' -Raw; foreach ($f in $files) { if (Test-Path $f) { $content = Get-Content $f -Raw; $content = $content -replace '(?s)&lt;!-- Header --&gt;.*?&lt;/nav&gt;', $newHeader; $content = $content -replace '(?s)&lt;!-- Footer --&gt;.*?&lt;/footer&gt;', $newFooter; Set-Content $f $content -NoNewline; Write-Host 'Updated: $f' } else { Write-Host 'NOT FOUND: $f' } }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\update_mvp.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="chcp 65001 &gt;nul" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:\Users\Анна\IdeaProjects\bitrix\update_mvp.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;import os; root='C:\\Users\\Анна\\IdeaProjects\\bitrix'; fpath=os.path.join(root,'index.html'); content=open(fpath,encoding='utf-8').read(); headers=content.count('&lt;header class=\&quot;header\&quot;'); footers=content.count('&lt;footer class=\&quot;footer\&quot;'); print(f'Headers: {headers}, Footers: {footers}')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python C:\Users\Анна\IdeaProjects\bitrix\check_mvp.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python update_mvp.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\update_mvp.py&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="python -c &quot;print('hello')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="py -c &quot;import os; print(os.getcwd())&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-Command python *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="C:\Users\Анна\AppData\Local\Microsoft\WindowsApps\python.exe C:\Users\Анна\IdeaProjects\bitrix\update_mvp.py" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="C:\Users\Анна\AppData\Local\Microsoft\WindowsApps\python.exe -c &quot;print('test123')&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="findstr /n &quot;&lt;!-- Footer --&gt;&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html').Count&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\404.html' | Measure-Object -Line).Lines&quot;" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
@@ -424,6 +511,9 @@
         </Read>
         <Read>
           <option name="pattern" value="$PROJECT_DIR$/../../../../../temp/bitrix24.html" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../miiesnikova/Documents/NewProjectBitric/*" />
         </Read>
       </list>
     </option>
