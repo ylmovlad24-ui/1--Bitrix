@@ -1,26 +1,27 @@
 <?php
-// Включаем отображение ошибок для отладки
+// Включаем отображение ошибок
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-echo "<h1>Загрузка Bitrix prolog...</h1>";
+echo "<pre>";
+echo "=== Установка сайта Dianomi ===\n\n";
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+// Подключаем Битрикс
+$docRoot = $_SERVER["DOCUMENT_ROOT"] ?? '/var/www/s277847/data/www/s277847.h1n.ru';
 
-use Bitrix\Main\Localization\Loc;
-use Bitrix\Main\ModuleManager;
-
-Loc::loadMessages(__FILE__);
-
-echo "<h1>Автоматическая установка сайта Dianomi</h1>";
-echo "<p>Этот скрипт создаст все необходимые элементы сайта.</p>";
-echo "<p><b>ВАЖНО: Удалите этот файл после использования!</b></p><hr>";
+if (file_exists($docRoot . '/bitrix/modules/main/include/prolog_before.php')) {
+    require($docRoot . '/bitrix/modules/main/include/prolog_before.php');
+    echo "✅ Prolog загружен\n\n";
+} else {
+    echo "❌ Prolog не найден по пути: $docRoot/bitrix/modules/main/include/prolog_before.php\n";
+    echo "Пытаемся загрузить без prolog...\n\n";
+}
 
 // ============================================
 // 1. Создание инфоблоков
 // ============================================
-echo "<h2>1. Создание инфоблоков...</h2>";
+echo "1. Создание инфоблоков...\n";
 
 $iblockCodes = array(
     "page_hero" => "Hero-блоки",
@@ -33,11 +34,16 @@ $iblockCodes = array(
 );
 
 $ib = new CIBlock();
+$createdIblocks = array();
+
 foreach($iblockCodes as $code => $name) {
     $res = $ib->GetByCode($code);
-    $ibID = $res ? $res->GetNext()["ID"] : false;
+    $ibData = $res ? $res->GetNext() : false;
     
-    if(!$ibID) {
+    if($ibData && $ibData["ID"]) {
+        echo "⚠️ Уже существует: $name ($code) [ID: {$ibData['ID']}]\n";
+        $createdIblocks[$code] = $ibData["ID"];
+    } else {
         $ibID = $ib->Add(array(
             "IBLOCK_TYPE_ID" => "content",
             "CODE" => $code,
@@ -48,16 +54,22 @@ foreach($iblockCodes as $code => $name) {
             "SEARCHABLE" => "Y",
             "FILTRABLE" => "Y",
         ));
-        echo "✅ Создан инфоблок: $name ($code)<br>";
-    } else {
-        echo "⚠️ Инфоблок уже существует: $name ($code)<br>";
+        
+        if($ibID > 0) {
+            echo "✅ Создан: $name ($code) [ID: $ibID]\n";
+            $createdIblocks[$code] = $ibID;
+        } else {
+            echo "❌ Ошибка создания: $name - " . $ib->LAST_ERROR . "\n";
+        }
     }
 }
 
+echo "\n";
+
 // ============================================
-// 2. Создание свойств инфоблоков
+// 2. Создание свойств
 // ============================================
-echo "<h2>2. Создание свойств инфоблоков...</h2>";
+echo "2. Создание свойств...\n";
 
 $properties = array(
     "page_hero" => array(
@@ -112,257 +124,255 @@ $properties = array(
 );
 
 $prop = new CIBlockProperty();
-foreach($properties as $ibCode => $props) {
-    $res = $ib->GetByCode($ibCode);
-    $ibID = $res ? $res->GetNext()["ID"] : false;
+
+foreach($properties as $ibCode => $ibProps) {
+    if(!isset($createdIblocks[$ibCode])) {
+        echo "⚠️ Пропуск свойств для $ibCode (инфоблок не создан)\n";
+        continue;
+    }
     
-    if($ibID) {
-        foreach($props as $propCode => $propData) {
-            $propDB = $prop->GetList(array(), array("CODE" => $propCode, "IBLOCK_ID" => $ibID));
-            if(!$propDB->Fetch()) {
-                $prop->Add(array(
-                    "IBLOCK_ID" => $ibID,
-                    "CODE" => $propCode,
-                    "NAME" => $propData["NAME"],
-                    "PROPERTY_TYPE" => $propData["TYPE"] == "STRING" ? "S" : ($propData["TYPE"] == "INTEGER" ? "N" : "T"),
-                    "MULTIPLE" => "N",
-                ));
+    $ibID = $createdIblocks[$ibCode];
+    $propsCreated = 0;
+    
+    foreach($ibProps as $propCode => $propData) {
+        $propDB = $prop->GetList(array(), array("CODE" => $propCode, "IBLOCK_ID" => $ibID));
+        if(!$propDB->Fetch()) {
+            $propType = ($propData["TYPE"] == "STRING") ? "S" : ($propData["TYPE"] == "INTEGER" ? "N" : "T");
+            
+            $propAddID = $prop->Add(array(
+                "IBLOCK_ID" => $ibID,
+                "CODE" => $propCode,
+                "NAME" => $propData["NAME"],
+                "PROPERTY_TYPE" => $propType,
+                "MULTIPLE" => "N",
+            ));
+            
+            if($propAddID > 0) {
+                $propsCreated++;
             }
         }
-        echo "✅ Созданы свойства для: $ibCode<br>";
     }
+    
+    echo "✅ Свойства для $ibCode: $propsCreated создано\n";
 }
 
+echo "\n";
+
 // ============================================
-// 3. Создание элементов инфоблоков
+// 3. Создание элементов
 // ============================================
-echo "<h2>3. Создание элементов инфоблоков...</h2>";
+echo "3. Создание элементов...\n";
 
 $el = new CIBlockElement();
 
-// Hero - index
-$elID = $el->Add(array(
-    "IBLOCK_ID" => $ib->GetByCode("page_hero")->GetNext()["ID"],
-    "ACTIVE" => "Y",
-    "CODE" => "index",
-    "PROPERTY_VALUES" => array(
+// Hero
+if(isset($createdIblocks["page_hero"])) {
+    $heroProps = array(
         "BADGE_TEXT" => "Авторизованный партнёр 1С-Битрикс",
         "TITLE" => "Битрикс24, сайт и 1С работают как <span>единая система</span> — без потерь заявок, дублирования данных и ручных отчётов",
         "DESCRIPTION" => "Запускаем Битрикс24 или сайт на 1С-Битрикс, настраиваем автоматический обмен данными с 1С.",
-        "COUNTER_1" => 10,
-        "COUNTER_2" => 53,
+        "COUNTER_1" => "10",
+        "COUNTER_2" => "53",
         "COUNTER_3" => "4 месяца",
         "COUNTER_LABEL_1" => "лет на рынке",
         "COUNTER_LABEL_2" => "реализованных проектов",
         "COUNTER_LABEL_3" => "окупаемость проекта",
-        "BENEFITS_LIST" => "
-            <li style=\"display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:12px;border:1px solid rgba(255,255,255,0.2);\">
-                <span style=\"flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;\">✓</span>
-                <div>
-                    <p style=\"font-size:1.0625rem;color:#fff;font-weight:600;margin:0 0 4px;\">Заявки с сайта <span style=\"color:#FFB366;\">не теряются</span></p>
-                    <p style=\"font-size:0.8125rem;color:rgba(255,255,255,0.9);margin:0;\">Автоматическая обработка и уведомление менеджера за 2 минуты</p>
-                </div>
-            </li>
-            <li style=\"display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:12px;border:1px solid rgba(255,255,255,0.2);\">
-                <span style=\"flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;\">✓</span>
-                <div>
-                    <p style=\"font-size:1.0625rem;color:#fff;font-weight:600;margin:0 0 4px;\">Отчёты собираются <span style=\"color:#FFB366;\">автоматически</span></p>
-                    <p style=\"font-size:0.8125rem;color:rgba(255,255,255,0.9);margin:0;\">Панель руководителя с данными в реальном времени</p>
-                </div>
-            </li>
-            <li style=\"display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:12px;border:1px solid rgba(255,255,255,0.2);\">
-                <span style=\"flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;\">✓</span>
-                <div>
-                    <p style=\"font-size:1.0625rem;color:#fff;font-weight:600;margin:0 0 4px;\">Внедряем <span style=\"color:#FFB366;\">проектное управление</span></p>
-                    <p style=\"font-size:0.8125rem;color:rgba(255,255,255,0.9);margin:0;\">Все задачи, сроки и статусы в одной системе</p>
-                </div>
-            </li>
-            <li style=\"display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.12);border-radius:12px;border:1px solid rgba(255,255,255,0.2);\">
-                <span style=\"flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;\">✓</span>
-                <div>
-                    <p style=\"font-size:1.0625rem;color:#fff;font-weight:600;margin:0 0 4px;\">Воронка под контролем — <span style=\"color:#FFB366;\">каждый лид на учёте</span></p>
-                    <p style=\"font-size:0.8125rem;color:rgba(255,255,255,0.9);margin:0;\">Статусы, ответственные и сроки — видите, где застревает клиент</p>
-                </div>
-            </li>
-        ",
-    ),
-));
-echo "✅ Создан элемент Hero для index<br>";
+        "BENEFITS_LIST" => json_encode(array(
+            "Заявки с сайта не теряются",
+            "Отчёты собираются автоматически",
+            "Внедряем проектное управление",
+            "Воронка под контролем"
+        )),
+    );
+    
+    $elID = $el->Add(array(
+        "IBLOCK_ID" => $createdIblocks["page_hero"],
+        "ACTIVE" => "Y",
+        "CODE" => "index",
+        "PROPERTY_VALUES" => $heroProps,
+    ));
+    
+    if($elID > 0) {
+        echo "✅ Создан элемент Hero [ID: $elID]\n";
+    } else {
+        echo "❌ Ошибка создания Hero: " . $el->LAST_ERROR . "\n";
+    }
+}
 
 // Problems
-$problems = array(
-    array("ICON" => "📉", "TITLE" => "Заявки с сайта теряются", "DESCRIPTION" => "менеджер не видит обращение, клиент не получает ответ. Через неделю вы узнаете, что лид ушёл к конкурентам.", "ORDER" => 1),
-    array("ICON" => "🔄", "TITLE" => "Данные вводятся дважды", "DESCRIPTION" => "в сайт, в CRM, в учётную систему. Ошибки неизбежны, а на исправление уходит время.", "ORDER" => 2),
-    array("ICON" => "🔀", "TITLE" => "Каждый источник считает по-своему", "DESCRIPTION" => "Сайт показывает одни остатки, CRM — другие, а учётная система — третьи.", "ORDER" => 3),
-    array("ICON" => "📱", "TITLE" => "Задачи живут в Telegram и Excel", "DESCRIPTION" => "ушёл ответственный сотрудник — процесс остановился.", "ORDER" => 4),
-    array("ICON" => "📊", "TITLE" => "Выручку считаем вручную", "DESCRIPTION" => "Чтобы понять выручку за месяц, нужно собрать данные из пяти источников — и подождать несколько дней.", "ORDER" => 5),
-    array("ICON" => "🎯", "TITLE" => "Решения без данных", "DESCRIPTION" => "когда цифра становится очевидна — уже поздно.", "ORDER" => 6),
-);
-
-$res = $ib->GetByCode("page_problems");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-foreach($problems as $problem) {
-    $elID = $el->Add(array(
-        "IBLOCK_ID" => $ibID,
-        "ACTIVE" => "Y",
-        "PROPERTY_VALUES" => $problem,
-    ));
-    echo "✅ Создана проблема: {$problem['TITLE']}<br>";
+if(isset($createdIblocks["page_problems"])) {
+    $problems = array(
+        array("ICON" => "📉", "TITLE" => "Заявки с сайта теряются", "DESCRIPTION" => "менеджер не видит обращение, клиент не получает ответ.", "ORDER" => 1),
+        array("ICON" => "🔄", "TITLE" => "Данные вводятся дважды", "DESCRIPTION" => "в сайт, в CRM, в учётную систему. Ошибки неизбежны.", "ORDER" => 2),
+        array("ICON" => "🔀", "TITLE" => "Каждый источник считает по-своему", "DESCRIPTION" => "Сайт показывает одни данные, CRM — другие, 1С — третьи.", "ORDER" => 3),
+        array("ICON" => "📱", "TITLE" => "Задачи живут в Telegram и Excel", "DESCRIPTION" => "ушёл ответственный сотрудник — процесс остановился.", "ORDER" => 4),
+        array("ICON" => "📊", "TITLE" => "Выручку считаем вручную", "DESCRIPTION" => "Чтобы понять выручку, нужно собрать данные из пяти источников.", "ORDER" => 5),
+        array("ICON" => "🎯", "TITLE" => "Решения без данных", "DESCRIPTION" => "когда цифра становится очевидна — уже поздно.", "ORDER" => 6),
+    );
+    
+    $ibID = $createdIblocks["page_problems"];
+    $count = 0;
+    foreach($problems as $problem) {
+        $elID = $el->Add(array(
+            "IBLOCK_ID" => $ibID,
+            "ACTIVE" => "Y",
+            "PROPERTY_VALUES" => $problem,
+        ));
+        if($elID > 0) $count++;
+    }
+    echo "✅ Создано проблем: $count\n";
 }
 
 // Solutions
-$solutions = array(
-    array(
-        "ICON" => "🏢",
-        "TITLE" => "Объединим всё в одной CRM",
-        "DESCRIPTION" => "Заявки теряются, данные вводятся дважды, каждый источник считает по-своему — Битрикс24 объединит всё в одной системе.",
-        "BENEFITS" => "
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Заявки за 2 минуты попадают к менеджеру</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Отчёты собираются автоматически</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Все данные в одном месте</span></li>
-        ",
-        "LINK_TEXT" => "Системы управления →",
-        "LINK_URL" => "/business-systems.php",
-        "ORDER" => 1,
-        "BORDER_COLOR" => "var(--primary)",
-    ),
-    array(
-        "ICON" => "🌐",
-        "TITLE" => "Сайт, который работает с бизнесом",
-        "DESCRIPTION" => "Сайт не связан с CRM, заявки не попадают в систему — создаём сайт, который работает вместе с бизнесом.",
-        "BENEFITS" => "
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Заявки автоматически попадают в CRM</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Интеграция с учётной системой</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Синхронизация товаров и цен</span></li>
-        ",
-        "LINK_TEXT" => "Веб-системы →",
-        "LINK_URL" => "/web-systems.php",
-        "ORDER" => 2,
-        "BORDER_COLOR" => "var(--accent)",
-    ),
-    array(
-        "ICON" => "🔧",
-        "TITLE" => "Наведём порядок в системе",
-        "DESCRIPTION" => "Всё есть, но процессы тормозят, задачи живут в Telegram, а отчёты собираются вручную — наведём порядок.",
-        "BENEFITS" => "
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Прозрачные процессы и задачи</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Автоматические отчёты в реальном времени</span></li>
-            <li style=\"font-size:0.875rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;\"><span style=\"color:var(--success);flex-shrink:0;\">✓</span><span>Система работает без ручного ввода</span></li>
-        ",
-        "LINK_TEXT" => "Аудит и оптимизация →",
-        "LINK_URL" => "/about.php",
-        "ORDER" => 3,
-        "BORDER_COLOR" => "var(--success)",
-    ),
-);
-
-$res = $ib->GetByCode("page_solutions");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-foreach($solutions as $solution) {
-    $elID = $el->Add(array(
-        "IBLOCK_ID" => $ibID,
-        "ACTIVE" => "Y",
-        "PROPERTY_VALUES" => $solution,
-    ));
-    echo "✅ Создано решение: {$solution['TITLE']}<br>";
+if(isset($createdIblocks["page_solutions"])) {
+    $solutions = array(
+        array(
+            "ICON" => "🏢",
+            "TITLE" => "Объединим всё в одной CRM",
+            "DESCRIPTION" => "Битрикс24 объединит всё в одной системе.",
+            "BENEFITS" => json_encode(array("Заявки за 2 минуты", "Отчёты автоматически", "Все данные в одном месте")),
+            "LINK_TEXT" => "Системы управления →",
+            "LINK_URL" => "/business-systems.php",
+            "ORDER" => 1,
+            "BORDER_COLOR" => "var(--primary)",
+        ),
+        array(
+            "ICON" => "🌐",
+            "TITLE" => "Сайт, который работает с бизнесом",
+            "DESCRIPTION" => "Создаём сайт, который работает вместе с бизнесом.",
+            "BENEFITS" => json_encode(array("Заявки в CRM", "Интеграция с 1С", "Синхронизация товаров")),
+            "LINK_TEXT" => "Веб-системы →",
+            "LINK_URL" => "/web-systems.php",
+            "ORDER" => 2,
+            "BORDER_COLOR" => "var(--accent)",
+        ),
+        array(
+            "ICON" => "🔧",
+            "TITLE" => "Наведём порядок в системе",
+            "DESCRIPTION" => "Наведём порядок в процессах и задачах.",
+            "BENEFITS" => json_encode(array("Прозрачные задачи", "Отчёты в реальном времени", "Без ручного ввода")),
+            "LINK_TEXT" => "Аудит →",
+            "LINK_URL" => "/about.php",
+            "ORDER" => 3,
+            "BORDER_COLOR" => "var(--success)",
+        ),
+    );
+    
+    $ibID = $createdIblocks["page_solutions"];
+    $count = 0;
+    foreach($solutions as $solution) {
+        $elID = $el->Add(array(
+            "IBLOCK_ID" => $ibID,
+            "ACTIVE" => "Y",
+            "PROPERTY_VALUES" => $solution,
+        ));
+        if($elID > 0) $count++;
+    }
+    echo "✅ Создано решений: $count\n";
 }
 
 // Before/After
-$res = $ib->GetByCode("page_before_after");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-$elID = $el->Add(array(
-    "IBLOCK_ID" => $ibID,
-    "ACTIVE" => "Y",
-    "PROPERTY_VALUES" => array(
-        "BEFORE_TITLE" => "До проекта",
-        "AFTER_TITLE" => "После проекта",
-        "BEFORE_LIST" => "
-            <li style=\"font-size:0.9375rem;line-height:1.6;color:var(--text-light);\">Данные находятся в разных системах</li>
-            <li style=\"font-size:0.9375rem;line-height:1.6;color:var(--text-light);\">Заявки распределяются вручную</li>
-            <li style=\"font-size:0.9375rem;line-height:1.6;color:var(--text-light);\">Отчёты собираются в таблицах</li>
-            <li style=\"font-size:0.9375rem;line-height:1.6;color:var(--text-light);\">Задачи контролируются через сообщения</li>
-            <li style=\"font-size:0.9375rem;line-height:1.6;color:var(--text-light);\">Нет единой картины бизнеса</li>
-        ",
-        "AFTER_LIST" => "
-            <li style=\"display:flex;align-items:flex-start;gap:12px;font-size:0.9375rem;line-height:1.6;color:var(--text-dark);\"><span style=\"flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;\">✓</span><span>Единый контур с понятными правилами обмена</span></li>
-            <li style=\"display:flex;align-items:flex-start;gap:12px;font-size:0.9375rem;line-height:1.6;color:var(--text-dark);\"><span style=\"flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;\">✓</span><span>Заявки автоматически попадают к менеджеру</span></li>
-            <li style=\"display:flex;align-items:flex-start;gap:12px;font-size:0.9375rem;line-height:1.6;color:var(--text-dark);\"><span style=\"flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;\">✓</span><span>Панель руководителя в реальном времени</span></li>
-            <li style=\"display:flex;align-items:flex-start;gap:12px;font-size:0.9375rem;line-height:1.6;color:var(--text-dark);\"><span style=\"flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;\">✓</span><span>Все задачи, сроки и статусы — в системе</span></li>
-            <li style=\"display:flex;align-items:flex-start;gap:12px;font-size:0.9375rem;line-height:1.6;color:var(--text-dark);\"><span style=\"flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;\">✓</span><span>Управленческая аналитика доступна в любой момент</span></li>
-        ",
-    ),
-));
-echo "✅ Создан элемент До/После<br>";
+if(isset($createdIblocks["page_before_after"])) {
+    $elID = $el->Add(array(
+        "IBLOCK_ID" => $createdIblocks["page_before_after"],
+        "ACTIVE" => "Y",
+        "PROPERTY_VALUES" => array(
+            "BEFORE_TITLE" => "До проекта",
+            "AFTER_TITLE" => "После проекта",
+            "BEFORE_LIST" => json_encode(array(
+                "Данные в разных системах",
+                "Заявки вручную",
+                "Отчёты в таблицах",
+                "Задачи в сообщениях",
+                "Нет единой картины"
+            )),
+            "AFTER_LIST" => json_encode(array(
+                "Единый контур",
+                "Заявки автоматически",
+                "Панель руководителя",
+                "Все задачи в системе",
+                "Аналитика доступна"
+            )),
+        ),
+    ));
+    
+    if($elID > 0) echo "✅ Создан элемент До/После [ID: $elID]\n";
+}
 
 // Approach
-$res = $ib->GetByCode("page_approach");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-$approachSteps = array(
-    array("STEP_NUMBER" => "1", "TITLE" => "Выясняем, что болит, и что считаем успешным", "ORDER" => 1),
-    array("STEP_NUMBER" => "2", "TITLE" => "Собираем карту текущих процессов и систем", "ORDER" => 2),
-    array("STEP_NUMBER" => "3", "TITLE" => "Рисуем, как система будет работать после", "ORDER" => 3),
-    array("STEP_NUMBER" => "4", "TITLE" => "Разбиваем на этапы, чтобы видеть результат сразу", "ORDER" => 4),
-    array("STEP_NUMBER" => "5", "TITLE" => "Реализуем и подключаем каждый контур", "ORDER" => 5),
-    array("STEP_NUMBER" => "6", "TITLE" => "Проверяем, запускаем и остаёмся на поддержке", "ORDER" => 6),
-);
-
-foreach($approachSteps as $step) {
-    $elID = $el->Add(array(
-        "IBLOCK_ID" => $ibID,
-        "ACTIVE" => "Y",
-        "PROPERTY_VALUES" => $step,
-    ));
-    echo "✅ Создан шаг подхода: {$step['TITLE']}<br>";
+if(isset($createdIblocks["page_approach"])) {
+    $approachSteps = array(
+        array("STEP_NUMBER" => "1", "TITLE" => "Выясняем, что болит", "ORDER" => 1),
+        array("STEP_NUMBER" => "2", "TITLE" => "Собираем карту процессов", "ORDER" => 2),
+        array("STEP_NUMBER" => "3", "TITLE" => "Рисуем целевую систему", "ORDER" => 3),
+        array("STEP_NUMBER" => "4", "TITLE" => "Разбиваем на этапы", "ORDER" => 4),
+        array("STEP_NUMBER" => "5", "TITLE" => "Реализуем и подключаем", "ORDER" => 5),
+        array("STEP_NUMBER" => "6", "TITLE" => "Проверяем и запускаем", "ORDER" => 6),
+    );
+    
+    $ibID = $createdIblocks["page_approach"];
+    $count = 0;
+    foreach($approachSteps as $step) {
+        $elID = $el->Add(array(
+            "IBLOCK_ID" => $ibID,
+            "ACTIVE" => "Y",
+            "PROPERTY_VALUES" => $step,
+        ));
+        if($elID > 0) $count++;
+    }
+    echo "✅ Создано шагов подхода: $count\n";
 }
 
 // About
-$res = $ib->GetByCode("page_about");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-$elID = $el->Add(array(
-    "IBLOCK_ID" => $ibID,
-    "ACTIVE" => "Y",
-    "PROPERTY_VALUES" => array(
-        "DESCRIPTION" => "Dianomi — это команда архитекторов, разработчиков и внедренцев. Мы не просто настраиваем Битрикс24 или делаем сайт — мы проектируем систему, в которой всё связано: сайт общается с CRM, CRM — с 1С, а вы видите результат в управленческой панели.",
-        "OFFICE" => "Офис в Барнауле. Работаем с бизнесом по всей России.",
-        "FEATURES" => "Проектируем систему целиком\nРаботаем прозрачно\nДанные вместе с процессом\nСопровождаем после запуска",
-    ),
-));
-echo "✅ Создан элемент О компании<br>";
-
-// FAQ
-$res = $ib->GetByCode("page_faq");
-$ibID = $res ? $res->GetNext()["ID"] : false;
-
-$faqs = array(
-    array("QUESTION" => "Сколько времени занимает внедрение Битрикс24?", "ANSWER" => "Простой запуск CRM — от 2 недель. Комплексное внедрение с интеграцией сайта, 1С и бизнес-процессами — от 2 месяцев. Точные сроки определяем после обследования.", "ORDER" => 1),
-    array("QUESTION" => "Чем коробочный Битрикс24 отличается от облачного?", "ANSWER" => "Облачный — вы получаете готовую систему, которую настраиваем под вас. Размещается на серверах Битрикс24. Коробочный — устанавливается на ваш сервер, даёт полный доступ к коду и возможность глубокой кастомизации. Выбираем вместе, исходя из ваших задач и требований к данным.", "ORDER" => 2),
-    array("QUESTION" => "Можно ли интегрировать 1С-Битрикс с Битрикс24?", "ANSWER" => "Да, это одна из основных задач. Настраиваем двусторонний обмен данными между сайтом и CRM.", "ORDER" => 3),
-    array("QUESTION" => "Как происходит перенос данных из другой системы?", "ANSWER" => "Изучаем данные, проектируем структуру, тестируем на тестовом контуре и запускаем миграцию.", "ORDER" => 4),
-    array("QUESTION" => "Что входит в сопровождение после запуска?", "ANSWER" => "Поддержка пользователей, контроль интеграций, исправления и плановое развитие системы.", "ORDER" => 5),
-    array("QUESTION" => "Работаете ли вы с регионами?", "ANSWER" => "Да, большая часть проектов реализуется дистанционно. Офис в Барнауле, но мы регулярно работаем с клиентами из Москвы, Новосибирска, Красноярска и других городов. Онлайн-встречи, документооборот и передача данных — всё в цифре.", "ORDER" => 6),
-    array("QUESTION" => "Как понять, какой формат работы нам нужен?", "ANSWER" => "На встрече обсуждаем задачу и предлагаем подходящий формат: обследование, внедрение, аудит или сопровождение.", "ORDER" => 7),
-    array("QUESTION" => "Можно ли начать с аудита текущей системы?", "ANSWER" => "Да, аудит — отличный старт. Выявим проблемы и предложим поэтапный план развития.", "ORDER" => 8),
-);
-
-foreach($faqs as $faq) {
+if(isset($createdIblocks["page_about"])) {
     $elID = $el->Add(array(
-        "IBLOCK_ID" => $ibID,
+        "IBLOCK_ID" => $createdIblocks["page_about"],
         "ACTIVE" => "Y",
-        "PROPERTY_VALUES" => $faq,
+        "CODE" => "about",
+        "PROPERTY_VALUES" => array(
+            "DESCRIPTION" => "Dianomi — команда архитекторов, разработчиков и внедренцев. Мы проектируем систему, в которой всё связано: сайт общается с CRM, CRM — с 1С.",
+            "OFFICE" => "Офис в Барнауле. Работаем с бизнесом по всей России.",
+            "FEATURES" => json_encode(array(
+                "Проектируем систему целиком",
+                "Работаем прозрачно",
+                "Данные вместе с процессом",
+                "Сопровождаем после запуска"
+            )),
+        ),
     ));
-    echo "✅ Создан FAQ: {$faq['QUESTION']}<br>";
+    
+    if($elID > 0) echo "✅ Создан элемент О компании [ID: $elID]\n";
 }
 
-echo "<hr>";
-echo "<h2>✅ Установка завершена!</h2>";
-echo "<p>Все инфоблоки, свойства и элементы созданы.</p>";
-echo "<p><b>ВАЖНО: Удалите этот файл сразу после использования!</b></p>";
-echo "<p><a href=\"/local/php/install_iblocks.php\" onclick=\"if(confirm('Вы уверены, что хотите удалить этот файл?')){window.location.href='delete.php?file=install_iblocks.php';return false;}\">Удалить файл</a></p>";
+// FAQ
+if(isset($createdIblocks["page_faq"])) {
+    $faqs = array(
+        array("QUESTION" => "Сколько времени занимает внедрение?", "ANSWER" => "Простой запуск CRM — от 2 недель. Комплексное внедрение — от 2 месяцев.", "ORDER" => 1),
+        array("QUESTION" => "Чем коробочный Битрикс24 отличается от облачного?", "ANSWER" => "Облачный — готовая система на серверах Битрикс24. Коробочный — на вашем сервере с полным доступом к коду.", "ORDER" => 2),
+        array("QUESTION" => "Можно ли интегрировать 1С-Битрикс с Битрикс24?", "ANSWER" => "Да, это одна из основных задач. Настраиваем двусторонний обмен данными.", "ORDER" => 3),
+        array("QUESTION" => "Как происходит перенос данных?", "ANSWER" => "Изучаем данные, проектируем структуру, тестируем и запускаем миграцию.", "ORDER" => 4),
+        array("QUESTION" => "Что входит в сопровождение?", "ANSWER" => "Поддержка пользователей, контроль интеграций, исправления и развитие системы.", "ORDER" => 5),
+    );
+    
+    $ibID = $createdIblocks["page_faq"];
+    $count = 0;
+    foreach($faqs as $faq) {
+        $elID = $el->Add(array(
+            "IBLOCK_ID" => $ibID,
+            "ACTIVE" => "Y",
+            "PROPERTY_VALUES" => $faq,
+        ));
+        if($elID > 0) $count++;
+    }
+    echo "✅ Создано элементов FAQ: $count\n";
+}
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");
-?>
+echo "\n";
+echo "========================================\n";
+echo "✅ УСТАНОВКА ЗАВЕРШЕНА!\n";
+echo "========================================\n";
+echo "\nИнфоблоки созданы:\n";
+foreach($createdIblocks as $code => $id) {
+    echo "  - $code [ID: $id]\n";
+}
+echo "\n⚠️ УДАЛИТЕ ЭТОТ ФАЙЛ ПОСЛЕ ИСПОЛЬЗОВАНИЯ!\n";
