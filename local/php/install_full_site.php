@@ -13,6 +13,14 @@ $docRoot = $_SERVER["DOCUMENT_ROOT"] ?? '/var/www/s277847/data/www/s277847.h1n.r
 if (file_exists($docRoot . '/bitrix/modules/main/include/prolog_before.php')) {
     require($docRoot . '/bitrix/modules/main/include/prolog_before.php');
     echo "✅ Prolog загружен\n\n";
+    
+    // Подключаем модуль инфоблоков
+    if (ClassExists("CIBlock") || interface_exists("\Bitrix\Iblock\ElementTable")) {
+        echo "✅ Модуль инфоблоков уже загружен\n\n";
+    } else {
+        require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/iblock/include.php");
+        echo "✅ Модуль инфоблоков подключён\n\n";
+    }
 } else {
     echo "❌ Prolog не найден по пути: $docRoot/bitrix/modules/main/include/prolog_before.php\n";
     echo "Пытаемся загрузить без prolog...\n\n";
