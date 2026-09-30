@@ -661,6 +661,153 @@
         <Execute>
           <option name="pattern" value="git push *" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L &quot;https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3232&amp;LESSON_PATH=3913.2704.2880.3232&quot; 2&gt;/dev/null" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3232&amp;LESSON_PATH=3913.2704.2880.3232' -UseBasicParsing | Select-Object -ExpandProperty Content&quot; 2&gt;&amp;1" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/css&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/js&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/img&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/components/bitrix/menu/megamenu/.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/css&quot;,&quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/js&quot;,&quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/img&quot;,&quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/components/bitrix/menu/megamenu/.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:/Users/Анна/IdeaProjects/bitrix/css/style.css&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/css/style.css&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:/Users/Анна/IdeaProjects/bitrix/js/main.js&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/js/main.js&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:/Users/Анна/IdeaProjects/bitrix/img/logo-dianomi.svg&quot; &quot;C:/Users/Анна/IdeaProjects/bitrix/local/templates/dianomi/img/logo-dianomi.svg&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="dir &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi&quot; /b" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\template.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\header.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\footer.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\lang&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\bitrix\menu\megamenu\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\bitrix\menu\templates\megamenu&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\components\bitrix\menu\templates\megamenu\style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\lang\ru\header.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\lang\ru\footer.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-template.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="type &quot;C:\Users\Анна\IdeaProjects\bitrix\index.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix&quot; -File" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix&quot; -Directory" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\templates\dianomi\css&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\index.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\index.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\css\style.css&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\css\style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\local&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\local&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\partials&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\partials&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\docs&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\docs&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\img&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\img&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\robots.txt&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\robots.txt&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-site.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\bitrix&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\local\components\bitrix&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\bitrix&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\local\components\dianomi&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\local\php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\php&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\local\modules&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\modules&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-site-fixed.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\site&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\components&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\site\bitrix&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\templates\dianomi&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template\dianomi&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\components&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\components\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\03-components.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\site\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\01-site.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\02-template.zip&quot; -Force" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
@@ -685,5 +832,6 @@
         </Read>
       </list>
     </option>
+    <option name="lastAutoApproveScope" value="SESSION" />
   </component>
 </project>
