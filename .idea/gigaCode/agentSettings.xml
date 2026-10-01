@@ -659,6 +659,7 @@
           <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\.default\template.php' -Force&quot;" />
         </Execute>
         <Execute>
+<<<<<<< Updated upstream
           <option name="pattern" value="git push *" />
         </Execute>
         <Execute>
@@ -807,6 +808,18 @@
         </Execute>
         <Execute>
           <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template\*&quot; -DestinationPath &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\02-template.zip&quot; -Force" />
+=======
+          <option name="pattern" value="powershell -Command &quot;Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\templates\dianomi\header.php' -Encoding UTF8 | Select-Object -Skip 18 -First 5&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\css\style.css' | Measure-Object -Line).Lines&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\templates\dianomi\components&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\hero\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\problems\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\solutions\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\before-after\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\approach\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\about-company\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\faq\templates\.default\style.css' -Force; Remove-Item 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\local\components\dianomi\cta-form\templates\.default\style.css' -Force&quot;" />
+>>>>>>> Stashed changes
         </Execute>
       </list>
     </option>
@@ -828,7 +841,7 @@
           <option name="pattern" value="$PROJECT_DIR$/../../../../../temp/bitrix24.html" />
         </Read>
         <Read>
-          <option name="pattern" value="$PROJECT_DIR$/../../../miiesnikova/Documents/NewProjectBitric/*" />
+          <option name="pattern" value="$USER_HOME$/miiesnikova/Documents/NewProjectBitric/*" />
         </Read>
       </list>
     </option>

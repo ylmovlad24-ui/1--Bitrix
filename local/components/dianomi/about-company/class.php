@@ -15,6 +15,9 @@ class CBitrixComponentDianomiAboutCompany extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
@@ -31,6 +34,7 @@ class CBitrixComponentDianomiAboutCompany extends CBitrixComponent
             'ID' => intval($arElement['ID']),
             'DESCRIPTION' => htmlspecialcharsbx($arElement['PROPERTY_DESCRIPTION_VALUE']),
             'OFFICE' => htmlspecialcharsbx($arElement['PROPERTY_OFFICE_VALUE']),
+            // FEATURES содержит доверенный текст (каждая строка — новое преимущество)
             'FEATURES' => $arElement['PROPERTY_FEATURES_VALUE'],
         );
         

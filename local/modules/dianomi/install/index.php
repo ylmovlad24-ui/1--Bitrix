@@ -77,13 +77,59 @@ class dianomi extends CModule
     
     protected function createIblocks()
     {
-        // Создание инфоблоков через API
-        // (реализация аналогична install_iblocks.php)
+        global $DB;
+
+        $iblockCodes = array(
+            "page_hero" => "Hero-блоки",
+            "page_problems" => "Проблемы",
+            "page_solutions" => "Решения",
+            "page_before_after" => "До/После",
+            "page_approach" => "Подход",
+            "page_about" => "О компании",
+            "page_faq" => "FAQ",
+        );
+
+        $ib = new CIBlock();
+        foreach ($iblockCodes as $code => $name) {
+            $res = $ib->GetByCode($code);
+            $ibID = $res ? $res->GetNext()["ID"] : false;
+
+            if (!$ibID) {
+                $ibID = $ib->Add(array(
+                    "IBLOCK_TYPE_ID" => "content",
+                    "CODE" => $code,
+                    "NAME" => $name,
+                    "SORT" => "100",
+                    "SITE_ID" => "s1",
+                    "TYPE" => "S",
+                    "SEARCHABLE" => "Y",
+                    "FILTRABLE" => "Y",
+                ));
+            }
+        }
     }
-    
+
     protected function deleteIblocks()
     {
-        // Удаление инфоблоков
+        $iblockCodes = array(
+            "page_hero",
+            "page_problems",
+            "page_solutions",
+            "page_before_after",
+            "page_approach",
+            "page_about",
+            "page_faq",
+        );
+
+        $ib = new CIBlock();
+        foreach ($iblockCodes as $code) {
+            $res = $ib->GetByCode($code);
+            $ibID = $res ? $res->GetNext()["ID"] : false;
+
+            if ($ibID) {
+                $ib->Delete($ibID);
+            }
+        }
     }
     
     protected function copyDir($src, $dst)

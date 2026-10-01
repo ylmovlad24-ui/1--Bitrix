@@ -56,7 +56,13 @@
         </ul>
       </div>
     </div>
+<<<<<<< Updated upstream
 
+=======
+    <div class="footer__bitrix">
+      <a href="https://www.1c-bitrix.ru/products/cms/" target="_blank" rel="noopener noreferrer">Работает на «1С-Битрикс: Управление сайтом»</a>
+    </div>
+>>>>>>> Stashed changes
     <div class="footer__copyright">
       &copy; <span id="currentYear">2026</span> dianomi. Все права защищены.
     </div>

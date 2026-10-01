@@ -1,15 +1,26 @@
+<<<<<<< Updated upstream
 ﻿<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $APPLICATION->SetTitle($TITLE);
+=======
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+>>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
   <title><?=$APPLICATION->getTitle()?></title>
   <meta name="description" content="<?=$APPLICATION->GetPageProperty('description','description')?>">
   <meta property="og:title" content="<?=$APPLICATION->GetPageProperty('og:title','og:title')?>">
   <meta property="og:description" content="<?=$APPLICATION->GetPageProperty('og:description','og:description')?>">
+=======
+  <title><?=$APPLICATION->GetTitle()?></title>
+  <meta name="description" content="<?=$APPLICATION->GetPageProperty('description')?>">
+  <meta property="og:title" content="<?=$APPLICATION->GetPageProperty('og:title')?>">
+  <meta property="og:description" content="<?=$APPLICATION->GetPageProperty('og:description')?>">
+>>>>>>> Stashed changes
   <meta property="og:type" content="website">
   <meta property="og:url" content="<?=$APPLICATION->GetPageProperty('og:url','og:url')?>">
   <meta property="og:image" content="<?=$APPLICATION->GetPageProperty('og:image','og:image')?>">
@@ -17,8 +28,13 @@ $APPLICATION->SetTitle($TITLE);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<<<<<<< Updated upstream
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/style.css">
+=======
+  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/../css/style.css">
+>>>>>>> Stashed changes
   <?$APPLICATION->ShowHead();?>
+  <script>document.write('<script type="text/javascript" src="/bitrix/components/bitrix/composite/indexer.php?rand=1"><' + '/script>');</script>
 </head>
 <body>
 <a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;z-index:10000;padding:1rem;background:var(--primary);color:#fff;">Перейти к основному содержанию</a>

@@ -8,7 +8,7 @@ Loc::loadMessages(__FILE__);
 return array(
     'NAME' => Loc::getMessage("DIANOMI_PROBLEMS_NAME"),
     'DESCRIPTION' => Loc::getMessage("DIANOMI_PROBLEMS_DESCR"),
-    'ICON' => '/images/problems.gif',
+    'ICON' => '/images/component.gif',
     'SORT' => 20,
     'PATH' => array(
         'TEMPLATE' => 'templates/.default',

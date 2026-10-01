@@ -12,6 +12,9 @@ class CBitrixComponentDianomiCtaForm extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         // CTA форма не требует данных из инфоблока
         $arResult['FORM_ACTION'] = '/project.php';
         

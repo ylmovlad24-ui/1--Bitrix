@@ -15,6 +15,9 @@ class CBitrixComponentDianomiApproach extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;

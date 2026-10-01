@@ -15,6 +15,9 @@ class CBitrixComponentDianomiBeforeAfter extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
@@ -31,6 +34,7 @@ class CBitrixComponentDianomiBeforeAfter extends CBitrixComponent
             'ID' => intval($arElement['ID']),
             'BEFORE_TITLE' => htmlspecialcharsbx($arElement['PROPERTY_BEFORE_TITLE_VALUE']),
             'AFTER_TITLE' => htmlspecialcharsbx($arElement['PROPERTY_AFTER_TITLE_VALUE']),
+            // BEFORE_LIST и AFTER_LIST содержат доверенный HTML-контент, созданный разработчиком
             'BEFORE_LIST' => $arElement['PROPERTY_BEFORE_LIST_VALUE'],
             'AFTER_LIST' => $arElement['PROPERTY_AFTER_LIST_VALUE'],
         );

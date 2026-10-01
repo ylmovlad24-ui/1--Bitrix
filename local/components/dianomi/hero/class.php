@@ -16,6 +16,9 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         // Проверка прав
         if (!$this->checkRights()) {
             $this->abortStep();
@@ -49,6 +52,7 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
             'COUNTER_LABEL_1' => htmlspecialcharsbx($arElement['PROPERTY_COUNTER_LABEL_1_VALUE']),
             'COUNTER_LABEL_2' => htmlspecialcharsbx($arElement['PROPERTY_COUNTER_LABEL_2_VALUE']),
             'COUNTER_LABEL_3' => htmlspecialcharsbx($arElement['PROPERTY_COUNTER_LABEL_3_VALUE']),
+            // BENEFITS_LIST содержит доверенный HTML-контент, созданный разработчиком
             'BENEFITS_LIST' => $arElement['PROPERTY_BENEFITS_LIST_VALUE'],
         );
         

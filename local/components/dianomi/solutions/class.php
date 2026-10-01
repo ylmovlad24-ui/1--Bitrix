@@ -15,6 +15,9 @@ class CBitrixComponentDianomiSolutions extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
@@ -33,6 +36,7 @@ class CBitrixComponentDianomiSolutions extends CBitrixComponent
                 'ICON' => htmlspecialcharsbx($solution['PROPERTY_ICON_VALUE']),
                 'TITLE' => htmlspecialcharsbx($solution['PROPERTY_TITLE_VALUE']),
                 'DESCRIPTION' => htmlspecialcharsbx($solution['PROPERTY_DESCRIPTION_VALUE']),
+                // BENEFITS содержит доверенный HTML-контент, созданный разработчиком
                 'BENEFITS' => $solution['PROPERTY_BENEFITS_VALUE'],
                 'LINK_TEXT' => htmlspecialcharsbx($solution['PROPERTY_LINK_TEXT_VALUE']),
                 'LINK_URL' => htmlspecialcharsbx($solution['PROPERTY_LINK_URL_VALUE']),

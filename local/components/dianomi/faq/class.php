@@ -15,6 +15,9 @@ class CBitrixComponentDianomiFaq extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
@@ -31,6 +34,7 @@ class CBitrixComponentDianomiFaq extends CBitrixComponent
             $arResult['FAQ'][] = array(
                 'ID' => intval($faq['ID']),
                 'QUESTION' => htmlspecialcharsbx($faq['PROPERTY_QUESTION_VALUE']),
+                // ANSWER содержит доверенный HTML-контент, созданный разработчиком
                 'ANSWER' => $faq['PROPERTY_ANSWER_VALUE'],
             );
         }

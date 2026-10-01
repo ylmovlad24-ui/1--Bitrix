@@ -15,6 +15,9 @@ class CBitrixComponentDianomiProblems extends CBitrixComponent
     {
         $arResult = array();
         
+        // Подключение стилей компонента
+        $this->AddExternalStyleSheet(SITE_TEMPLATE_PATH . '/components/common.css');
+        
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
@@ -32,7 +35,7 @@ class CBitrixComponentDianomiProblems extends CBitrixComponent
                 'ID' => intval($problem['ID']),
                 'ICON' => htmlspecialcharsbx($problem['PROPERTY_ICON_VALUE']),
                 'TITLE' => htmlspecialcharsbx($problem['PROPERTY_TITLE_VALUE']),
-                'DESCRIPTION' => htmlspecialcharsbx($problem['PROPERTY_DESCRIPTION_VALUE']),
+                'DESCRIPTION' => htmlspecialcharsbx($problem['PROPERTY_DESCRIPTION_VALUE']), // Описание проблемы — текст, экранируется
             );
         }
         
