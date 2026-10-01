@@ -1,0 +1,18 @@
+# BEGIN_RUBIUK
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^(.*)$ /bitrix/modules/main/rule.php?ID=%1&RULE=$1 [L]
+</IfModule>
+# END_RUBIUK
+
+# BEGIN_BLOCK_ID_1
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+# END_BLOCK_ID_1

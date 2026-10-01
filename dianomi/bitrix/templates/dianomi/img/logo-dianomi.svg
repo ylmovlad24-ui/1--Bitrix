@@ -1,0 +1,14 @@
+<!-- dianomi Logo - SVG Placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40">
+  <defs>
+    <linearGradient id="dianomiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A5B9A"/>
+      <stop offset="100%" style="stop-color:#3A7BC8"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon mark -->
+  <circle cx="18" cy="20" r="14" fill="url(#dianomiGrad)"/>
+  <path d="M12 14 L18 26 L24 14" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Text -->
+  <text x="40" y="26" font-family="Inter, Segoe UI, Roboto, sans-serif" font-size="20" font-weight="700" fill="#2A5B9A">dianomi</text>
+</svg>
