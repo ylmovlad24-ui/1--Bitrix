@@ -1,0 +1,12 @@
+/* ============================================
+   dianomi:faq
+   ============================================ */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; background: none; border: none; cursor: pointer; text-align: left; font-size: 1rem; font-weight: 600; color: var(--text-dark); transition: color 0.3s ease; }
+.faq-question:hover { color: var(--primary); }
+.faq-question__icon { font-size: 1.5rem; color: var(--primary); transition: transform 0.3s ease; flex-shrink: 0; margin-left: 16px; }
+.faq-item--open .faq-question__icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-item--open .faq-answer { max-height: 500px; }
+.faq-answer__text { padding-bottom: 20px; font-size: 0.9375rem; color: var(--text-light); line-height: 1.7; }

@@ -5,220 +5,94 @@
     <option name="autoApprovedCommands">
       <list>
         <Execute>
-          <option name="pattern" value="mkdir -p &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/.gigacode/plans&quot;" />
+          <option name="pattern" value="mkdir -p &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/deploy/template_full/bitrix/templates/dianomi/css&quot; &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/deploy/template_full/bitrix/templates/dianomi/js&quot; &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/deploy/template_full/bitrix/templates/dianomi/img&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="wc *" />
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\css&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/business-systems.html').Count; (Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/web-systems.html').Count; (Get-Content 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/integrations.html').Count&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\css\style.css&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\css\style.css&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/blog.html&quot; -Force" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/crm.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/sites.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bi-analytics.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/process-audit.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/project-management.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/services.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bitrix.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bitrix_license.html&quot;,&quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/editions.html&quot; -Force" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="python &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="python -c &quot;import subprocess; result = subprocess.run(['python', 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py'], capture_output=True, text=True); print(result.stdout); print(result.stderr)&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\img\*.svg&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\img\&quot; -Force; Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\img\*.jpg&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\img\&quot; -Force" />
         </Execute>
         <Execute>
           <option name="pattern" value="cd *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py" />
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\*&quot; -DestinationPath &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\dianomi-site.zip&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="node -e &quot;const fs = require('fs'); const path = require('path'); const base = 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix'; const header = fs.readFileSync(path.join(base, 'partials', 'header.html'), 'utf8'); const footer = fs.readFileSync(path.join(base, 'partials', 'footer.html'), 'utf8'); const files = ['index.html','business-systems.html','web-systems.html','integrations.html','data-bi.html','ai-bots.html','bitrix24.html','1c-bitrix.html','cases.html','approach.html','about.html','project.html','contacts.html','personal-data.html','privacy.html','success.html','404.html']; files.forEach(fn =&gt; { let c = fs.readFileSync(path.join(base, fn), 'utf8'); let mi = c.indexOf('&lt;main id=\&quot;main-content\&quot;&gt;'); if (mi &gt; 0) { c = c.slice(0, mi) + header + '\n' + c.slice(mi); } let bi = c.lastIndexOf('&lt;/body&gt;'); if (bi &gt; 0) { c = c.slice(0, bi) + footer + '\n' + c.slice(bi); } fs.writeFileSync(path.join(base, fn), c, 'utf8'); console.log('Processed: ' + fn); }); console.log('Done!');&quot;" />
+          <option name="pattern" value="echo *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="where *" />
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\hero\templates\.default&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File add-header-footer.ps1" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\solutions\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\solutions\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command &quot;[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; cd 'C:/Users/Vlad/Documents/Ptodjec/1--Bitrix'; powershell -ExecutionPolicy Bypass -File 'add-header-footer.ps1'&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\cta-form\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\cta-form\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/add-header-footer.ps1&quot; -Force" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\about-company\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\about-company\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Remove-Item &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/embed_partials.py&quot; -Force" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\problems\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\problems\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="git status *" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\faq\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\faq\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-Location&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\approach\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\approach\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Ptodjec' -Directory | Select-Object Name&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\hero\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad' -Directory | Select-Object Name&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\before-after\templates\.default\template.php&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\before-after\templates\.default\template.php&quot; -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive' -Directory 2&gt;$null | Select-Object Name; Get-ChildItem -Path 'C:\Users\Vlad\YandexDisk' -Directory 2&gt;$null | Select-Object Name&quot;" />
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates&quot; -Recurse -Force" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi&quot; -Recurse" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\iCloudDrive\Documents' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components&quot; -Recurse -Directory" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents' -Directory -ErrorAction SilentlyContinue | Select-Object Name&quot;" />
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full&quot; -Filter &quot;*.php&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec' -Recurse | Select-Object FullName&quot;" />
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi&quot; -Recurse -Directory" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git status --short&quot;" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix' -Filter '*.html' | ForEach-Object { $content = Get-Content $_.FullName -Raw -Encoding UTF8; $hasHeader = $content -match 'class=\&quot;header\&quot;'; $hasFooter = $content -match 'class=\&quot;footer\&quot;'; [PSCustomObject]@{Name=$_.Name; Header=$hasHeader; Footer=$hasFooter} } | Format-Table -AutoSize&quot;" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\faq&quot; -Recurse" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix' -Filter '*.html' | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $h = if ($c -match 'class=.header.') { 'YES' } else { 'NO' }; $f = if ($c -match 'class=.footer.') { 'YES' } else { 'NO' }; Write-Output ('{0} | H: {1} | F: {2}' -f $_.Name, $h, $f) }&quot;" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\hero&quot; -Recurse" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-header.ps1&quot;" />
+          <option name="pattern" value="Test-Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\hero\templates\.default\template.php&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-header.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\update-nav.ps1' -Force; Write-Output 'Temporary files removed'&quot;" />
+          <option name="pattern" value="Test-Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\faq\templates\.default\template.php&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;$files = @('index.html', 'bitrix24.html', '1c-bitrix.html', 'project.html', 'bitrix24-prices.html'); foreach ($f in $files) { $path = 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\' + $f; $c = Get-Content $path -Raw -Encoding UTF8; $hasBody = if ($c -match '&lt;body') { 'YES' } else { 'NO' }; $hasCloseBody = if ($c -match '&lt;/body&gt;') { 'YES' } else { 'NO' }; $hasHtmlOpen = if ($c -match '&lt;html') { 'YES' } else { 'NO' }; $hasHtmlClose = if ($c -match '&lt;/html&gt;') { 'YES' } else { 'NO' }; Write-Output ('{0} | Body: {1} | /Body: {2} | &lt;html: {3} | &lt;/html: {4}' -f $f, $hasBody, $hasCloseBody, $hasHtmlOpen, $hasHtmlClose) }&quot;" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\components\dianomi\faq&quot; -Directory" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-html.ps1&quot;" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full&quot; -File" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-html-2.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html-2.ps1' -Force; Write-Output 'Temporary files removed'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;$c = Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\css\style.css' -Raw; $components = @('arch-diagram', 'comparison-table', 'result-table', 'process-steps', 'solution-card', 'problem-card', 'format-card', 'platform-card', 'integration-card', 'cta-section', 'case-card-nov', 'breadcrumbs', 'section-heading', 'contact-block', 'cookie-notice', 'success-message'); foreach ($comp in $components) { $found = if ($c -match [regex]::Escape($comp)) { 'FOUND' } else { 'MISSING' }; Write-Output ($comp + ': ' + $found) }&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-css.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-css.ps1' -Force&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-js.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;$c = Get-Content 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\js\main.js' -Raw; $patterns = @('dynamic', 'phone', 'mask', 'scroll', 'animation', 'FAQ', 'accordion', 'cookie', 'megamenu', 'burger'); foreach ($p in $patterns) { $found = if ($c -match [regex]::Escape($p)) { 'FOUND' } else { 'MISSING' }; Write-Output ($p + ' : ' + $found) }&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-js.ps1' -Force&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-css.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-header.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-js.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\update-nav.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html-2.ps1'; Test-Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-html.ps1'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git add -A; git status --short&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 5 --oneline&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 1 --pretty=format:'%H%n%s%n%b%n' -- . &quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="curl -s -L -A &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&quot; &quot;https://www.1c-bitrix.ru/products/cms/#tab-section-2&quot; 2&gt;/dev/null" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="curl -s -L -A &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36&quot; &quot;https://www.1c-bitrix.ru/products/bitrix24/&quot; 2&gt;/dev/null" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="curl -s -L --max-time 20 -H &quot;User-Agent: Mozilla/5.0&quot; &quot;https://www.1c-bitrix.ru/products/cms/&quot; 2&gt;&amp;1" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/' -UseBasicParsing -OutFile 'C:\tmp\bitrix_page.html'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="mkdir C:\tmp 2&gt;$null" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path $env:TEMP -Filter 'bitrix24*' -Recurse 2&gt;$null | Select-Object FullName, Length&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -NoProfile -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/bitrix24/' -UserAgent 'Mozilla/5.0' -UseBasicParsing | Select-Object -ExpandProperty Content | Out-File -FilePath 'C:\temp\bitrix24.html' -Encoding UTF8&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -NoProfile -Command &quot;if (Test-Path 'C:\temp\bitrix24.html') { Write-Output ('File exists: ' + (Get-Item 'C:\temp\bitrix24.html').Length + ' bytes') } else { Write-Output 'File not found' }&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/validate-updated.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\validate-updated.ps1' -Force&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git log -n 3 --oneline&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git commit -m 'Обновлены страницы Битрикс24 и 1С-Битрикс&#10;&#10;bitrix24.html:&#10;- Добавлена секция CoPilot (AI-ассистент)&#10;- Добавлена секция Enterprise (для крупных предприятий)&#10;- Расширены возможности платформы (автоматизация, BI)&#10;- Обновлены мета-данные&#10;&#10;1c-bitrix.html:&#10;- Добавлена секция преимуществ платформы (6 карточек)&#10;- Добавлена секция возможностей для интернет-магазинов&#10;- Добавлена секция возможностей для корпоративных сайтов&#10;- Обновлены мета-данные&#10;&#10;Обновлены JSON-LD микроразметка на обеих страницах'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/fix-encoding.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/fix-bom.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-encoding.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-bom.ps1' -Force; Write-Output 'Temp files removed'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git commit -m 'Fix UTF-8 encoding with BOM for all HTML files&#10;&#10;- Added UTF-8 BOM to all 18 HTML files&#10;- Fixes display of header and footer with Cyrillic text&#10;- Resolves mojibake (garbled text) issue in browsers'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/replace-header-footer.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/check-duplicates.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix24.html' -Pattern 'mobileMenu' -AllMatches | ForEach-Object { $_.LineNumber }&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix24.html' -Pattern 'mobileMenu' | ForEach-Object { $_.LineNumber }&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/remove-mobile-duplicates.ps1&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\check-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\remove-mobile-duplicates.ps1' -Force; Remove-Item -Path 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\fix-all.ps1' -Force; Write-Output 'Temp files removed'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="powershell -Command &quot;cd 'C:\Users\Vlad\Documents\Ptodjec\1--Bitrix'; git add -A; git commit -m 'Fix mobile menu - remove duplicates and broken fetch&#10;&#10;- Removed duplicate mobile-menu and mobile-overlay from all 18 HTML files&#10;- Removed broken fetch() calls for header/footer from main.js&#10;- Mobile menu should now work correctly on mobile devices'&quot;" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="git log *" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="git reset *" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="git show *" />
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\bitrix&quot; -Recurse -Directory" />
         </Execute>
         <Execute>
           <option name="pattern" value="git status" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="git diff *" />
-        </Execute>
-        <Execute>
-          <option name="pattern" value="git stash *" />
         </Execute>
         <Execute>
           <option name="pattern" value="git add *" />
@@ -227,204 +101,227 @@
           <option name="pattern" value="git commit *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="start &quot;&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\index.html&quot;" />
+          <option name="pattern" value="git push *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Invoke-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\index.html&quot;" />
+          <option name="pattern" value="git log *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Filter '*.html' -File | ForEach-Object { $content = Get-Content $_.FullName -Raw -Encoding UTF8; $content = $content -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $content = $content -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $content -Encoding UTF8 -NoNewline }&quot;" />
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\install&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;$dir = Get-Location; Get-ChildItem -Path $dir -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\install&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -NoProfile -NonInteractive -Command &quot;$root = 'C:\Users\Анна\IdeaProjects\bitrix'; Get-ChildItem -Path $root -Filter '*.html' -File | ForEach-Object { $c = Get-Content $_.FullName -Raw -Encoding UTF8; $c = $c -replace 'bitrix24\.html#cloud', 'bitrix24.html'; $c = $c -replace 'bitrix24\.html#on-premise', 'bitrix24-on-premise.html'; Set-Content $_.FullName $c -Encoding UTF8 -NoNewline }&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\js\main.js&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\js\main.js&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.ps1&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\css\style.css&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\css\style.css&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="node &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.js&quot;" />
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\robots.txt&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\robots.txt&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.py&quot;" />
+          <option name="pattern" value="tar -czf &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution.tar.gz&quot; -C &quot;C:\Users\Анна\IdeaProjects\bitrix&quot; dianomi-solution" />
         </Execute>
         <Execute>
-          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.ps1&quot;" />
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution.tar.gz&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\update-links.js&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Expand-Archive -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/dianomi-site.zip' -DestinationPath 'C:/Users/Анна/IdeaProjects/bitrix/temp-check' -Force; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/temp-check' -Recurse -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Select-String -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix24.html&quot; -Pattern &quot;Коробочный Битрикс24&quot; -Context 0,5" />
+          <option name="pattern" value="powershell -Command &quot;New-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/install/lang/ru' -ItemType Directory -Force; New-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/lang/ru' -ItemType Directory -Force&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python -c &quot;import sys; lines = open(r'C:\Users\Анна\IdeaProjects\bitrix\bitrix24.html', encoding='utf-8').readlines(); start = end = -1; [setattr(sys.modules[__name__], 'start', i) or None for i, l in enumerate(lines) if '&lt;!-- Коробочный Битрикс24 --&gt;' in l] or None; start = [i for i, l in enumerate(lines) if '&lt;!-- Коробочный Битрикс24 --&gt;' in l][0] if any('&lt;!-- Коробочный Битрикс24 --&gt;' in l for l in lines) else -1; end = [i for i, l in enumerate(lines[start+1:]) if '&lt;!-- Бизнес-задачи --&gt;' in l][0] + start + 1 if any('&lt;!-- Бизнес-задачи --&gt;' in l for l in lines[start+1:]) else -1; print(f'Start: {start}, End: {end}'); print(f'Start line: {lines[start].strip()}'); print(f'End line: {lines[end].strip()}')&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/*.php' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Force; Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/css' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force; Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/js' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force; Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/img' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force; Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/partials' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python C:/Users/Анна/IdeaProjects/bitrix/_debug_bitrix24.py" />
+          <option name="pattern" value="powershell -Command &quot;Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/templates' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force; Copy-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution/components' -Destination 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -Recurse -Force&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python -u C:/Users/Анна/IdeaProjects/bitrix/_debug_bitrix24.py 2&gt;&amp;1" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Set-Location 'C:/Users/Анна/IdeaProjects/bitrix'; Remove-Item -Path 'deploy/dianomi-site.zip' -Force -ErrorAction SilentlyContinue; Compress-Archive -Path 'wizard/dianomi/*' -DestinationPath 'deploy/dianomi-site.zip' -Force&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$content = Get-Content 'bitrix24.html' -Raw; $s = $content.IndexOf('&lt;!-- Коробочный Битрикс24 --&gt;'); $e = $content.IndexOf('&lt;!-- Бизнес-задачи --&gt;'); Write-Host 'Start:' $s 'End:' $e&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Expand-Archive -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/dianomi-site.zip' -DestinationPath 'C:/Users/Анна/IdeaProjects/bitrix/temp-wizard-check' -Force; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/temp-wizard-check' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$env:OLDPWD = pwd; Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; $content = Get-Content 'bitrix24.html' -Raw -Encoding UTF8; $s = $content.IndexOf('&lt;!-- Коробочный Битрикс24 --&gt;'); $e = $content.IndexOf('&lt;!-- Бизнес-задачи --&gt;'); Write-Host ('Start: ' + $s + ' End: ' + $e)&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Set-Location 'C:/Users/Анна/IdeaProjects/bitrix'; Compress-Archive -Path 'wizard/dianomi' -DestinationPath 'deploy/dianomi-site.tar.gz'; Get-Item 'deploy/dianomi-site.tar.gz' | Select-Object Name, Length&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/_find_section.ps1&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Directory -Name | Where-Object { $_ -notin @('.git', '.gigacode', 'temp-check', 'temp-wizard-check') }&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="git restore *" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/wizard' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.py&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_find_section.ps1&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_section_to_remove.txt&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\_section.txt&quot; 2&gt;nul" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_debug_bitrix24.py' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_find_section.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section_to_remove.txt' -Force -ErrorAction SilentlyContinue; Remove-Item 'C:\Users\Анна\IdeaProjects\bitrix\_section.txt' -Force -ErrorAction SilentlyContinue; Write-Host 'Cleaned'&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/about.html&quot; -Pattern &quot;1c-bitrix-prices&quot; -Context 1,1" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/business-systems.html&quot; -Pattern &quot;&lt;!-- Когда нужна система --&gt;&quot; -Context 0,2" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -File -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Select-String -Path &quot;C:/Users/Анна/IdeaProjects/bitrix/business-systems.html&quot; -Pattern &quot;Решения&quot; -Context 1,1" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="curl -s &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/js' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="curl -s &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot; -o &quot;C:/Users/Анна/IdeaProjects/bitrix/temp_license.html&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/css' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Invoke-WebRequest -Uri 'https://www.1c-bitrix.ru/products/cms/license.php' -OutFile 'C:/Users/Анна/IdeaProjects/bitrix/temp_license.html'&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/img' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="curl -s -L &quot;https://www.1c-bitrix.ru/products/cms/license.php&quot; -H &quot;User-Agent: Mozilla/5.0&quot; 2&gt;/dev/null" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/docs' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="grep *" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/partials' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern '&lt;/section&gt;' | ForEach-Object { $_.LineNumber }&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/local' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern '&lt;!--' | ForEach-Object { $_.LineNumber.ToString() + ': ' + $_.Line.Trim() }&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/components' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -NoProfile -Command &quot;$lines = Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'; for($i=0; $i -lt $lines.Count; $i++) { if($lines[$i] -match '&lt;/section&gt;') { Write-Output ($i+1) } }&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/template' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\analyze.ps1&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/site' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/analyze.ps1&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/template_full' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -Command &quot;$lines = Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'; $lines[642..813] = $null; $lines | Where-Object { $_ -ne $null } | Set-Content 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html.tmp'; Move-Item -Force 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html.tmp' 'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html'&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy' -File -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python -c &quot;with open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'r', encoding='utf-8') as f: lines = f.readlines(); open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'w', encoding='utf-8').writelines(lines[:642] + lines[814:])&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi' -File -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python -c &quot;with open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html', 'r', encoding='utf-8') as f: lines = f.readlines(); [print(f'{i+1}: {l.rstrip()}') for i, l in enumerate(lines) if 'Услуги внедрения' in l or '&lt;!-- CTA --&gt;' in l]&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/temp-check' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/temp-wizard-check' -Recurse -Force; Write-Output 'Временные папки удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python -c &quot;import re; f=open(r'C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html','r',encoding='utf-8'); lines=f.readlines(); [print(f'{i+1}') for i,l in enumerate(lines) if 'Услуги внедрения' in l or '&lt;!-- CTA --&gt;' in l]&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/css' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/js' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/img' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/partials' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/local' -Recurse -Force; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/docs' -Recurse -Force; Write-Output 'Дубликаты удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="findstr /n &quot;Услуги внедрения&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Filter '*.html' -File | Remove-Item -Force; Write-Output 'HTML файлы удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/01-all-site.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-site-fixed.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-solution.tar.gz' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-template.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/local.zip' -Force -ErrorAction SilentlyContinue; Write-Output 'ZIP файлы (root) удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="python &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot; &gt; &quot;C:\Users\Анна\IdeaProjects\bitrix\output.txt&quot; 2&gt;&amp;1" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/01-site.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/02-template.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/02-template-full.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/02-template-full.zip.gz' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/03-components.zip' -Force -ErrorAction SilentlyContinue; Write-Output 'ZIP файлы (deploy) удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Get-Content &quot;C:\Users\Анна\IdeaProjects\bitrix\output.txt&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Write-Output '=== Root level ==='; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Directory -Name | Where-Object { $_ -ne '.git' -and $_ -ne '.gigacode' -and $_ -ne '.gigaide' -and $_ -ne '.gitverse' -and $_ -ne '.idea' }; Write-Output ''; Write-Output '=== Root files ==='; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -File -Name; Write-Output ''; Write-Output '=== Deploy files ==='; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy' -File -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="py &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.py&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/COMPONENTS-README.md' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/DEPLOYMENT-GUIDE.md' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/dianomi-site.zip' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/DOCUMENTATION.md' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/INSTALATION-GUIDE.md' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/MIGRATION-GUIDE.md' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/MIGRATION-README.md' -Force -ErrorAction SilentlyContinue; Write-Output 'Лишние файлы удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\fix_temp.ps1&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/.htaccess' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/404.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/about.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/bitrix24-prices.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/bitrix24.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/business-systems.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/contacts.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/data-bi.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/index.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/project.php' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/robots.txt' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/sitemap.xml' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/web-systems.php' -Force -ErrorAction SilentlyContinue; Write-Output 'Корневые PHP файлы удалены'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="cmd /c &quot;python C:\Users\Анна\IdeaProjects\bitrix\fix_corrupted.py&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Write-Output '=== ИТОГОВАЯ СТРУКТУРА ==='; Write-Output ''; Write-Output '--- Root files (should be only README.md) ---'; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -File -Name; Write-Output ''; Write-Output '--- Root directories ---'; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix' -Directory -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="dir &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices-fixed.html&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Expand-Archive -Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy/dianomi-site.zip' -DestinationPath 'C:/Users/Анна/IdeaProjects/bitrix/verify-zip' -Force; Get-ChildItem -Path 'C:/Users/Анна/IdeaProjects/bitrix/verify-zip' -Name&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="node -e &quot;const fs=require('fs'); const lines=fs.readFileSync('C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html','utf8').split('\\n'); const fixed=lines.slice(0,638).concat(lines.slice(812)).join('\\n'); fs.writeFileSync('C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices-fixed.html',fixed,'utf8'); console.log('Done. Original:',lines.length,'Fixed:',fixed.split('\\n').length,'Removed:',lines.length-fixed.split('\\n').length);&quot;" />
+          <option name="pattern" value="powershell -Command &quot;Get-Item 'C:/Users/Анна/IdeaProjects/bitrix/deploy/dianomi-site.zip' | Select-Object Name, Length&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File C:/temp/fix_bitrix.ps1" />
+          <option name="pattern" value="powershell -Command &quot;Remove-Item -Path 'C:/Users/Анна/IdeaProjects/bitrix/verify-zip' -Recurse -Force -ErrorAction SilentlyContinue; Write-Output 'Временная папка удалена'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="Get-ChildItem &quot;C:\Users&quot;" />
+          <option name="pattern" value="powershell -Command &quot;if (Test-Path 'C:\Program Files\7-Zip\7z.exe') { Write-Output '7-Zip found'; &amp; 'C:\Program Files\7-Zip\7z.exe' a 'C:/Users/Анна/IdeaProjects/bitrix/deploy/dianomi-site.tar.gz' 'C:/Users/Анна/IdeaProjects/bitrix/wizard/dianomi/' -tgzip; Write-Output 'Created' } else { Write-Output '7-Zip not found' }&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;$env:USERPROFILE; (Get-Item $env:USERPROFILE).Name&quot;" />
+          <option name="pattern" value="python C:/Users/Анна/IdeaProjects/bitrix/create_deploy.py" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -InputFormat None -File C:/temp/fix_bitrix2.ps1" />
+          <option name="pattern" value="where *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -Command &quot;Get-ChildItem $env:USERPROFILE -Recurse -Filter '1c-bitrix-prices.html' -ErrorAction SilentlyContinue | Select-Object FullName&quot;" />
+          <option name="pattern" value="Get-Command gzip *" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -Command &quot;$f='$env:USERPROFILE'+ '/IdeaProjects/bitrix/1c-bitrix-prices.html'; $lines=Get-Content $f -Encoding UTF8; $fixed=@($lines[0..637]+$lines[812..($lines.Count-1)]); $fixed|Set-Content ('$env:USERPROFILE'+ '/IdeaProjects/bitrix/1c-bitrix-prices-fixed.html') -Encoding UTF8; Write-Host 'Done'&quot;" />
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/create_gz3.ps1&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="cp &quot;C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html&quot; /tmp/prices.html" />
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; &amp; '.\make_gz.ps1'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="xcopy &quot;C:\Users\Анна\IdeaProjects\bitrix\1c-bitrix-prices.html&quot; &quot;C:\temp\prices.html&quot; /Y" />
+          <option name="pattern" value="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; &amp; '.\make_gz.ps1'&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/1c-bitrix-prices.html' -Pattern 'section-header' | Select-Object LineNumber,Line&quot;" />
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Expand-Archive -Path 'C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy.tar.gz' -DestinationPath 'C:\Users\Анна\IdeaProjects\bitrix\check-deploy' -Force; Get-ChildItem -Path 'C:\Users\Анна\IdeaProjects\bitrix\check-deploy' -Recurse -Name | Select-Object -First 30&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -File C:/temp/update_headers.ps1" />
+          <option name="pattern" value="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; Compress-Archive -Path 'dianomi-solution\*' -DestinationPath 'deploy\dianomi-deploy.zip' -Force; Get-Item 'deploy\dianomi-deploy.zip' | Select-Object Name, @{N='SizeKB';E={[math]::Round($_.Length/1KB,1)}}&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -ExecutionPolicy Bypass -NoProfile -File C:/temp/update_headers2.ps1" />
+          <option name="pattern" value="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/make_zip.ps1&quot;" />
         </Execute>
         <Execute>
-          <option name="pattern" value="powershell -NoProfile -Command &quot;Select-String -Path 'C:/Users/Анна/IdeaProjects/bitrix/index.html' -Pattern 'header__nav-link' | Select-Object Line&quot;" />
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Expand-Archive -Path 'C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy.zip' -DestinationPath 'C:\Users\Анна\IdeaProjects\bitrix\check-zip' -Force; Get-ChildItem -Path 'C:\Users\Анна\IdeaProjects\bitrix\check-zip' -Name&quot;" />
         </Execute>
-      </list>
-    </option>
-    <option name="autoApprovedReads">
-      <list>
-        <Read>
-          <option name="pattern" value="D:/Projects/Dianomi/*" />
-        </Read>
-        <Read>
-          <option name="pattern" value="$PROJECT_DIR$/../*" />
-        </Read>
-        <Read>
-          <option name="pattern" value="$PROJECT_DIR$/../../../../runneradmin/AppData/Local/Temp/bitrix24.html" />
-        </Read>
-        <Read>
-          <option name="pattern" value="$PROJECT_DIR$/../../../../../tmp/bitrix_page.html" />
-        </Read>
-        <Read>
-          <option name="pattern" value="$PROJECT_DIR$/../../../../../temp/bitrix24.html" />
-        </Read>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\check-zip' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\check-deploy' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\create_deploy.py' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\create_gz2.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\create_gz3.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\make_gz.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\make_zip.ps1' -Force -ErrorAction SilentlyContinue; Write-Output 'Cleaned'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;New-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\bitrix\local\components' -ItemType Directory -Force; New-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\bitrix\templates' -ItemType Directory -Force; Write-Output 'Created'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\components\dianomi' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\bitrix\local\components\' -Recurse -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\templates\dianomi' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\bitrix\templates\' -Recurse -Force; Write-Output 'Copied'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\*.php' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\css' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Recurse -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\js' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Recurse -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\img' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Recurse -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\robots.txt' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\sitemap.xml' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Force; Copy-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution\.htaccess' -Destination 'C:\Users\Анна\IdeaProjects\bitrix\temp-build\' -Force; Write-Output 'Copied'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Get-ChildItem -Path 'C:\Users\Анна\IdeaProjects\bitrix\temp-build' -Name&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;Set-Location 'C:\Users\Анна\IdeaProjects\bitrix'; Compress-Archive -Path 'temp-build\*' -DestinationPath 'deploy\dianomi-deploy-v2.zip' -Force; Get-Item 'deploy\dianomi-deploy-v2.zip' | Select-Object Name, @{N='SizeKB';E={[math]::Round($_.Length/1KB,1)}}&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;C:/Users/Анна/IdeaProjects/bitrix/make_v2.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Expand-Archive -Path 'C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy-v2.zip' -DestinationPath 'C:\Users\Анна\IdeaProjects\bitrix\verify-v2' -Force; Get-ChildItem -Path 'C:\Users\Анна\IdeaProjects\bitrix\verify-v2\bitrix' -Recurse -Name | Select-Object -First 20&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\verify-v2' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\temp-build' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\make_v2.ps1' -Force -ErrorAction SilentlyContinue; Remove-Item -Path 'C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy.zip' -Force -ErrorAction SilentlyContinue; Write-Output 'Cleaned'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="unzip -l deploy/dianomi-deploy-v2.zip" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-Object -First 80" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="7z a *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="ls *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Test-Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy'&quot;" />
+        </Execute>
       </list>
     </option>
   </component>

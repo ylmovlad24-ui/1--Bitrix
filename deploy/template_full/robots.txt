@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dianomi.ru/sitemap.xml
+Host: dianomi.ru
