@@ -1,0 +1,16 @@
+<?php
+$arWizardManifest = array(
+    "name" => "Dianomi Site",
+    "description" => "Сайт Dianomi — интегратор связанных цифровых систем",
+    "version" => "1.0.0",
+    "versionDate" => "2026-10-04",
+    "site" => "s1", // или пустая строка для выбора
+    "siteDir" => "/dianomi/",
+    "priority" => 10,
+    "partner" => array(
+        "name" => "Dianomi",
+        "link" => "https://dianomi.ru",
+        "image" => "img/partner.png",
+    ),
+);
+?>
