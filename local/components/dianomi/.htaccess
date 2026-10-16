@@ -1,0 +1,13 @@
+# Защита от прямого доступа к файлам компонентов
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Запрет на доступ к class.php напрямую
+    RewriteRule ^class\.php$ - [F,L]
+    RewriteRule ^\. - [F,L]
+</IfModule>
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(php)$">
+        Require all granted
+    </FilesMatch>
+</IfModule>
