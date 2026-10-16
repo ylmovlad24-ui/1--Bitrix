@@ -1,0 +1,18 @@
+# Защита директории шаблона от прямого доступа к PHP файлам
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^\. - [F,L]
+</IfModule>
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(php)$">
+        Require all granted
+    </FilesMatch>
+</IfModule>
+
+# Защита от XSS и кликлинга
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>

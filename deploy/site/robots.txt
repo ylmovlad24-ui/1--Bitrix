@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /bitrix/
+Disallow: /admin/
+Disallow: /local/
+Disallow: /upload/
+Disallow: /*?print=Y
+Disallow: /*&print=Y
+
+Sitemap: http://dianomi.ru/sitemap.xml
+Host: dianomi.ru

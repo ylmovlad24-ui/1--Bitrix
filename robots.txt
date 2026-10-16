@@ -1,9 +1,0 @@
-# Sitemap
-Sitemap: https://dianomi.ru/sitemap.xml
-
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-# Crawl delay
-Crawl-delay: 1
