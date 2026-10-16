@@ -1,6 +1,7 @@
 ﻿<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $APPLICATION->SetTitle($TITLE);
 ?>
+<?$APPLICATION->IncludeRegion("dianomi.header.region");?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

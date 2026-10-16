@@ -7,7 +7,7 @@
       <!-- Brand -->
       <div class="footer__brand">
         <div class="footer__logo">
-          <img src="/bitrix/templates/dianomi/img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
+          <img src="<?=SITE_TEMPLATE_PATH?>/img/logo-dianomi.svg" alt="dianomi" width="32" height="32">
           dianomi
         </div>
         <p class="footer__desc">Проектируем и внедряем связанные цифровые системы для управления компанией и работы с клиентами.</p>
@@ -63,6 +63,6 @@
   </div>
 </footer>
 
-<script src="/bitrix/templates/dianomi/js/main.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/main.js"></script>
 </body>
 </html>

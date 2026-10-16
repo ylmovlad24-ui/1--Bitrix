@@ -1,0 +1,290 @@
+---
+title: Что нового
+---
+
+Документация находится в активной разработке. Мы постоянно добавляем новые разделы и улучшаем существующие материалы. Если вы не нашли нужную информацию, возможно, мы уже работаем над ней.
+
+Чтобы узнавать о новых статьях и дополнениях, подпишитесь на наш репозиторий.
+
+1. Откройте репозиторий [framework-docs](https://github.com/bitrix-tools/framework-docs) на Github.
+
+2. Нажмите кнопку Watch вверху страницы.
+
+3. Выберите Custom > Releases, чтобы получать уведомления о новых версиях.
+
+Все значимые обновления мы публикуем в разделе [Releases](https://github.com/bitrix-tools/framework-docs/releases). Там вы найдете подробный список новинок с описанием изменений.
+
+Также вы можете выбрать All activity, чтобы следить за обсуждениями и issues.
+
+## История изменений
+
+### 2026
+
+#### 9 октября
+
+- Добавили новый раздел [CRM](./pages/modules/crm/overview.md).
+
+#### 8 октября
+
+- Добавили новую статью [Форма обратной связи ui.feedback.form](./pages/ui/ui-feedback-form.md).
+- Добавили новую статью [Диалог с флажками ui.dialogs.checkbox-list](./pages/ui/dialogs-checkbox-list.md).
+
+#### 2 октября
+
+- Добавили новый раздел [Push and Pull](./pages/modules/pull/overview.md).
+
+#### 1 октября
+
+- Добавили новую статью [Поле выбора файлов FileInput](./pages/ui/file-input.md).
+
+- Добавили новую статью [Список шагов ui.stepbystep](./pages/ui/ui-stepbystep.md).
+
+- Добавили новую статью [Пошаговое выполнение ui.stepprocessing](./pages/ui/ui-stepprocessing.md).
+
+- Добавили новую статью [Индикаторы прогресса ui.progressbar и ui.progressround](./pages/ui/ui-progress.md).
+
+- Обновили статью [Загрузка файлов Uploader](./pages/ui/uploader.md).
+
+#### 24 сентября
+
+- Добавили новую статью [Карточка пользователя ui.tooltip](./pages/ui/ui-tooltip.md).
+- Добавили новую статью [Счетчик ui.counter](./pages/ui/ui-counter.md).
+- Добавили новую статью [Метка ui.label](./pages/ui/ui-label.md).
+- Обновили статью [Системная метка](./pages/ui/system-label.md#vybrat-stil).
+
+#### 22 сентября
+
+- Добавили новую статью [Просмотр файлов ui.viewer](./pages/ui/ui-viewer.md).
+- Добавили новую статью [Настраиваемое меню ui.menu-configurable](./pages/ui/ui-menu-configurable.md).
+
+#### 18 сентября
+
+- Добавили новый раздел [Поиск](./pages/modules/search/overview.md).
+
+#### 17 сентября
+
+- Добавили новую статью [Каталог объектов ui.entity-catalog](./pages/ui/ui-entity-catalog.md).
+- Добавили новую статью [Поток стадий ui.stageflow](./pages/ui/ui-stageflow.md).
+- Добавили новую статью [Лента событий ui.timeline](./pages/ui/ui-timeline.md).
+
+#### 16 сентября
+
+- Добавили новую статью [Загрузка файлов Uploader](./pages/ui/uploader.md).
+- Обновили статью [Поля форм ui.forms](./pages/ui/ui-forms.md).
+
+#### 15 сентября
+
+- Добавили новую статью [Класс PageNavigation](./pages/cms-basics/page-navigation-class.md).
+- Добавили новую статью [Класс ReversePageNavigation](./pages/cms-basics/reverse-page-navigation.md).
+- Обновили статью [Постраничная навигация](./pages/cms-basics/page-navigation.md).
+- Обновили статью [Иконки](./pages/ui/icons.md).
+
+#### 10 сентября
+
+- Добавили новую статью [Сетка формы ui.layout-form](./pages/ui/ui-layout-form.md).
+- Добавили новую статью [Диалог выбора цвета color_picker](./pages/ui/color-picker.md).
+
+#### 7 сентября
+
+- Обновили статью [Операции с сущностями и события](./pages/orm/entity-operations.md).
+- Обновили статью [Коллекции](./pages/orm/collections.md).
+
+#### 3 сентября
+
+- Добавили новую статью [Выпадающий список ui.select](./pages/ui/ui-select.md).
+- Добавили новую статью [Поля форм ui.forms](./pages/ui/ui-forms.md).
+- Добавили новую статью [Панель инструментов ui.toolbar](./pages/ui/ui-toolbar.md).
+- Добавили новый раздел [Генератор документов](./pages/modules/documentgenerator/overview.md).
+
+#### 21 августа
+
+- Добавили новую статью [Отрисовка пользовательских полей в главном модуле](./pages/cms-basics/userfields-main-rendering.md).
+- Добавили новую статью [Типы и компоненты пользовательских полей в главном модуле](./pages/cms-basics/userfields-main-types.md).
+- Обновили статью [Пользовательские поля](./pages/cms-basics/userfields.md).
+- Добавили информацию про публичные страницы на контроллерах в статью [Роутинг](./pages/framework/routing.md#controller-public-pages).
+- Добавили раздел [Управление персоналом](./pages/modules/humanresources/overview.md).
+
+#### 18 августа
+
+- Добавили новый раздел [Highload-блоки](./pages/modules/highloadblocks/overview.md).
+
+#### 14 августа
+
+- Обновили статью [Анимации Lottie](./pages/ui/lottie.md).
+- Добавили новую статью [Фильтр main.ui.filter](./pages/ui/main-ui-filter.md).
+- Добавили новую статью [Таблица main.ui.grid](./pages/ui/main-ui-grid.md).
+
+#### 13 августа
+
+- Добавили новый раздел [Интернет-магазин](./pages/modules/sale/overview.md).
+
+#### 10 августа
+
+- Добавили новый раздел [Расширение ui.a11y](./pages/ui/a11y/index.md).
+
+#### 28 июля
+
+- Обновили статью [Контроллеры](./pages/framework/controllers.md).
+- Добавили новый раздел [Диалог выбора объектов ui.entity-selector](./pages/ui/entity-selector/index.md).
+
+#### 23 июля
+
+- Добавили новую статью [Работа со стилями](./pages/cms-basics/styles.md).
+
+#### 2 июля
+
+- Добавили новую статью [Кнопки ui.buttons](./pages/ui/ui-buttons.md).
+
+#### 26 июня
+
+- Обновили статью [Экосистема](./pages/about/ecosystem.md)
+
+#### 25 июня
+
+- Добавили новый раздел [Миграция на PostgreSQL](./pages/database/postgresql/migration.md).
+
+#### 22 июня
+
+- Добавили новую статью [Кодировка](./pages/advanced/encoding.md).
+
+#### 19 июня
+
+- Добавили новый раздел [Торговый каталог](./pages/modules/catalog/overview.md).
+
+#### 16 июня
+
+- Добавили новую статью [Окно сообщения](./pages/ui/dialogs-messagebox.md).
+- Добавили новую статью [Подсказка](./pages/ui/hint.md).
+- Добавили новую статью [Всплывающие окна и меню main.popup](./pages/ui/main-popup.md).
+- Добавили новую статью [Боковая панель main.sidepanel](./pages/ui/main-sidepanel.md).
+- Добавили новую статью [Менеджер уведомлений](./pages/ui/notification-manager.md).
+
+#### 4 июня
+
+- Добавили новую статью [Иконки](./pages/ui/icons.md).
+
+#### 28 мая
+
+- Добавили новую статью [Системный хайлайтер](./pages/ui/system-highlighter.md).
+- Добавили новую статью [Системное поле ввода](./pages/ui/system-input.md).
+- Добавили новую статью [Системная метка](./pages/ui/system-label.md).
+- Добавили новую статью [Системное меню](./pages/ui/system-menu.md).
+- Добавили новую статью [Скелетон загрузки](./pages/ui/system-skeleton.md).
+- Добавили новую статью [Типографика](./pages/ui/typography.md).
+
+#### 26 мая
+
+- Добавили новую статью [Монитор качества](./pages/advanced/quality-monitor.md).
+
+#### 15 мая
+
+- Добавили новую статью [Системный алерт](./pages/ui/system-alert.md).
+- Добавили новую статью [Системный чип](./pages/ui/system-chip.md).
+- Добавили новую статью [Системный диалог](./pages/ui/system-dialog.md).
+- Добавили новую статью [Свойства страницы и раздела](./pages/cms-basics/properties.md).
+- Добавили новую статью [Заголовки страницы](./pages/cms-basics/titles.md).
+
+#### 30 апреля
+
+- Добавили новую статью [Архитектура модулей](./pages/modules/architecture.md).
+
+#### 29 апреля
+
+- Добавили информацию про файл init.php в статью [Жизненный цикл запроса](./pages/framework/request-lifecycle.md)
+
+#### 27 апреля
+
+- Добавили статью [Как правильно и безопасно кастомизировать коробочные продукты](./pages/get-started/how-customize.md)
+
+#### 23 апреля
+
+- Добавили новый раздел [Пользовательский интерфейс UI](./pages/ui/lottie.md).
+
+#### 16 апреля
+
+- Добавили описание параметров ограничения количества обрабатываемых сообщений в статью [Очереди сообщений](./pages/framework/messenger.md).
+
+#### 3 апреля
+
+- Добавили новую статью [Криптографические поля в ORM](./pages/security/cryptofield.md).
+
+#### 26 марта
+
+- Добавили новую статью [Шифрование данных](./pages/security/cipher.md).
+
+#### 20 марта
+
+- Добавили новую статью [HTTP-клиент](./pages/advanced/http-client.md).
+
+#### 13 марта
+
+- Добавили новую статью [Многосайтовость](./pages/advanced/multisite.md).
+
+#### 4 марта
+
+- Добавили новую статью [Vue.js](./pages/advanced/vue.md).
+
+#### 26 февраля
+
+- Добавили описание подключения key-value хранилищ в статью [Конфигурация](./pages/database/configuration.md#key-value).
+
+#### 19 февраля
+
+- Добавили описание преобразования данных в статью [Request и Response](./pages/framework/request-response.md#converter).
+- Описали как обработать элементы коллекции в статье [Коллекции](./pages/orm/collections.md#walk).
+
+#### 10 февраля
+
+- Добавили новый раздел [Расширенные знания](./pages/advanced/datetime.md).
+
+#### 6 февраля
+
+- Добавили новую статью [Временное хранение](./pages/framework/storage.md).
+
+#### 5 февраля
+
+-  Добавили новую статью [Контрибьюторам: как внести свой вклад в документацию](./CONTRIBUTING.md).
+
+#### 29 января
+
+-  Добавили новый раздел [Информационные блоки](./pages/modules/iblocks/overview.md).
+-  Добавили описание новых команд в статье [Консольные команды](./pages/framework/console-commands.md#vstroennye-komandy).
+-  Описали рендеринг компонента для AJAX в статье [Контроллеры](./pages/framework/controllers.md#rendering-komponenta-dlya-ajax).
+-  Добавили новый раздел Валидация массивов в статью [Валидация](./pages/framework/validation.md#validaciya-massivov).
+-  Добавили информацию про мобильные PUSH-уведомления в статью [Двухэтапная авторизация](./pages/security/two-factor-auth.md#mobilnye-push-uvedomleniya)
+
+#### 13 января
+
+-  Добавили новую статью [Аннотации классов](./pages/orm/annotations.md).
+-  Полностью обновили статью [Контроллеры](./pages/framework/controllers.md).
+-  Описали как подменить ответ через фильтр в статье [Контроллеры](./pages/framework/pre-post-filters.md#podmenit-otvet-cherez-filtr).
+
+### 2025
+
+#### 27 ноября
+
+-  Добавили новый раздел [Основы CMS](./pages/cms-basics/sites.md).
+
+#### 25 ноября
+
+-  Добавили описание типа параметров `CUSTOM` в статью [Компоненты](./pages/framework/components.md#tip-parametrov-custom).
+-  Добавили новую статью [Консольные команды](./pages/framework/console-commands.md). Спасибо [bxmaximum](https://github.com/bxmaximum) за [вклад](https://github.com/bitrix-tools/framework-docs/pull/24) в документацию.
+-  Полностью обновили статью [Роутинг](./pages/framework/routing.md).
+-  Добавили описание режима `Autowire` в статью [Service Locator](./pages/framework/service-locator.md#rezhim-autowire).
+-  Добавили архив с примером компонента в статью [Создание компонента](./pages/get-started/create-component.md#arhiv-s-primerom-komponenta).
+-  Добавили архив с примером модуля в статью [Создание модуля](./pages/get-started/create-module.md#arhiv-s-primerom-modulya).
+
+Партнеры и разработчики, которые внесли вклад в развитие нашей документации:
+
+1. [Voral](https://github.com/Voral)
+2. [gromdron](https://github.com/gromdron)
+3. [bxmaximum](https://github.com/bxmaximum)
+4. [el-system](https://github.com/el-system)
+5. [artemyaz](https://github.com/artemyaz)
+6. [DeLighter1990](https://github.com/DeLighter1990)
+7. [ilimurzin](https://github.com/ilimurzin)
+8. [Ya11Alfa](https://github.com/Ya11Alfa)
+9. [pilezkiy](https://github.com/pilezkiy)
+10. [minh244330022](https://github.com/minh244330022)
+11. [ExaltedTrou6](https://github.com/ExaltedTrou6)
+12. [jabir-sabitov](https://github.com/jabir-sabitov)

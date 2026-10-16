@@ -322,6 +322,412 @@
         <Execute>
           <option name="pattern" value="powershell -Command &quot;Test-Path 'C:/Users/Анна/IdeaProjects/bitrix/deploy'&quot;" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="git diff *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git status *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-Object -First 30" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\hero\templates\.default\template.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\hero&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\hero\templates&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\hero\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\hero\templates&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\hero\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="$base = &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\cta-form\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\faq\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\approach\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\about-company\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\hero\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\before-after\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\solutions\templates\.default\style.css&quot; &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\hero\.default&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -File &quot;C:\Users\Анна\IdeaProjects\bitrix\check_css.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -ExecutionPolicy Bypass -Command &quot;C:\Users\Анна\IdeaProjects\bitrix\check_css.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi&quot; -Directory" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\cta-form\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\faq\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\approach\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\about-company\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\description.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\.DS_Store&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\css\style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-Object Length" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\js\main.js&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\img\logo-dianomi.svg&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\dianomi\bitrix&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;if (Test-Path 'C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\dianomi\bitrix') { Write-Output 'EXISTS' } else { Write-Output 'DELETED' }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="ren style.css template.style.css" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\approach\templates\.default\style.css&quot; -NewName &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems\templates\.default\style.css&quot; -NewName &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\about-company\templates\.default\style.css&quot; -NewName &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Rename-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\cta-form\templates\.default\style.css&quot; -NewName &quot;template.style.css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\about-company\templates&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\about-company\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\cta-form\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\approach\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\problems\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\solutions\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\hero\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\faq\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi\before-after\templates\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi&quot; -Recurse -File" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi&quot; -File" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\local\components\dianomi&quot; -Recurse -File" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\styles.css&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\.style.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\.styles.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\template_styles.css&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\.description.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\templates\dianomi\.style.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru\bitrix\dianomi-local.zip&quot; -Force -ErrorAction SilentlyContinue" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="git reset *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive dianomi *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;*&quot; -DestinationPath &quot;C:\Users\Анна\Desktop\pages-dianomi.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\css&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\js&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\img&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\lang\ru&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\components\bitrix\menu\templates\megamenu&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\templates\dianomi\css\*&quot; -Destination &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\css\&quot; -Force; Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\templates\dianomi\js\*&quot; -Destination &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\js\&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\components\bitrix\menu\templates\mobile&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force -Path &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\header\.description&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\bitrix\local\components\dianomi\header&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\header.php&quot; -Destination &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\header.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi\template.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L &quot;https://docs.1c-bitrix.ru/pages/framework/architecture.html&quot; -o /tmp/bitrix_doc_01_architecture.html" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s -L &quot;https://docs.1c-bitrix.ru/pages/framework/architecture.html&quot; -o C:/tmp/bitrix_doc_01_architecture.html" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Invoke-WebRequest -Uri &quot;https://docs.1c-bitrix.ru/pages/framework/architecture.html&quot; -OutFile &quot;C:/Users/Анна/IdeaProjects/bitrix/tmp/bitrix_doc_01_architecture.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Invoke-WebRequest -Uri &quot;https://docs.1c-bitrix.ru/pages/framework/architecture.html&quot; -OutFile &quot;bitrix_doc_01.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Invoke-WebRequest -Uri &quot;https://docs.1c-bitrix.ru/pages/get-started/install-env.html&quot; -OutFile &quot;bitrix_doc_02.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -sL --max-time 20 &quot;https://docs.1c-bitrix.ru/pages/framework/architecture.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="curl -s &quot;https://docs.1c-bitrix.ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -NonInteractive -Command &quot;[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; $r = Invoke-WebRequest -Uri 'https://docs.1c-bitrix.ru' -UseBasicParsing; $r.Content.Substring(0, [Math]::Min(3000, $r.Content.Length))&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="file *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;Get-Content 'C:/Users/Анна/IdeaProjects/bitrix/bitrix/templates/dianomi.tar.gz' -Encoding Byte -TotalCount 2 | ForEach-Object { '{0:X2}' -f $_ }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$bytes = [System.IO.File]::ReadAllBytes('C:/Users/Анна/IdeaProjects/bitrix/bitrix/templates/dianomi.tar.gz'); $bytes[0..1] | ForEach-Object { '{0:X2}' -f $_ }&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;$b = [System.IO.File]::ReadAllBytes('C:/Users/Анна/IdeaProjects/bitrix/bitrix/templates/dianomi.tar.gz'); Write-Host $b[0]; Write-Host $b[1]&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -NoProfile -Command &quot;[Convert]::ToBase64String((Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\bitrix\templates\dianomi.tar.gz' -Encoding Byte -TotalCount 2))&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="rmdir /s /q &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\wizard\dianomi.tar.gz&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="rmdir /s /q &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="rmdir /s /q &quot;C:\Users\Анна\IdeaProjects\bitrix\wizard\dianomi&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\wizard\dianomi&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi-solution&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru.2026-10-11_09_42_53&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\dianomi\partials&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix_doc_01.html&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix_doc_02.html&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\bitrix_doc_03.html&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\check_css.ps1&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru_empty&quot; /MIR /R:0 /NFL /NDL /NP" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru_empty&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-components.zip&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-core.zip&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy-v2.zip&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-deploy.tar.gz&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-local.zip&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-site.zip&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-template.zip&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-components&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-local&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-template&quot;, &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\components&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\components&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-template&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\template&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\deploy\dianomi-local&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cmd /c &quot;rmdir /s /q C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru_empty&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cmd /c &quot;rmdir /s /q C:\Users\Анна\IdeaProjects\bitrix\s277847.h1n.ru_empty&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\css&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\lang\ru&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\img&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\js&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="pwd" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\.default&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;New-Item -ItemType Directory -Force -Path 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\approach\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\about-company\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\faq\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\cta-form\.default', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\faq\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\hero\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\problems\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\solutions\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\before-after\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\approach\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\about-company\lang\ru', 'C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi\cta-form\lang\ru' | Out-Null; Write-Host 'Directories created'&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="powershell -Command &quot;(Get-Content 'C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\css\style.css').Count&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\index.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\404.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\urlrewrite.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\index.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\404.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\urlrewrite.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Анна\IdeaProjects\bitrix\local\components\dianomi&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Move-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\img&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\images&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Move-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.description.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\description.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.style.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.description.php&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.style.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="del &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.description.php&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Move-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\img&quot; &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\images&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.description.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi\.style.php&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Анна\IdeaProjects\bitrix\local\templates\dianomi&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-Object Name, Mode" />
+        </Execute>
+      </list>
+    </option>
+    <option name="autoApprovedReads">
+      <list>
+        <Read>
+          <option name="pattern" value="$USER_HOME$/Desktop/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="/local/*" />
+        </Read>
       </list>
     </option>
   </component>

@@ -17,7 +17,7 @@ $APPLICATION->SetTitle($TITLE);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/bitrix/templates/dianomi/css/style.css">
+  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/style.css">
   <?$APPLICATION->ShowHead();?>
 </head>
 <body>
@@ -26,7 +26,7 @@ $APPLICATION->SetTitle($TITLE);
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="/" class="header__logo">
-      <img src="/bitrix/templates/dianomi/img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
+      <img src="<?=SITE_TEMPLATE_PATH?>/img/logo-dianomi.svg" alt="dianomi" width="36" height="36">
       <span>dianomi</span>
     </a>
 

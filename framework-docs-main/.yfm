@@ -1,0 +1,31 @@
+allowHTML: true
+
+resources:
+  style:
+    - _assets/style/b24_custom.css
+    - _assets/style/highlight_custom.css
+  script:
+    - _assets/b24loc.js
+    - _assets/b24addons.js
+
+search: true
+
+staticContent: true
+
+extensions:
+  - './extensions/page-footer-text'
+  - './extensions/copy-md-button'
+
+feedback:
+  url: https://util.1c-bitrix.ru/rest-doc/feedback-control.php
+
+pageFooterText:
+  html: |
+    <div>
+    Мы еще работаем над документацией. Если вы не нашли нужную информацию:
+    <br>
+      - создайте <a href="https://github.com/bitrix-tools/framework-docs/issues/new" target="_blank" rel="noopener" style="color: rgb(78, 121, 235);">issue</a> — расскажите, что нужно добавить
+      <br>
+      - следите за обновлениями — подпишитесь на репозиторий <a href="https://github.com/bitrix-tools/framework-docs" target="_blank" rel="noopener" style="color: rgb(78, 121, 235);">framework-docs</a>
+    </div>
+  className: 'dc-page-footer-text'

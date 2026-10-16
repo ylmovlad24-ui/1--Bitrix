@@ -1,0 +1,632 @@
+title: BitrixFramework
+href: index.yaml
+
+navigation:
+  logo:
+    url: '/'
+    dark:
+      icon: '/_images/img_framework_logo_bus_w.png'
+    light:
+      icon: '/_images/img_framework_logo.png'
+  header:
+    leftItems:
+      - text: 'С чего начать'
+        type: 'link'
+        url: '/pages/get-started/install-env.html'
+
+      - text: 'Основы фреймворка'
+        type: 'link'
+        url: '/pages/framework/architecture.html'
+
+      - text: 'Справочник API'
+        type: 'link'
+        url: '/api/'
+        target: '_blank'
+
+      - text: 'Быстрый старт'
+        type: 'link'
+        url: '/pages/get-started/install-env.html#docker-obrazy'
+
+      - text: 'Что нового'
+        type: 'link'
+        url: '/whats-new.html'
+
+    rightItems:
+      - type: controls
+
+items:
+  - name: О фреймворке
+    items:
+      - name: Экосистема
+        href: /pages/about/ecosystem.md
+      - name: Отличия от других CMS
+        href: /pages/about/cms-comparison.md
+      - name: Отличия от других фреймворков
+        href: /pages/about/framework-comparison.md
+      - name: Что нового
+        href: whats-new.md
+        hidden: true
+      - name: Страница 404
+        href: 404.yaml
+        hidden: true
+
+  - name: С чего начать
+    items:
+      - name: Как кастомизировать
+        href: /pages/get-started/how-customize.md
+      - name: Установка окружения
+        href: /pages/get-started/install-env.md
+      - name: Установка дистрибутива
+        href: /pages/get-started/install-distr.md
+      - name: Установка решения
+        href: /pages/get-started/install-solution.md
+      - name: Структура директорий
+        href: /pages/get-started/directory-structure.md
+      - name: Composer
+        href: /pages/get-started/composer.md
+      - name: Отладка с помощью Xdebug
+        href: /pages/get-started/debug-xdebug.md
+      - name: Создание страницы
+        href: /pages/get-started/create-page.md
+      - name: Создание компонента
+        href: /pages/get-started/create-component.md
+      - name: Создание модуля
+        href: /pages/get-started/create-module.md
+      - name: Создание контроллера
+        href: /pages/get-started/create-controller.md
+      - name: Что дальше
+        href: /pages/get-started/next-steps.md
+
+  - name: Основы фреймворка
+    items:
+      - name: Конфигурация ядра
+        href: /pages/framework/settings.md
+      - name: Архитектура
+        href: /pages/framework/architecture.md
+      - name: Автозагрузка классов
+        href: /pages/framework/autoloading.md
+      - name: Жизненный цикл запроса
+        href: /pages/framework/request-lifecycle.md
+      - name: Роутинг
+        href: /pages/framework/routing.md
+      - name: Контроллеры
+        href: /pages/framework/controllers.md
+      - name: Пре- и постфильтры
+        href: /pages/framework/pre-post-filters.md
+      - name: Объект приложения и контекст
+        href: /pages/framework/app-and-context.md
+      - name: Request и Response
+        href: /pages/framework/request-response.md
+      - name: Service Locator
+        href: /pages/framework/service-locator.md
+      - name: Сессии
+        href: /pages/framework/sessions.md
+      - name: Cookie-файлы
+        href: /pages/framework/cookies.md
+      - name: Валидация
+        href: /pages/framework/validation.md
+      - name: Результат работы и ошибки
+        href: /pages/framework/results-and-errors.md
+      - name: Компоненты
+        href: /pages/framework/components.md
+      - name: Расширения
+        href: /pages/framework/extensions.md
+      - name: Агенты и фоновые задачи
+        href: /pages/framework/background-jobs.md
+      - name: События
+        href: /pages/framework/events.md
+      - name: Очереди сообщений
+        href: /pages/framework/messenger.md
+      - name: Временное хранение
+        href: /pages/framework/storage.md
+      - name: Консольные команды
+        href: /pages/framework/console-commands.md
+
+  - name: База данных
+    items:
+      - name: Конфигурация
+        href: /pages/database/configuration.md
+      - name: Выполнение запросов
+        href: /pages/database/query-execution.md
+      - name: Формирование запросов
+        href: /pages/database/sql-helper-and-expression.md
+      - name: Построитель запросов
+        href: /pages/database/query-builder.md
+      - name: Отладка запросов
+        href: /pages/database/sql-tracker.md
+      - name: Транзакции
+        href: /pages/database/transactions.md
+      - name: NoSQL
+        href: /pages/database/nosql.md
+      - name: HandlerSocket
+        href: /pages/database/handlersocket.md
+      - name: Миграция на PostgreSQL
+        items:
+          - name: Как перейти с MySQL на PostgreSQL
+            href: /pages/database/postgresql/migration.md
+          - name: Поддержка PostgreSQL в модулях
+            href: /pages/database/postgresql/module-support.md
+          - name: Как писать код, совместимый с PostgreSQL
+            href: /pages/database/postgresql/compatible-code.md
+          - name: Установка PostgreSQL на macOS
+            href: /pages/database/postgresql/installation-macos.md
+
+  - name: ORM
+    items:
+      - name: Концепция ORM
+        href: /pages/orm/orm-concepts.md
+      - name: Операции с сущностями и события
+        href: /pages/orm/entity-operations.md
+      - name: Объекты
+        href: /pages/orm/objects.md
+      - name: Коллекции
+        href: /pages/orm/collections.md
+      - name: Отношения между сущностями
+        href: /pages/orm/entity-relations.md
+      - name: Аннотации классов
+        href: /pages/orm/annotations.md
+      - name: Выборка данных
+        href: /pages/orm/querying-data.md
+      - name: Построитель запросов
+        href: /pages/orm/query-builder.md
+
+  - name: Основы CMS
+    items:
+      - name: Сайты
+        href: /pages/cms-basics/sites.md
+      - name: Шаблоны сайтов
+        href: /pages/cms-basics/site-templates.md
+      - name: Шаблоны страницы
+        href: /pages/cms-basics/page-templates.md
+      - name: Свойства страницы и раздела
+        href: /pages/cms-basics/properties.md
+      - name: Заголовки страницы
+        href: /pages/cms-basics/titles.md
+      - name: Работа со стилями
+        href: /pages/cms-basics/styles.md
+      - name: Работа с почтой
+        href: /pages/cms-basics/mail.md
+      - name: Работа с СМС
+        href: /pages/cms-basics/sms.md
+      - name: Пользователи
+        href: /pages/cms-basics/users.md
+      - name: Группы пользователей
+        href: /pages/cms-basics/user-groups.md
+      - name: Хлебные крошки
+        href: /pages/cms-basics/breadcrumbs.md
+      - name: Меню
+        href: /pages/cms-basics/menu.md
+      - name: Постраничная навигация
+        href: /pages/cms-basics/page-navigation.md
+      - name: Класс PageNavigation
+        href: /pages/cms-basics/page-navigation-class.md
+      - name: Класс ReversePageNavigation
+        href: /pages/cms-basics/reverse-page-navigation.md
+      - name: Включаемые области
+        href: /pages/cms-basics/includes.md
+      - name: Панель администрирования
+        href: /pages/cms-basics/admin-panel.md
+      - name: Пользовательские поля
+        href: /pages/cms-basics/userfields.md
+      - name: Отрисовка пользовательских полей
+        href: /pages/cms-basics/userfields-main-rendering.md
+      - name: Типы и компоненты пользовательских полей
+        href: /pages/cms-basics/userfields-main-types.md
+
+
+  - name: Расширенные знания
+    items:
+      - name: Дата и время
+        href: /pages/advanced/datetime.md
+      - name: Локализация
+        href: /pages/advanced/localization.md
+      - name: Кодировка
+        href: /pages/advanced/encoding.md
+      - name: Отладка
+        href: /pages/advanced/debug.md
+      - name: Резервное копирование
+        href: /pages/advanced/backup.md
+      - name: Монитор качества
+        href: /pages/advanced/quality-monitor.md
+      - name: Vue.js
+        href: /pages/advanced/vue.md
+      - name: Многосайтовость
+        href: /pages/advanced/multisite.md
+      - name: Логгеры
+        href: /pages/advanced/logger.md
+      - name: Идентификатор UUID
+        href: /pages/advanced/uuid.md
+      - name: Итератор
+        href: /pages/advanced/stepper.md
+      - name: Работа с изображениями
+        href: /pages/advanced/images.md
+      - name: HTTP-клиент
+        href: /pages/advanced/http-client.md
+      - name: Геолокация
+        href: /pages/advanced/geolocation.md
+      - name: Нумератор
+        href: /pages/advanced/numerator.md
+      - name: Пользовательские соглашения
+        href: /pages/advanced/user-consent.md
+
+  - name: Безопасность
+    items:
+      - name: Права доступа
+        href: /pages/security/access-control.md
+      - name: XSS
+        href: /pages/security/xss.md
+      - name: CSRF и SSRF
+        href: /pages/security/csrf-ssrf.md
+      - name: SQL-инъекции
+        href: /pages/security/sql-injection.md
+      - name: Защищенные cookie
+        href: /pages/security/secure-cookies.md
+      - name: JWT
+        href: /pages/security/jwt.md
+      - name: Санитайзер
+        href: /pages/security/sanitizer.md
+      - name: Firewall
+        href: /pages/security/firewall.md
+      - name: Защита от фреймов
+        href: /pages/security/frame-protection.md
+      - name: CAPTCHA
+        href: /pages/security/captcha.md
+      - name: Проактивная защита
+        href: /pages/security/proactive-security.md
+      - name: Двухэтапная авторизация
+        href: /pages/security/two-factor-auth.md
+      - name: Шифрование данных
+        href: /pages/security/cipher.md
+      - name: Криптографические поля в ORM
+        href: /pages/security/cryptofield.md
+
+  - name: Производительность
+    items:
+      - name: Кеширование
+        href: /pages/performance/caching.md
+      - name: Композитный сайт
+        href: /pages/performance/composite-site.md
+      - name: Шардинг
+        href: /pages/performance/sharding.md
+      - name: Репликация и кластер
+        href: /pages/performance/replication-and-clustering.md
+      - name: Сессия в разделенном режиме
+        href: /pages/performance/hot-and-cold-session.md
+      - name: Как оптимизировать запросы к базе данных
+        href: /pages/performance/query-optimization.md
+
+  - name: Пользовательский интерфейс UI
+    items:
+      - name: Типографика
+        href: /pages/ui/typography.md
+      - name: Иконки
+        href: /pages/ui/icons.md
+      - name: Анимации Lottie
+        href: /pages/ui/lottie.md
+      - name: Панель инструментов ui.toolbar
+        href: /pages/ui/ui-toolbar.md
+      - name: Боковая панель main.sidepanel
+        href: /pages/ui/main-sidepanel.md
+      - name: Сетка формы ui.layout-form
+        href: /pages/ui/ui-layout-form.md
+      - name: Кнопки ui.buttons
+        href: /pages/ui/ui-buttons.md
+      - name: Поля форм ui.forms
+        href: /pages/ui/ui-forms.md
+      - name: Системное поле ввода
+        href: /pages/ui/system-input.md
+      - name: Загрузка файлов Uploader
+        href: /pages/ui/uploader.md
+      - name: Поле выбора файлов FileInput
+        href: /pages/ui/file-input.md
+      - name: Просмотр файлов ui.viewer
+        href: /pages/ui/ui-viewer.md
+      - name: Выпадающий список ui.select
+        href: /pages/ui/ui-select.md
+      - name: Диалог выбора цвета color_picker
+        href: /pages/ui/color-picker.md
+      - name: Таблица main.ui.grid
+        href: /pages/ui/main-ui-grid.md
+      - name: Фильтр main.ui.filter
+        href: /pages/ui/main-ui-filter.md
+      - name: Лента событий ui.timeline
+        href: /pages/ui/ui-timeline.md
+      - name: Поток стадий ui.stageflow
+        href: /pages/ui/ui-stageflow.md
+      - name: Список шагов ui.stepbystep
+        href: /pages/ui/ui-stepbystep.md
+      - name: Диалог выбора объектов ui.entity-selector
+        items:
+          - name: Обзор
+            href: /pages/ui/entity-selector/index.md
+          - name: Dialog
+            href: /pages/ui/entity-selector/dialog.md
+          - name: TagSelector
+            href: /pages/ui/entity-selector/tag-selector.md
+          - name: Провайдеры данных
+            href: /pages/ui/entity-selector/data-providers.md
+          - name: Стандартные провайдеры
+            href: /pages/ui/entity-selector/standard-providers.md
+          - name: Общие параметры
+            href: /pages/ui/entity-selector/options.md
+      - name: Каталог объектов ui.entity-catalog
+        href: /pages/ui/ui-entity-catalog.md
+      - name: Всплывающие окна и меню main.popup
+        href: /pages/ui/main-popup.md
+      - name: Системное меню
+        href: /pages/ui/system-menu.md
+      - name: Настраиваемое меню ui.menu-configurable
+        href: /pages/ui/ui-menu-configurable.md
+      - name: Системный диалог
+        href: /pages/ui/system-dialog.md
+      - name: Окно сообщения
+        href: /pages/ui/dialogs-messagebox.md
+      - name: Диалог с флажками ui.dialogs.checkbox-list
+        href: /pages/ui/dialogs-checkbox-list.md
+      - name: Форма обратной связи ui.feedback.form
+        href: /pages/ui/ui-feedback-form.md
+      - name: Подсказка
+        href: /pages/ui/hint.md
+      - name: Карточка пользователя ui.tooltip
+        href: /pages/ui/ui-tooltip.md
+      - name: Системный алерт
+        href: /pages/ui/system-alert.md
+      - name: Менеджер уведомлений
+        href: /pages/ui/notification-manager.md
+      - name: Системная метка
+        href: /pages/ui/system-label.md
+      - name: Метка ui.label
+        href: /pages/ui/ui-label.md
+      - name: Системный чип
+        href: /pages/ui/system-chip.md
+      - name: Счетчик ui.counter
+        href: /pages/ui/ui-counter.md
+      - name: Скелетон загрузки
+        href: /pages/ui/system-skeleton.md
+      - name: Индикаторы прогресса ui.progressbar и ui.progressround
+        href: /pages/ui/ui-progress.md
+      - name: Пошаговое выполнение ui.stepprocessing
+        href: /pages/ui/ui-stepprocessing.md
+      - name: Системный хайлайтер
+        href: /pages/ui/system-highlighter.md
+      - name: Работа с эмодзи
+        href: /pages/ui/emoji.md
+      - name: Расширение ui.a11y
+        items:
+          - name: Обзор
+            href: /pages/ui/a11y/index.md
+          - name: Монитор фокуса FocusMonitor
+            href: /pages/ui/a11y/focus-monitor.md
+          - name: Навигация фокуса FocusNavigator
+            href: /pages/ui/a11y/focus-navigator.md
+          - name: Ловушка фокуса FocusTrap
+            href: /pages/ui/a11y/focus-trap.md
+          - name: Зона фокуса FocusZone
+            href: /pages/ui/a11y/focus-zone.md
+          - name: Трекер способа ввода InputModalityTracker
+            href: /pages/ui/a11y/input-modality-tracker.md
+          - name: Проверка интерактивности InteractivityChecker
+            href: /pages/ui/a11y/interactivity-checker.md
+          - name: Объявления для скринридера LiveAnnouncer
+            href: /pages/ui/a11y/live-announcer.md
+
+  - name: Модули
+    items:
+      - name: Архитектура модулей
+        href: /pages/modules/architecture.md
+      - name: Информационные блоки
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/iblocks/overview.md
+          - name: Схема работы инфоблоков и основные объекты
+            href: /pages/modules/iblocks/architecture.md
+          - name: Работа с инфоблоками через API
+            href: /pages/modules/iblocks/api.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/iblocks/performance.md
+      - name: Highload-блоки
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/highloadblocks/overview.md
+          - name: Архитектура и основные объекты
+            href: /pages/modules/highloadblocks/architecture.md
+          - name: Создание, настройка и перенос Highload-блоков
+            href: /pages/modules/highloadblocks/manage-highloadblocks.md
+          - name: Работа с записями
+            href: /pages/modules/highloadblocks/records.md
+          - name: Связи и справочники на Highload-блоках
+            href: /pages/modules/highloadblocks/relations-and-directories.md
+          - name: События записей и права доступа
+            href: /pages/modules/highloadblocks/events.md
+          - name: Вывод данных компонентами
+            href: /pages/modules/highloadblocks/components.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/highloadblocks/performance.md
+      - name: Торговый каталог
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/catalog/overview.md
+          - name: Схема работы торгового каталога и основные объекты
+            href: /pages/modules/catalog/architecture.md
+          - name: Как выбрать API торгового каталога
+            href: /pages/modules/catalog/choose-catalog-api.md
+          - name: Базовые настройки каталога
+            href: /pages/modules/catalog/catalog-settings.md
+          - name: Работа с товарами и торговыми предложениями
+            href: /pages/modules/catalog/products-and-offers.md
+          - name: Доступность, цены и подписка
+            href: /pages/modules/catalog/availability-prices-subscription.md
+          - name: Складской учет
+            href: /pages/modules/catalog/inventory-management.md
+          - name: Комплекты, наборы и скидки
+            href: /pages/modules/catalog/bundles-sets-discounts.md
+          - name: Экспорт и импорт
+            href: /pages/modules/catalog/export-import.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/catalog/performance.md
+      - name: Интернет-магазин
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/sale/overview.md
+          - name: Схема работы интернет-магазина и основные объекты
+            href: /pages/modules/sale/architecture.md
+          - name: Как выбрать API интернет-магазина
+            href: /pages/modules/sale/choose-sale-api.md
+          - name: Базовые настройки интернет-магазина
+            href: /pages/modules/sale/sale-settings.md
+          - name: Права доступа и ограничения
+            href: /pages/modules/sale/permissions.md
+          - name: Работа с корзиной
+            href: /pages/modules/sale/basket.md
+          - name: Оформление заказа и публичные сценарии
+            href: /pages/modules/sale/order-checkout-component.md
+          - name: Создание заказа
+            href: /pages/modules/sale/order-create.md
+          - name: Изменение и чтение заказа
+            href: /pages/modules/sale/order-update.md
+          - name: Печатные формы заказа
+            href: /pages/modules/sale/order-documents.md
+          - name: Доставка и отгрузки
+            href: /pages/modules/sale/delivery-shipments.md
+          - name: Транспортные заявки
+            href: /pages/modules/sale/delivery-requests.md
+          - name: Оплаты и платежные системы
+            href: /pages/modules/sale/payments.md
+          - name: Свойства заказа
+            href: /pages/modules/sale/properties.md
+          - name: Правила работы с корзиной
+            href: /pages/modules/sale/discounts-coupons.md
+          - name: Резервирование и списание
+            href: /pages/modules/sale/reservation-deduct.md
+          - name: Статусы и события
+            href: /pages/modules/sale/statuses-events.md
+          - name: Уведомления по заказам
+            href: /pages/modules/sale/order-notifications.md
+          - name: Кассы и чеки
+            href: /pages/modules/sale/cashbox-checks.md
+          - name: Местоположения и налоги
+            href: /pages/modules/sale/locations-taxes.md
+          - name: Покупатели и внутренние счета
+            href: /pages/modules/sale/buyers-accounts.md
+          - name: Архив заказов
+            href: /pages/modules/sale/archive.md
+          - name: Отчеты и аналитические выборки
+            href: /pages/modules/sale/reports.md
+          - name: Обмен, импорт и экспорт заказов
+            href: /pages/modules/sale/exchange-import-export.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/sale/performance.md
+      - name: Управление персоналом
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/humanresources/overview.md
+          - name: Архитектура модуля и выбор сервиса
+            href: /pages/modules/humanresources/architecture.md
+          - name: Узлы структуры компании
+            href: /pages/modules/humanresources/nodes.md
+          - name: Участники и роли
+            href: /pages/modules/humanresources/node-members.md
+          - name: Выборки узлов и участников через билдеры
+            href: /pages/modules/humanresources/data-builders.md
+          - name: Пользователи и управленческая иерархия
+            href: /pages/modules/humanresources/users-and-hierarchy.md
+          - name: Настройки узлов и пользователей
+            href: /pages/modules/humanresources/settings.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/humanresources/performance.md
+      - name: Генератор документов
+        items:
+          - name: Введение и базовые концепции
+            href: /pages/modules/documentgenerator/overview.md
+          - name: Схема работы генератора документов и основные объекты
+            href: /pages/modules/documentgenerator/architecture.md
+          - name: Шаблоны, поля и форматирование
+            href: /pages/modules/documentgenerator/templates-and-fields.md
+          - name: Провайдеры данных
+            href: /pages/modules/documentgenerator/data-providers.md
+          - name: Документы
+            href: /pages/modules/documentgenerator/document-generation.md
+          - name: Файлы, форматы и преобразование
+            href: /pages/modules/documentgenerator/files-and-transformation.md
+          - name: Права доступа
+            href: /pages/modules/documentgenerator/permissions.md
+          - name: События и расширение модуля
+            href: /pages/modules/documentgenerator/events-and-extension.md
+          - name: Встраивание документов в интерфейс
+            href: /pages/modules/documentgenerator/components.md
+          - name: Производительность и частые ошибки
+            href: /pages/modules/documentgenerator/performance.md
+      - name: Поиск
+        items:
+          - name: Введение и выбор способа поиска
+            href: /pages/modules/search/overview.md
+          - name: Поиск на сайте через компоненты
+            href: /pages/modules/search/components.md
+          - name: Архитектура и поисковый индекс
+            href: /pages/modules/search/architecture.md
+          - name: Выбор и настройка поискового движка
+            href: /pages/modules/search/search-engines.md
+          - name: Индексация собственного контента
+            href: /pages/modules/search/index-custom-content.md
+          - name: Поисковые запросы через CSearch
+            href: /pages/modules/search/search-queries.md
+          - name: Ранжирование, теги и поисковые подсказки
+            href: /pages/modules/search/search-quality.md
+          - name: События и расширение поиска
+            href: /pages/modules/search/events-and-extension.md
+          - name: Переиндексация и диагностика поиска
+            href: /pages/modules/search/maintenance-and-troubleshooting.md
+      - name: Push and Pull
+        items:
+          - name: Введение и принципы работы
+            href: /pages/modules/pull/overview.md
+          - name: Настройка модуля и сервера очередей
+            href: /pages/modules/pull/configuration.md
+          - name: Обновление страницы по команде сервера
+            href: /pages/modules/pull/quick-start.md
+          - name: Отправка команд из PHP
+            href: /pages/modules/pull/sending-events.md
+          - name: Обработка команд в JavaScript
+            href: /pages/modules/pull/javascript-client.md
+          - name: Подписки по тегам
+            href: /pages/modules/pull/watch-subscriptions.md
+          - name: Обновление компонента после фоновой операции
+            href: /pages/modules/pull/events-and-extension.md
+          - name: Отправка мобильных push-уведомлений
+            href: /pages/modules/pull/push-notifications.md
+          - name: Диагностика и обслуживание Push and Pull
+            href: /pages/modules/pull/maintenance-and-troubleshooting.md
+      - name: CRM
+        items:
+          - name: Введение в CRM
+            href: /pages/modules/crm/overview.md
+          - name: Схема работы CRM и основные объекты API
+            href: /pages/modules/crm/architecture.md
+          - name: Как выбрать API CRM
+            href: /pages/modules/crm/choose-crm-api.md
+          - name: Работа с элементами CRM
+            href: /pages/modules/crm/items.md
+          - name: Смарт-процессы
+            href: /pages/modules/crm/smart-processes.md
+          - name: Направления и стадии
+            href: /pages/modules/crm/categories-and-stages.md
+          - name: Поля и данные клиента
+            href: /pages/modules/crm/fields-and-client-data.md
+          - name: Связи между элементами
+            href: /pages/modules/crm/relations.md
+          - name: Товары в элементах CRM
+            href: /pages/modules/crm/product-rows.md
+          - name: Дела и история взаимодействий
+            href: /pages/modules/crm/activities.md
+          - name: Права доступа в PHP API CRM
+            href: /pages/modules/crm/permissions.md
+          - name: События и расширение поведения CRM
+            href: /pages/modules/crm/events-and-extension.md
+          - name: Синхронизация CRM с внешней системой
+            href: /pages/modules/crm/synchronization.md
+          - name: Производительность и типовые ошибки CRM
+            href: /pages/modules/crm/performance-and-errors.md
+  - name: Обратная связь
+    href: feedback.md
+  - name: Контрибьюторам
+    href: CONTRIBUTING.md

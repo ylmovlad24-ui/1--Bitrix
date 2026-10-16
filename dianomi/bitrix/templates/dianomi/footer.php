@@ -1,5 +1,6 @@
 ﻿<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
+<?$APPLICATION->IncludeRegion("dianomi.footer.region");?>
 
 <footer class="footer">
   <div class="container">
