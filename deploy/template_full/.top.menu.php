@@ -17,6 +17,41 @@ $aMenuLinks = [
         "/business-systems.php|/bitrix24.php|/bitrix24-prices.php|/web-systems.php|/1c-bitrix.php|/1c-bitrix-prices.php|/data-bi.php"
     ],
     [
+        "Битрикс24",
+        "/bitrix24.php",
+        [],
+        [],
+        "/bitrix24.php|/bitrix24-prices.php"
+    ],
+    [
+        "1С-Битрикс",
+        "/1c-bitrix.php",
+        [],
+        [],
+        "/1c-bitrix.php|/1c-bitrix-prices.php"
+    ],
+    [
+        "Интеграции",
+        "/integrations.php",
+        [],
+        [],
+        "/integrations.php"
+    ],
+    [
+        "Кейсы",
+        "/cases.php",
+        [],
+        [],
+        "/cases.php"
+    ],
+    [
+        "Как работаем",
+        "/approach.php",
+        [],
+        [],
+        "/approach.php"
+    ],
+    [
         "О компании",
         "/about.php",
         [],
@@ -31,3 +66,4 @@ $aMenuLinks = [
         ""
     ]
 ];
+?>

@@ -7,93 +7,95 @@ use Bitrix\Iblock\ElementTable;
 
 Loc::loadMessages(__FILE__);
 
-class CBitrixComponentDianomiApproach extends CBitrixComponent
+/**
+ * Компонент Approach Section
+ * Выводит этапы работы (подход Dianomi)
+ */
+class CBitrixComponentDianomiApproach extends CBitrixComponentDianomiBase
 {
     const CODE_IBLOCK = 'page_approach';
-    
+
+    /**
+     * Выполнение компонента
+     */
+    public function executeComponent()
+    {
+        // Автокеширование по канону Bitrix Framework
+        if ($this->startResultCache()) {
+            $this->prepareResult();
+            $this->includeComponentTemplate();
+        }
+    }
+
+    /**
+     * Подготовка данных для шаблона
+     */
     public function prepareResult()
     {
         $arResult = array();
-        
+
+        // Проверка прав
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
         }
-        
+
+        // Проверка существования инфоблока
+        if (!$this->checkIblockExists(self::CODE_IBLOCK)) {
+            $this->abortStep();
+            return;
+        }
+
+        // Получение этапов работы
         $arSteps = $this->getApproachSteps();
-        
+
         if (empty($arSteps)) {
             $this->abortStep();
             return;
         }
-        
+
+        // Подготовка данных для шаблона
         foreach ($arSteps as $step) {
             $arResult['STEPS'][] = array(
                 'ID' => intval($step['ID']),
                 'STEP_NUMBER' => htmlspecialcharsbx($step['PROPERTY_STEP_NUMBER_VALUE']),
                 'TITLE' => htmlspecialcharsbx($step['PROPERTY_TITLE_VALUE']),
+                'DESCRIPTION' => htmlspecialcharsbx($step['PROPERTY_DESCRIPTION_VALUE']),
             );
         }
-        
+
         $this->arResult = $arResult;
     }
-    
-    protected function checkRights()
-    {
-        // Компонент доступен всем для чтения
-        return true;
-    }
-    
-    protected function getIblockID()
-    {
-        static $ibID = null;
-        
-        if ($ibID === null) {
-            $res = \Bitrix\Iblock\IblockTable::getList(array(
-                'filter' => array(
-                    'CODE' => self::CODE_IBLOCK,
-                    'SITE_ID' => SITE_ID,
-                ),
-                'select' => array('ID'),
-                'limit' => 1,
-            ));
-            
-            $ibID = $res->fetch();
-            $ibID = $ibID ? intval($ibID['ID']) : 0;
-        }
-        
-        return $ibID;
-    }
-    
+
+    /**
+     * Получение этапов работы из инфоблока
+     * @return array
+     */
     protected function getApproachSteps()
     {
         $res = ElementTable::getList(array(
             'filter' => array(
-                'IBLOCK_CODE' => self::CODE_IBLOCK,
+                '=IBLOCK_CODE' => self::CODE_IBLOCK,
                 'ACTIVE' => 'Y',
-                'IBLOCK_LID' => SITE_ID,
+                '=IBLOCK_LID' => SITE_ID,
             ),
             'select' => array(
                 'ID',
                 'NAME',
                 'PROPERTY_STEP_NUMBER',
                 'PROPERTY_TITLE',
+                'PROPERTY_DESCRIPTION',
                 'PROPERTY_ORDER',
             ),
             'order' => array('PROPERTY_ORDER' => 'ASC'),
         ));
-        
+
         $results = array();
         while ($arItem = $res->fetch()) {
             $results[] = $arItem;
         }
-        
+
         return $results;
     }
-    
-    public function getAction()
-    {
-        $this->prepareResult();
-        $this->includeComponentTemplate();
-    }
 }
+?>

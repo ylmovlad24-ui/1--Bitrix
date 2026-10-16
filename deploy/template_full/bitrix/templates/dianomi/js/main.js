@@ -9,21 +9,25 @@
 
   /* ───────── Mobile menu toggle ───────── */
   function openMenu() {
+    var burger = document.getElementById('burger');
     var mobileMenu = document.getElementById('mobileMenu');
     var mobileOverlay = document.getElementById('mobileOverlay');
     if (!mobileMenu) return;
     mobileMenu.classList.add('mobile-menu--open');
     if (mobileOverlay) mobileOverlay.classList.add('mobile-overlay--visible');
     document.body.style.overflow = 'hidden';
+    if (burger) burger.classList.add('burger--active');
   }
 
   function closeMenu() {
+    var burger = document.getElementById('burger');
     var mobileMenu = document.getElementById('mobileMenu');
     var mobileOverlay = document.getElementById('mobileOverlay');
     if (!mobileMenu) return;
     mobileMenu.classList.remove('mobile-menu--open');
     if (mobileOverlay) mobileOverlay.classList.remove('mobile-overlay--visible');
     document.body.style.overflow = '';
+    if (burger) burger.classList.remove('burger--active');
   }
 
   function initMobileMenu() {
@@ -48,6 +52,14 @@
         link.addEventListener('click', closeMenu);
       });
     }
+
+    // ESC key handler для закрытия меню
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('mobile-menu--open')) {
+        closeMenu();
+        if (burger) burger.focus();
+      }
+    });
   }
 
   /* ───────── Mobile dropdowns ───────── */
@@ -251,7 +263,7 @@
 
         // Redirect to success page
         setTimeout(function () {
-          window.location.href = 'success.html?' + new URLSearchParams(utmParams).toString();
+          window.location.href = '/success.php?' + new URLSearchParams(utmParams).toString();
         }, 1000);
       }
     });

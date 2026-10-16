@@ -40,16 +40,17 @@
   --z-header: 1000;
   --z-overlay: 999;
   --z-modal: 1001;
+  /* Алиасы для обратной совместимости (удалить после рефакторинга) */
   --text-primary: var(--text);
   --text-secondary: var(--text-light);
   --border-color: var(--border);
   --white: #FFFFFF;
   --light: #F8F9FA;
-  --danger: #E74C3C;
-  --success: #27AE60;
-  --shadow: 0 2px 12px rgba(0,0,0,0.06);
-  --border-light: #E0E4E8;
-  --border-section: #E8EAED;
+  --danger: var(--error);
+  /* --success уже определён выше */
+  --shadow: var(--shadow-sm);
+  --border-light: var(--border);
+  --border-section: var(--border);
 }
 
 /* === 2. RESET & BASE === */
@@ -431,11 +432,6 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .quick-form .form-group { margin-bottom: 12px; }
 .quick-form .form-control { text-align: center; }
 .quick-form__guarantee { font-size: 0.8125rem; color: var(--text-muted); margin-top: 8px; }
-.contact-channels { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 32px 0; padding: 24px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--card-radius); }
-.contact-channel { display: flex; align-items: center; gap: 12px; font-size: 0.9375rem; }
-.contact-channel__icon { font-size: 1.25rem; flex-shrink: 0; }
-.contact-channel__label { color: var(--text-muted); font-size: 0.8125rem; }
-.contact-channel__value a { color: var(--primary); font-weight: var(--font-weight-semibold); }
 .contact-form { max-width: 560px; margin: 0 auto; }
 
 /* 6h. Pain / Testimonials */
@@ -942,12 +938,6 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .comparison-table__legend { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
 .comparison-table__legend span { font-size: 0.875rem; color: var(--text-muted); }
 
-/* === 9. PRICING CARDS === */
-.edition-card--popular { border: 2px solid var(--accent); position: relative; }
-.edition-card--popular::before { content: "Популярный"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 16px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-.price-old { text-decoration: line-through; color: var(--text-muted); font-size: 0.875rem; display: block; }
-.price-new { font-size: 1.5rem; font-weight: 700; color: var(--text); display: block; }
-
 /* === 10. BILLING TOGGLE === */
 .billing-toggle { padding: 0 16px; }
 .billing-toggle__inner { display: inline-flex; gap: 0; background: var(--bg-alt); border: 2px solid var(--primary); border-radius: 50px; overflow: hidden; }
@@ -968,23 +958,7 @@ textarea.form-control { min-height: 120px; resize: vertical; }
 .edition-card--free .edition-card__users, .edition-card--free .edition-card__storage { font-weight: 600; color: var(--text); }
 .edition-card--free .price-new { font-size: 2rem; color: var(--success); }
 
-/* === 13. PAID CARDS === */
-.edition-card { background: #F0F4FF; border: none; border-radius: 24px; display: flex; flex-direction: column; }
-.edition-card h3 { font-size: 1.125rem; margin-bottom: 8px; }
-.edition-card__desc { font-size: 0.875rem; color: var(--text-light); margin-bottom: 16px; min-height: 40px; }
-.edition-card__users { font-weight: 600; font-size: 1rem; margin-bottom: 8px; color: var(--text); }
-.edition-card__storage { font-size: 0.9375rem; color: var(--text-light); margin-bottom: 16px; }
-.edition-card__price { margin-bottom: 8px; }
-.edition-card__price-period { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 16px; }
-
-/* === 14. POPULAR BADGE === */
-.edition-card--popular { background: #F0F4FF; border: none; position: relative; }
-.edition-card--popular::before { content: "Популярный"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0077FF; color: #fff; padding: 4px 16px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-
-/* === 15. PRICE STYLES === */
-.price-old { text-decoration: line-through; color: var(--text-muted); font-size: 0.875rem; display: block; margin-bottom: 4px; }
-
-/* === 16. FOOTER BITRIX LINK === */
+/* === 13. FOOTER BITRIX LINK === */
 .footer__bitrix {
   text-align: center;
   margin-top: 16px;

@@ -40,6 +40,7 @@
   --z-header: 1000;
   --z-overlay: 999;
   --z-modal: 1001;
+  --z-admin-panel: 10000; /* Панель админки Bitrix - документация */
   --text-primary: var(--text);
   --text-secondary: var(--text-light);
   --border-color: var(--border);
@@ -63,11 +64,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* === 2b. BITRIX ADMIN TOOLBAR COMPATIBILITY === */
-/* Тулбар админки Битрикс имеет высоту 30px и фиксирован вверху. */
-/* При включённом тулбаре body получает класс .admin-panel-visible, */
-/* но для надёжности добавляем отступ через JS в header.php */
+/* Тулбар админки Битрикс имеет высоту 30px и z-index: 10000.
+   Согласно документации Bitrix: /pages/cms-basics/admin-panel.md
+   Панель подключается через $APPLICATION->ShowPanel() после <body>
+   Header имеет z-index: 1000, что меньше 10000, поэтому меню
+   будет ПОД панелью админки - это ПРАВИЛЬНО. */
+
+/* Отступ для header при включённой панели админки */
 body.bitrix-admin-visible #header {
   margin-top: 30px;
+}
+
+/* Панель админки Bitrix - всегда поверх всего */
+#panel {
+  z-index: var(--z-admin-panel) !important; /* 10000 */
 }
 
 /* === 3. LAYOUT === */

@@ -718,6 +718,96 @@
         <Execute>
           <option name="pattern" value="Select-Object Name, Mode" />
         </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/dianomi&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/bitrix&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/deploy&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Test-Path &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/.agents/skills&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:/Users/Vlad/Documents/Ptodjec/1--Bitrix/framework-docs-main&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="xcopy &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\hero\templates&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates&quot; /E /I /Y" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="xcopy &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\problems\templates&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\problems\templates&quot; /E /I /Y" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\hero\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\problems\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\problems\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\solutions\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\solutions\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\before-after\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\before-after\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\approach\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\approach\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\about-company\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\about-company\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\faq\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\faq\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Copy-Item -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\cta-form\templates&quot; -Destination &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\cta-form\templates&quot; -Recurse -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\templates\dianomi\lang\ru&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="robocopy &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\dianomi\bitrix\local\components\dianomi\hero\templates&quot; &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates&quot; /E /NFL /NDL /NJH /NJS" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\bitrix\local\components\dianomi\hero\templates\.default&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\deploy\template_full\*.php&quot; -File" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Select-Object -ExpandProperty Name" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="head *" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cmd /c &quot;dir C:\ /b&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="cmd /c &quot;dir C:\inetpub\ /s /b 2&gt;nul&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="mkdir -p &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix\templates\dianomi\include&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="rmdir /s /q &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix\templates\dianomi\include&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Remove-Item -Recurse -Force &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\bitrix\templates\dianomi\include&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="New-Item -ItemType Directory -Force &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\template-dianomi-for-upload&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem -Recurse &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\template-dianomi-for-upload&quot;" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Compress-Archive -Path &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\template-dianomi-for-upload\*&quot; -DestinationPath &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\template-dianomi.zip&quot; -Force" />
+        </Execute>
+        <Execute>
+          <option name="pattern" value="Get-ChildItem &quot;C:\Users\Vlad\Documents\Ptodjec\1--Bitrix\template-dianomi-for-upload\components&quot; -Recurse" />
+        </Execute>
       </list>
     </option>
     <option name="autoApprovedReads">
@@ -727,6 +817,27 @@
         </Read>
         <Read>
           <option name="pattern" value="/local/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../VVlad/Documents/Ptodjec/1--Bitrix/deploy/template_full/about.php" />
+        </Read>
+        <Read>
+          <option name="pattern" value="/var/www/site.ru/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="/var/www/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="/var/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="//*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../../inetpub/*" />
+        </Read>
+        <Read>
+          <option name="pattern" value="$PROJECT_DIR$/../../../../*" />
         </Read>
       </list>
     </option>

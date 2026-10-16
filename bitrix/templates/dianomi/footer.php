@@ -68,6 +68,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
     </footer>
 
+    <?php // Включаемая область: подвал сайта (footer) ?>
+    <?php $APPLICATION->IncludeArea(
+        $AR_MENU_CACHE,
+        SITE_TEMPLATE_PATH . "/include/footer.inc"
+    ); ?>
+
     <script src="<?= htmlspecialcharsbx(SITE_TEMPLATE_PATH . '/js/main.js') ?>"></script>
 </body>
 </html>

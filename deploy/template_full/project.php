@@ -1,20 +1,19 @@
-<?
+<?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Обсудить проект — Dianomi");
-
-$APPLICATION->SetPageProperty("description", "Заполните форму, и мы свяжемся с вами. Обсудим ваш проект и предложим решение.");
-$APPLICATION->SetPageProperty("og:title", "Обсудить проект — Dianomi");
-$APPLICATION->SetPageProperty("og:description", "Заполните форму, и мы свяжемся с вами. Обсудим ваш проект и предложим решение.");
+$APPLICATION->SetTitle("Dianomi — Обсудить проект");
+$APPLICATION->SetPageProperty("description", "Расскажите о вашей задаче — мы предложим решение.");
+$APPLICATION->SetPageProperty("og:title", "Dianomi — Обсудить проект");
+$APPLICATION->SetPageProperty("og:description", "Расскажите о вашей задаче — мы предложим решение.");
 $APPLICATION->SetPageProperty("og:type", "website");
 $APPLICATION->SetPageProperty("og:url", "https://dianomi.ru/project.php");
 $APPLICATION->SetPageProperty("og:image", "https://dianomi.ru/img/og-default.jpg");
 $APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/project.php");
 ?>
 
-<main id="main-content">
-
-<?$APPLICATION->IncludeComponent("dianomi:hero", "", array(
-    "PAGE_CODE" => "index"
+<?$APPLICATION->IncludeComponent("dianomi:hero", ".default", array(
+    "PAGE_CODE" => "project",
+    "CACHE_TYPE" => "N",
+    "CACHE_TIME" => "3600",
 ), false);?>
 
 <?$APPLICATION->IncludeComponent("bitrix:form", "project_form", array(
@@ -35,9 +34,6 @@ $APPLICATION->SetPageProperty("canonical", "https://dianomi.ru/project.php");
     "CHAIN_ITEM_LINK" => "",
     "SUCCESS_TEXT" => "",
     "QUESTION_REQUIRED" => "Y",
-    "VARIABLE_ALIAS" => array(),
 ), false);?>
-
-</main>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

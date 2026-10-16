@@ -3,39 +3,57 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
-use Bitrix\Iblock\IblockTable;
 use Bitrix\Iblock\ElementTable;
 
 Loc::loadMessages(__FILE__);
 
-class CBitrixComponentDianomiHero extends CBitrixComponent
+/**
+ * Компонент Hero Section
+ * Выводит заголовок страницы, подзаголовок и счётчики
+ */
+class CBitrixComponentDianomiHero extends CBitrixComponentDianomiBase
 {
     const CODE_IBLOCK = 'page_hero';
-    
+
+    /**
+     * Выполнение компонента
+     */
+    public function executeComponent()
+    {
+        // Автокеширование по канону Bitrix Framework
+        if ($this->startResultCache()) {
+            $this->prepareResult();
+            $this->includeComponentTemplate();
+        }
+    }
+
+    /**
+     * Подготовка данных для шаблона
+     */
     public function prepareResult()
     {
         $arResult = array();
-        
+
         // Проверка прав
         if (!$this->checkRights()) {
             $this->abortStep();
             return;
         }
-        
+
         // Проверка существования инфоблока
-        if (!$this->checkIblockExists()) {
+        if (!$this->checkIblockExists(self::CODE_IBLOCK)) {
             $this->abortStep();
             return;
         }
-        
+
         // Получение данных из инфоблока
         $arElement = $this->getElementData();
-        
+
         if (!$arElement) {
             $this->abortStep();
             return;
         }
-        
+
         // Подготовка данных для шаблона
         $arResult['ELEMENT'] = array(
             'ID' => intval($arElement['ID']),
@@ -51,59 +69,43 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
             'COUNTER_LABEL_3' => htmlspecialcharsbx($arElement['PROPERTY_COUNTER_LABEL_3_VALUE']),
             'BENEFITS_LIST' => $arElement['PROPERTY_BENEFITS_LIST_VALUE'],
         );
-        
+
         $this->arResult = $arResult;
     }
-    
-    protected function checkRights()
-    {
-        // Компонент доступен всем для чтения
-        return true;
-    }
-    
-    protected function checkIblockExists()
-    {
-        $ibID = $this->getIblockID();
-        return $ibID > 0;
-    }
-    
-    protected function getIblockID()
-    {
-        static $ibID = null;
-        
-        if ($ibID === null) {
-            $res = IblockTable::getList(array(
-                'filter' => array(
-                    'CODE' => self::CODE_IBLOCK,
-                    'SITE_ID' => SITE_ID,
-                ),
-                'select' => array('ID'),
-                'limit' => 1,
-            ));
-            
-            $ibID = $res->fetch();
-            $ibID = $ibID ? intval($ibID['ID']) : 0;
-        }
-        
-        return $ibID;
-    }
-    
+
+    /**
+     * Получение данных элемента из инфоблока
+     * @return array|false
+     */
     protected function getElementData()
     {
-        $pageCode = $this->arParams['PAGE_CODE'] ?? 'index';
-        
+        $pageCode = isset($this->arParams['PAGE_CODE']) ? (string)$this->arParams['PAGE_CODE'] : 'index';
+
         // Валидация входных данных
-        $arAllowedPages = array('index', 'about', 'contacts', 'business-systems', 'bitrix24', 'web-systems', '1c-bitrix', 'data-bi');
+        $arAllowedPages = array(
+            'index',
+            'about',
+            'contacts',
+            'business-systems',
+            'bitrix24',
+            'web-systems',
+            '1c-bitrix',
+            'data-bi',
+            'project',
+            'bitrix24-prices',
+            '1c-bitrix-prices',
+        );
+
         if (!in_array($pageCode, $arAllowedPages)) {
             $pageCode = 'index';
         }
-        
+
         $res = ElementTable::getList(array(
             'filter' => array(
-                'IBLOCK_CODE' => self::CODE_IBLOCK,
-                'CODE' => $pageCode,
+                '=IBLOCK_CODE' => self::CODE_IBLOCK,
+                '=CODE' => $pageCode,
                 'ACTIVE' => 'Y',
-                'IBLOCK_LID' => SITE_ID,
+                '=IBLOCK_LID' => SITE_ID,
             ),
             'select' => array(
                 'ID',
@@ -121,13 +123,8 @@ class CBitrixComponentDianomiHero extends CBitrixComponent
             ),
             'limit' => 1,
         ));
-        
+
         return $res->fetch();
     }
-    
-    public function getAction()
-    {
-        $this->prepareResult();
-        $this->includeComponentTemplate();
-    }
 }
+?>
