@@ -1,0 +1,26 @@
+/* The split brings its own sizes, so this node only holds it in the send row. */
+.mail-compose-send-split
+{
+	display: flex;
+	min-width: 0;
+}
+
+/*
+ * The split always draws a chevron in its right half, where the calendar icon goes instead. `!important`
+ * beats the rule of the design system without naming its internal classes, and it hangs on a class of the
+ * form, so nothing outside the form changes.
+ */
+.mail-compose-send-split__schedule::before
+{
+	content: none !important;
+}
+
+/*
+ * The right half is a native button, so it does not inherit the colour of the split: the design system sets
+ * `color` on the half for hover and active only, and at rest the browser paints it black. The resting state
+ * takes the published button colour; the calendar icon follows it through `currentColor` in every state.
+ */
+.mail-compose-send-split__schedule
+{
+	color: var(--ui-btn-color);
+}

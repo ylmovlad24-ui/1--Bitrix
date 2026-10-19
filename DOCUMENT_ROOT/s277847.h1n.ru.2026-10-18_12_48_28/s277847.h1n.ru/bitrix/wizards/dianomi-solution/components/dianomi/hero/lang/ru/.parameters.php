@@ -1,0 +1,6 @@
+<?php
+$MESS["DIANOMI_HERO_PAGE_CODE"] = "Код страницы";
+$MESS["DIANOMI_HERO_PAGE_CODE_INDEX"] = "Главная";
+$MESS["DIANOMI_HERO_PAGE_CODE_ABOUT"] = "О компании";
+$MESS["DIANOMI_HERO_PAGE_CODE_CONTACTS"] = "Контакты";
+$MESS["DIANOMI_HERO_PAGE_CODE_BUSINESS"] = "Системы управления";

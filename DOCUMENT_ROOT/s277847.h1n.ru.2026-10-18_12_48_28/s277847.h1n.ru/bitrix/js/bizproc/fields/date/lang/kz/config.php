@@ -1,0 +1,4 @@
+<?php
+$MESS["BIZPROC_FIELDS_DATE_OPEN_CALENDAR"] = "Күнтізбені ашу";
+$MESS["BIZPROC_FIELDS_DATE_PLACEHOLDER"] = "Күні";
+$MESS["BIZPROC_FIELDS_DATE_TIMEZONE"] = "Уақыт белдеуі";

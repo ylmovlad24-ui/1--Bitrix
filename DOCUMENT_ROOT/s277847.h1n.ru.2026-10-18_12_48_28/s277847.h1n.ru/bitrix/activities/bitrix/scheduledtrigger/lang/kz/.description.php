@@ -1,0 +1,4 @@
+<?php
+$MESS["BPSCT_DESCR_DESCR"] = "Триггер белгіленген кесте бойынша бизнес-процесті бастайды";
+$MESS["BPSCT_DESCR_NAME"] = "Кесте бойынша іске қосу";
+$MESS["BPSCT_RETURN_SCHEDULED_AT"] = "Жоспарланған іске қосу уақыты";

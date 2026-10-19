@@ -1,0 +1,36 @@
+<?php
+
+$MESS["BIZPROC_LOG_CLEANUP_DAYS"] = "Время хранения лога выполнения бизнес-процесса (дней)";
+$MESS["BIZPROC_SEARCH_CLEANUP_DAYS"] = "Время хранения поискового индекса бизнес-процесса (дней)";
+$MESS["BIZPROC_EMPLOYEE_COMPATIBLE_MODE"] = "Включить режим совместимости для типа \"Привязка к сотруднику\"";
+$MESS["BIZPROC_TAB_SET"] = "Настройки";
+$MESS["BIZPROC_TAB_SET_ALT"] = "Настройки модуля";
+$MESS["BIZPROC_NAME_TEMPLATE"] = "Формат отображения имени";
+$MESS["BIZPROC_OPTIONS_NAME_IN_SITE_FORMAT"] = "Формат сайта";
+$MESS["BIZPROC_LOG_SKIP_TYPES"] = "Не сохранять в лог события";
+$MESS["BIZPROC_LOG_SKIP_TYPES_1_1"] = "запуск действия";
+$MESS["BIZPROC_LOG_SKIP_TYPES_2_1"] = "завершение действия";
+$MESS["BIZPROC_LIMIT_SIMULTANEOUS_PROCESSES"] = "Максимальное количество одновременно запущенных над документом процессов";
+$MESS["BIZPROC_LIMIT_WHILE_ITERATIONS"] = "Максимальное количество итераций цикла в рамках одного запуска";
+$MESS["BIZPROC_OPT_USE_GZIP_COMPRESSION"] = "Использовать компрессию при хранении данных";
+$MESS["BIZPROC_OPT_USE_GZIP_COMPRESSION_EMPTY"] = "по умолчанию";
+$MESS["BIZPROC_OPT_USE_GZIP_COMPRESSION_Y"] = "да";
+$MESS["BIZPROC_OPT_USE_GZIP_COMPRESSION_N"] = "нет";
+$MESS["BIZPROC_OPT_LOCKED_WI_PATH"] = "Путь к списку зависших бизнес-процессов";
+$MESS["BIZPROC_OPT_TIME_LIMIT"] = "Минимальное время ожидания для действий";
+$MESS["BIZPROC_OPT_MAX_DAYS_LIMIT"] = "Максимальное время ожидания процесса (дней)";
+$MESS["BIZPROC_OPT_TIME_LIMIT_S"] = "секунд";
+$MESS["BIZPROC_OPT_TIME_LIMIT_M"] = "минут";
+$MESS["BIZPROC_OPT_TIME_LIMIT_H"] = "часов";
+$MESS["BIZPROC_OPT_TIME_LIMIT_D"] = "дней";
+$MESS["BIZPROC_AUTOMATION_NO_FORCED_TRACKING"] = "Не сохранять в лог статусы роботов";
+$MESS["BIZPROC_OPT_ENABLE_GETDOCUMENT_SELECT"] = "Оптимизировать загрузку полей документа";
+$MESS["BIZPROC_OPT_STORAGE_ITEM_DATA_LIMIT"] = "Лимит на количество данных в одной записи хранилища (МБ)";
+$MESS["BIZPROC_OPT_STORAGE_DISK_BLOCK_BUFFER"] = "Остаток свободного места на портале, при котором запись в хранилище блокируется (МБ)";
+$MESS["BIZPROC_OPT_STORAGE_DISK_WARNING_BUFFER"] = "Остаток свободного места на портале, при котором появится предупреждение (МБ)";
+$MESS["BIZPROC_OPT_STORAGE_DISK_BUFFER_RANGE_ERROR"] = "Укажите целое число от 0 до #MAX# МБ, чтобы задать остаток свободного места для блокировки записи и предупреждения. Настройки не сохранены";
+$MESS["BIZPROC_OPT_STORAGE_DISK_BUFFER_ORDER_ERROR"] = "Остаток свободного места для предупреждения должен быть больше остатка для блокировки записи — иначе предупреждение не появится. Настройки не сохранены";
+$MESS["BIZPROC_OPT_CLEAR_STUCK_PAUSE_ACTIVE"] = "Автоматически удалять зависшие на паузе бизнес-процессы";
+$MESS["BIZPROC_OPT_CLEAR_STUCK_PAUSE_ACTIVE_UPDATE_NOTE"] = "Настройка станет доступна после того, как обновление портала подготовит очередь отложенных бизнес-процессов. До этого автоматическое удаление выключено";
+$MESS["BIZPROC_OPT_CLEAR_STUCK_PAUSE_GRACE_DAYS"] = "Время ожидания перед удалением зависшего на паузе процесса (дней)";
+$MESS["BIZPROC_OPT_CLEAR_STUCK_PAUSE_GRACE_DAYS_RANGE_ERROR"] = "Укажите целое число от 1 до #MAX# дней, чтобы задать время ожидания перед удалением зависшего на паузе процесса. Настройка не сохранена";
