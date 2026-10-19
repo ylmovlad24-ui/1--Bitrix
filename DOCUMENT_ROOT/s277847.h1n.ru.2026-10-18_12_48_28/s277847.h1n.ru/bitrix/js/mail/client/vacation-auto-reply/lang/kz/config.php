@@ -1,0 +1,20 @@
+<?php
+$MESS['MAIL_VACATION_AUTO_REPLY_ACTIVE_LABEL'] = 'Болмаған кездегі автожауап';
+$MESS['MAIL_VACATION_AUTO_REPLY_BODY_LABEL'] = 'Автожауап мәтіні';
+$MESS['MAIL_VACATION_AUTO_REPLY_EXCLUSIONS_HINT'] = 'Автожауап таратылымдарға және автоматты хабарламаларға жіберілмейді, ал бір жіберушіге кезең ішінде бір рет барады';
+$MESS['MAIL_VACATION_AUTO_REPLY_LOAD_ERROR'] = 'Автожауап баптауын жүктеу мүмкін болмады';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_LABEL'] = 'Пошта жәшігі';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_LIST'] = 'Пошта жәшіктерінің тізіміне өту';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_PLACEHOLDER'] = 'Жәшікті таңдаңыз';
+$MESS['MAIL_VACATION_AUTO_REPLY_NO_MAILBOX'] = 'Автожауапты баптауға қосылған пошта жәшігі жоқ';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_END_LABEL'] = 'Кезеңнің аяқталуы';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_FORMAT_HINT'] = 'Күні мен уақытын мысалдағыдай енгізіңіз: #EXAMPLE#';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_HINT'] = 'Уақыт #TIMEZONE# уақыт белдеуі бойынша көрсетілген';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_START_LABEL'] = 'Кезеңнің басталуы';
+$MESS['MAIL_VACATION_AUTO_REPLY_READONLY'] = 'Баптау тек қарауға қолжетімді: бұл пошта жәшігінің автожауабын оның иесі өзгерте алады';
+$MESS['MAIL_VACATION_AUTO_REPLY_RETRY'] = 'Қайталау';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVED'] = 'Автожауап баптауы сақталды';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_FAILED'] = 'Автожауап баптауын сақтау мүмкін болмады';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_INVALID'] = 'Өрістердің толтырылуын тексеріңіз';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_WAIT'] = 'Автожауап баптауы жүктелгенше күте тұрыңыз';
+$MESS['MAIL_VACATION_AUTO_REPLY_SIGNATURE_HINT'] = 'Жіберу кезінде автожауапқа таңдалған пошта жәшігінің қолданыстағы қолтаңбасы қосылады. Қолтаңба бапталмаған болса, автожауап бәрібір жіберіледі';

@@ -1,0 +1,6 @@
+<?php
+$MESS["BIZPROC_FIELDS_BACKEND_RENDER_ERROR"] = "Басқару элементін жүктеу мүмкін болмады.";
+$MESS["BIZPROC_FIELDS_INSERT_VALUE"] = "Мәнді кірістіру";
+$MESS["BIZPROC_FIELDS_MULTIPLE_ADD"] = "Қосу";
+$MESS["BIZPROC_FIELDS_MULTIPLE_REMOVE"] = "Жою";
+$MESS["BIZPROC_FIELDS_MULTIPLE_ROW_LABEL"] = "#NAME#, #NUMBER# жол";

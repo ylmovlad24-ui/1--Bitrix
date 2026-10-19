@@ -1,0 +1,19 @@
+<?php
+$MESS["BPATL_A11Y_COMMENTS_LABEL"] = "Kommentare: #COUNT#";
+$MESS["BPATL_A11Y_DELEGATE_TO_LABEL"] = "Delegieren an";
+$MESS["BPATL_A11Y_GRID_UPDATED"] = "Liste aktualisiert";
+$MESS["BPATL_A11Y_PROCESS_FACES_LABEL"] = "Workflow-Teilnehmer";
+$MESS["BPATL_A11Y_ROW_ACTIONS_LABEL"] = "Aktionen";
+$MESS["BPATL_CURRENT_TASKS"] = "Aktuelle Aufgaben";
+$MESS["BPATL_DESCRIPTION"] = "Beschreibung";
+$MESS["BPATL_DOCUMENT"] = "Element";
+$MESS["BPATL_DOCUMENT_TITLE"] = "Element ansehen";
+$MESS["BPATL_EMPTY"] = "Die Aufgabenliste ist leer.";
+$MESS["BPATL_FINISHED_TASKS"] = "Aufgabenarchiv";
+$MESS["BPATL_GROUP_ACTION_DELEGATE"] = "Delegieren";
+$MESS["BPATL_GROUP_ACTION_NO"] = "Ablehnen";
+$MESS["BPATL_GROUP_ACTION_OK"] = "Ausführen";
+$MESS["BPATL_GROUP_ACTION_YES"] = "Bestätigen";
+$MESS["BPATL_MODIFIED"] = "Geändert";
+$MESS["BPATL_NAME"] = "Name";
+$MESS["BPWC_WLCT_TOTAL"] = "Gesamt";

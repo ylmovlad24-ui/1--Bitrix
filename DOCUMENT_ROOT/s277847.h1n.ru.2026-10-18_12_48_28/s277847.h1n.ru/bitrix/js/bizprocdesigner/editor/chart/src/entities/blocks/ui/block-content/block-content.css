@@ -1,0 +1,49 @@
+.editor-chart-block-content {
+    width: 100%;
+    min-height: 31px;
+    padding: 6px 0;
+    border-top: 1px solid var(--ui-color-divider-vibrant-accent);
+    border-radius: 0 0 7px 7px;
+    background: var(--ui-color-bg-content-secondary);
+    box-sizing: border-box;
+}
+
+.editor-chart-block-content.--deactivated {
+    background-color: var(--ui-color-gray-05);
+}
+
+.editor-chart-block-content.--background-color-1 {
+	background-color: color-mix(in srgb, var(--designer-bp-ai-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-2 {
+	background-color: color-mix(in srgb, var(--designer-bp-entities-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-3 {
+	background-color: color-mix(in srgb, var(--designer-bp-employe-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-4 {
+	background-color: color-mix(in srgb, var(--designer-bp-technical-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-5 {
+	background-color: color-mix(in srgb, var(--designer-bp-communication-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-6 {
+	background-color: color-mix(in srgb, var(--designer-bp-storage-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-7 {
+	background-color: color-mix(in srgb, var(--designer-bp-afiliate-bg) 40%, transparent);
+}
+
+.editor-chart-block-content.--background-color-8 {
+	background-color: color-mix(in srgb, rgba(31, 134, 255, 1) 40%, transparent); /* token will be provided later */
+}
+
+.editor-chart-block-content.--default {
+	border-top: 1px solid var(--ui-color-palette-gray-04);
+}

@@ -1,0 +1,25 @@
+.mail-compose-subject-field__label
+{
+	flex: 0 0 76px;
+	color: var(--ui-color-base-3);
+}
+
+/* the box the phrase of the generation is laid over: the field itself keeps the whole width of it */
+.mail-compose-subject-field__slot
+{
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+/* the typed subject reads a step bolder than the body; the placeholder stays quiet */
+.mail-compose-subject-field input
+{
+	font-weight: var(--ui-font-weight-medium);
+}
+
+.mail-compose-subject-field input::placeholder
+{
+	font-weight: var(--ui-font-weight-normal);
+}

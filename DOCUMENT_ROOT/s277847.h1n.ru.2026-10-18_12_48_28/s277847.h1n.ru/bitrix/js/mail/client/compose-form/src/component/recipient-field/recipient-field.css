@@ -1,0 +1,48 @@
+.mail-compose-recipient-field
+{
+	display: flex;
+	flex: 0 1 auto;
+	align-items: center;
+	min-width: 0;
+}
+
+/* An empty selector is opened by the row action and must not leave its bordered shell in the layout. */
+.mail-compose-recipient-field.--empty:not(.--editing)
+{
+	display: none;
+}
+
+.mail-compose-recipient-field .ui-tag-selector-outer-container
+{
+	width: auto;
+	border-color: transparent;
+	background: transparent;
+}
+
+/* the sender chip next to these fields is a pill; the recipient tags match it */
+.mail-compose-recipient-field .ui-tag-selector-outer-container .ui-tag-selector-tag
+{
+	border-radius: var(--ui-border-radius-pill);
+}
+
+.mail-compose-recipient-field .--hidden-by-collapse
+{
+	display: none;
+}
+
+/*
+ * The look of the chip belongs to the control itself; only the place in the tag row is set here.
+ * The margin is the one of `.--air .ui-tag-selector-item`, the box every tag stands in.
+ */
+.mail-compose-recipient-field__more
+{
+	margin: var(--ui-space-stack-3xs) var(--ui-space-inline-3xs);
+	cursor: pointer;
+}
+
+/* the small caption of the built-in control reads better at the field size */
+.mail-compose-form .mail-compose-recipient-field .ui-tag-selector-add-button-caption
+{
+	font-size: var(--ui-font-size-md);
+}
+

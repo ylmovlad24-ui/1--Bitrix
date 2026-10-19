@@ -1,0 +1,16 @@
+<?php
+$MESS["MAIL_DRAFT_LIST_DELETE_PARTIAL_ERROR"] = "Шимайларды жою мүмкін болмады (#COUNT#)";
+$MESS["MAIL_DRAFT_LIST_NO_RECIPIENTS"] = "Алушыларсыз";
+$MESS["MAIL_MESSAGE_LIST_DRAFT_FILTER_TO"] = "Кімге";
+$MESS['MAIL_MESSAGE_LIST_FILTER_RECIPIENT'] = 'Кімге';
+$MESS['MAIL_MESSAGE_LIST_FILTER_SENDER'] = 'Кімнен';
+$MESS['MAIL_SCHEDULED_LIST_CANCEL_ACTION'] = 'Жіберуді болдырмау';
+$MESS['MAIL_SCHEDULED_LIST_EDIT_ACTION'] = 'Өзгерту';
+$MESS['MAIL_SCHEDULED_LIST_EDIT_ACTION_TITLE'] = 'Хатты ашу және өзгерту';
+$MESS['MAIL_SCHEDULED_LIST_RETRY_ACTION'] = 'Қайта жіберу';
+$MESS['MAIL_SCHEDULED_LIST_SEND_NOW_ACTION'] = 'Қазір жіберу';
+$MESS['MAIL_SCHEDULED_LIST_SEND_NOW_ACTION_TITLE'] = 'Жоспарланған уақытты күтпей хатты жіберу';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_ERROR'] = 'Қате';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_SCHEDULED'] = 'Жоспарланды';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_SENDING'] = 'Жіберілуде';
+$MESS['MAIL_SCHEDULED_LIST_TIME_HINT'] = 'Жіберу уақыты — #TIME#, хат авторының уақыт белдеуі: UTC#OFFSET#';

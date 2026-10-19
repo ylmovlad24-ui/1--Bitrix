@@ -1,0 +1,4 @@
+<?php
+$MESS["BPSCT_DESCR_DESCR"] = "Ein Workflow wird nach dem angegebenen Zeitplan gestartet.";
+$MESS["BPSCT_DESCR_NAME"] = "Planer";
+$MESS["BPSCT_RETURN_SCHEDULED_AT"] = "Geplante Startzeit";

@@ -1,0 +1,12 @@
+# Dianomi - Настройки Apache для Bitrix
+# ============================================
+
+# Включение модуля rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # ЧПУ для Bitrix
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /dianomi/index.php [L,QSA]
+</IfModule>

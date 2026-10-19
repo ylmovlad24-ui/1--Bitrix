@@ -1,0 +1,8 @@
+.node-data-inspector-close-button {
+	padding: 0;
+	border: none;
+	background: none;
+	display: flex;
+	cursor: pointer;
+	--ui-icon-set__icon-color: var(--ui-color-base-3);
+}

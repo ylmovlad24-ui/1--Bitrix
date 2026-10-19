@@ -1,0 +1,6 @@
+<?php
+$MESS["BIZPROC_FIELDS_BACKEND_RENDER_ERROR"] = "Element konnte nicht geladen werden.";
+$MESS["BIZPROC_FIELDS_INSERT_VALUE"] = "Wert einfügen";
+$MESS["BIZPROC_FIELDS_MULTIPLE_ADD"] = "Hinzufügen";
+$MESS["BIZPROC_FIELDS_MULTIPLE_REMOVE"] = "Entfernen";
+$MESS["BIZPROC_FIELDS_MULTIPLE_ROW_LABEL"] = "#NAME#, Zeile #NUMBER#";

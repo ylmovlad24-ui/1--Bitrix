@@ -1,0 +1,16 @@
+<?php
+$MESS["MAIL_DRAFT_LIST_DELETE_PARTIAL_ERROR"] = "Entwürfe konnten nicht gelöscht werden (#COUNT#).";
+$MESS["MAIL_DRAFT_LIST_NO_RECIPIENTS"] = "Ohne Empfänger";
+$MESS["MAIL_MESSAGE_LIST_DRAFT_FILTER_TO"] = "An";
+$MESS['MAIL_MESSAGE_LIST_FILTER_RECIPIENT'] = 'An';
+$MESS['MAIL_MESSAGE_LIST_FILTER_SENDER'] = 'Von';
+$MESS['MAIL_SCHEDULED_LIST_CANCEL_ACTION'] = 'Versand abbrechen';
+$MESS['MAIL_SCHEDULED_LIST_EDIT_ACTION'] = 'Bearbeiten';
+$MESS['MAIL_SCHEDULED_LIST_EDIT_ACTION_TITLE'] = 'Nachricht öffnen und bearbeiten.';
+$MESS['MAIL_SCHEDULED_LIST_RETRY_ACTION'] = 'Erneut senden';
+$MESS['MAIL_SCHEDULED_LIST_SEND_NOW_ACTION'] = 'Jetzt senden';
+$MESS['MAIL_SCHEDULED_LIST_SEND_NOW_ACTION_TITLE'] = 'Nachricht senden, ohne auf den geplanten Zeitpunkt zu warten.';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_ERROR'] = 'Fehler';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_SCHEDULED'] = 'Geplant';
+$MESS['MAIL_SCHEDULED_LIST_STATUS_SENDING'] = 'Wird gesendet';
+$MESS['MAIL_SCHEDULED_LIST_TIME_HINT'] = 'Versand #TIME# in der Zeitzone des Verfassers: UTC#OFFSET#';

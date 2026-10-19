@@ -1,0 +1,21 @@
+<?php
+$MESS['MAIL_SCHEDULED_VIEW_BODY'] = 'Text der geplanten Nachricht';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL'] = 'Versand abbrechen';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR'] = 'Der Versand konnte nicht abgebrochen werden. Aktualisieren Sie die Seite und versuchen Sie es erneut.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ACCESS_DENIED'] = 'Sie haben nicht genügend Rechte, um den Versand dieser Nachricht abzubrechen.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_CANCELLED'] = 'Der Versand wurde bereits abgebrochen, die Nachricht wurde als Entwurf gespeichert.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_SENDING'] = 'Der Versand hat bereits begonnen und kann nicht mehr abgebrochen werden.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_SENT'] = 'Die Nachricht wurde bereits gesendet, der Versand kann nicht mehr abgebrochen werden.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_DRAFT_SAVE_FAILED'] = 'Die Nachricht konnte nicht in den Entwürfen gespeichert werden, der Versand bleibt geplant. Versuchen Sie es erneut.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_DRAFT_UNAVAILABLE'] = 'Entwürfe sind nicht verfügbar, der Versand kann nicht abgebrochen werden.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_NOT_FOUND'] = 'Die Nachricht ist nicht mehr für den Versand geplant.';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_REVISION_CONFLICT'] = 'Die Nachricht wurde geändert. Die Daten wurden aktualisiert, versuchen Sie erneut, den Versand abzubrechen.';
+$MESS['MAIL_SCHEDULED_VIEW_CC'] = 'Cc';
+$MESS['MAIL_SCHEDULED_VIEW_EDIT'] = 'Nachricht bearbeiten';
+$MESS['MAIL_SCHEDULED_VIEW_FROM'] = 'Von';
+$MESS['MAIL_SCHEDULED_VIEW_LOAD_ERROR'] = 'Die geplante Nachricht konnte nicht geöffnet werden.';
+$MESS['MAIL_SCHEDULED_VIEW_READ_ONLY'] = 'Nur Ansicht';
+$MESS['MAIL_SCHEDULED_VIEW_SCHEDULED_AT'] = 'Versand geplant: #DATE#';
+$MESS['MAIL_SCHEDULED_VIEW_SUBJECT'] = 'Betreff';
+$MESS['MAIL_SCHEDULED_VIEW_TITLE'] = 'Geplante Nachricht';
+$MESS['MAIL_SCHEDULED_VIEW_TO'] = 'An';

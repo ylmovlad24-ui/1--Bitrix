@@ -1,0 +1,20 @@
+<?php
+$MESS['MAIL_VACATION_AUTO_REPLY_ACTIVE_LABEL'] = 'Abwesenheitsnotiz aktivieren';
+$MESS['MAIL_VACATION_AUTO_REPLY_BODY_LABEL'] = 'Text der Abwesenheitsnotiz';
+$MESS['MAIL_VACATION_AUTO_REPLY_EXCLUSIONS_HINT'] = 'Die Abwesenheitsnotiz wird nicht an Newsletter und automatische Benachrichtigungen gesendet. An denselben Absender geht sie nur einmal pro Zeitraum.';
+$MESS['MAIL_VACATION_AUTO_REPLY_LOAD_ERROR'] = 'Die Einstellungen der Abwesenheitsnotiz konnten nicht geladen werden.';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_LABEL'] = 'Mailbox';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_LIST'] = 'Zur Liste der Mailboxen';
+$MESS['MAIL_VACATION_AUTO_REPLY_MAILBOX_PLACEHOLDER'] = 'Mailbox auswählen';
+$MESS['MAIL_VACATION_AUTO_REPLY_NO_MAILBOX'] = 'Es ist keine Mailbox verbunden, für die eine Abwesenheitsnotiz eingerichtet werden kann.';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_END_LABEL'] = 'Enddatum';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_FORMAT_HINT'] = 'Geben Sie Datum und Uhrzeit wie im Beispiel ein: #EXAMPLE#';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_HINT'] = 'Die Uhrzeit wird in der Zeitzone #TIMEZONE# angegeben.';
+$MESS['MAIL_VACATION_AUTO_REPLY_PERIOD_START_LABEL'] = 'Startdatum';
+$MESS['MAIL_VACATION_AUTO_REPLY_READONLY'] = 'Die Einstellung kann nur angezeigt werden: Die Abwesenheitsnotiz dieser Mailbox kann nur vom Besitzer geändert werden.';
+$MESS['MAIL_VACATION_AUTO_REPLY_RETRY'] = 'Erneut versuchen';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVED'] = 'Die Einstellungen der Abwesenheitsnotiz wurden gespeichert.';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_FAILED'] = 'Die Einstellungen der Abwesenheitsnotiz konnten nicht gespeichert werden.';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_INVALID'] = 'Prüfen Sie, ob alle Felder korrekt ausgefüllt sind.';
+$MESS['MAIL_VACATION_AUTO_REPLY_SAVE_WAIT'] = 'Warten Sie, bis die Einstellungen der Abwesenheitsnotiz geladen sind.';
+$MESS['MAIL_VACATION_AUTO_REPLY_SIGNATURE_HINT'] = 'Beim Senden wird der Abwesenheitsnotiz die aktive Signatur der ausgewählten Mailbox hinzugefügt. Ist keine Signatur konfiguriert, wird die Abwesenheitsnotiz trotzdem gesendet.';

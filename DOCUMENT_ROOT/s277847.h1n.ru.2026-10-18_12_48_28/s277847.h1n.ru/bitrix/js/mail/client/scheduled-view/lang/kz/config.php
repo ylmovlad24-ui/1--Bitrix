@@ -1,0 +1,21 @@
+<?php
+$MESS['MAIL_SCHEDULED_VIEW_BODY'] = 'Жоспарланған хаттың мәтіні';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL'] = 'Жіберуді болдырмау';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR'] = 'Жіберуді болдырмау мүмкін болмады. Бетті жаңартып, қайталап көріңіз';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ACCESS_DENIED'] = 'Бұл хатты жіберуді болдырмауға құқық жоқ';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_CANCELLED'] = 'Хатты жіберу болдырылған, хат шимай ретінде сақталды';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_SENDING'] = 'Жіберу басталып кетті, оны болдырмау мүмкін емес';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_ALREADY_SENT'] = 'Хат жіберіліп қойды, жіберуді болдырмау мүмкін емес';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_DRAFT_SAVE_FAILED'] = 'Хатты шимайларға сақтау мүмкін болмады, жіберу жоспарланған күйде қалды. Қайталап көріңіз';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_DRAFT_UNAVAILABLE'] = 'Шимайлар қолжетімсіз, жіберуді болдырмау мүмкін емес';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_NOT_FOUND'] = 'Хат енді жіберуге жоспарланбаған';
+$MESS['MAIL_SCHEDULED_VIEW_CANCEL_ERROR_REVISION_CONFLICT'] = 'Хат өзгерді. Деректер жаңартылды, жіберуді болдырмауды қайталап көріңіз';
+$MESS['MAIL_SCHEDULED_VIEW_CC'] = 'Көшірме:';
+$MESS['MAIL_SCHEDULED_VIEW_EDIT'] = 'Хатты өзгерту';
+$MESS['MAIL_SCHEDULED_VIEW_FROM'] = 'Кімнен:';
+$MESS['MAIL_SCHEDULED_VIEW_LOAD_ERROR'] = 'Жоспарланған хатты ашу мүмкін болмады';
+$MESS['MAIL_SCHEDULED_VIEW_READ_ONLY'] = 'Тек қарау';
+$MESS['MAIL_SCHEDULED_VIEW_SCHEDULED_AT'] = 'Жіберу жоспарланды: #DATE#';
+$MESS['MAIL_SCHEDULED_VIEW_SUBJECT'] = 'Тақырып:';
+$MESS['MAIL_SCHEDULED_VIEW_TITLE'] = 'Жоспарланған хат';
+$MESS['MAIL_SCHEDULED_VIEW_TO'] = 'Кімге:';

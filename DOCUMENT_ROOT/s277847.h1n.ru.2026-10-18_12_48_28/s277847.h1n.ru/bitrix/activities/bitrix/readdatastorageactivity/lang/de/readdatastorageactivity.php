@@ -1,0 +1,21 @@
+<?php
+$MESS["BIZPROC_SRA_DISK_BLOCKED_WARNING"] = "Der Speicherplatz auf Ihrem Drive wird knapp, er wird bald schreibgeschützt sein. Geben Sie etwas Speicherplatz frei, damit Sie weiterhin Daten darauf schreiben können.";
+$MESS["BIZPROC_SRA_DISK_LOW_WARNING"] = "Der Speicherplatz auf Ihrem Drive wird knapp, er wird bald schreibgeschützt sein. Geben Sie etwas Speicherplatz frei, damit Sie weiterhin Daten darauf schreiben können.";
+$MESS["BIZPROC_SRA_EMPTY_FILTER_FIELDS"] = "Das Feld \"Filter nach Feldern\" darf nicht leer sein.";
+$MESS["BIZPROC_SRA_EMPTY_RETURN_FIELDS"] = "Mindestens ein Rückgabefeld ist erforderlich.";
+$MESS["BIZPROC_SRA_EMPTY_STORAGE_ID_OR_CODE"] = "Speicher nicht ausgewählt, oder symbolischer Code des Speichers nicht angegeben.";
+$MESS["BIZPROC_SRA_EMPTY_STORAGE_ID_OR_CODE_MSGVER_1"] = "Das Feld \"Speicher\" ist erforderlich.";
+$MESS["BIZPROC_SRA_FIELD_RECORD_CODE"] = "Symbolischer Code";
+$MESS["BIZPROC_SRA_FIELD_RECORD_CODE_DESCRIPTION"] = "Symbolischer Code des Speichers";
+$MESS["BIZPROC_SRA_FIELD_RECORD_NAME"] = "Name";
+$MESS["BIZPROC_SRA_FILTER_FIELDS_COLLAPSED_TEXT"] = "Filter angewendet, klicken Sie auf Maximieren, um anzuzeigen.";
+$MESS["BIZPROC_SRA_FILTER_FIELDS_PROPERTY"] = "Filter nach Feldern";
+$MESS["BIZPROC_SRA_ITEM_NOT_FOUND"] = "Die von Ihnen ausgewählten Filter stimmen mit den Speicherelementen nicht überein.";
+$MESS["BIZPROC_SRA_QUOTA_EXCEEDED"] = "Speicherdaten können nicht gelesen werden, weil Ihr Bitrix24 keinen freien Speicherplatz mehr hat. Geben Sie etwas Festplattenspeicher frei und versuchen Sie es erneut.";
+$MESS["BIZPROC_SRA_RETURN_FIELDS_SELECTION"] = "Auszugebende Felder";
+$MESS["BIZPROC_SRA_RETURN_JSON_COLLECTION"] = "JSON Sammlung";
+$MESS["BIZPROC_SRA_RETURN_MODE_COLLECTION_PROPERTY"] = "Sammlung (JSON)";
+$MESS["BIZPROC_SRA_RETURN_MODE_PROPERTY"] = "Datenrückgabe als";
+$MESS["BIZPROC_SRA_RETURN_MODE_SINGLE_PROPERTY"] = "Einzelner Eintrag";
+$MESS["BIZPROC_SRA_RETURN_MODE_WRONG"] = "Der Wert \"Datenrückgabe als\" ist nicht korrekt.";
+$MESS["BIZPROC_SRA_STORAGE_ID_PROPERTY"] = "Speicher auswählen";
